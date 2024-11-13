@@ -1,6 +1,6 @@
 <template>
     <div class="main-content">
-      <div class="container">
+      <div class="container-section">
           <div class="main-container col-md-9">
               <section class="consommation-section">
                   <Consommation />
@@ -13,7 +13,7 @@
                   <Sim />
               </section>
           </div>
-          <div class="left-container col-md-3">
+          <div class="left-container">
             <section class="infos-section">
                   <Infos />
               </section>
@@ -45,7 +45,7 @@ import Soubscription from '../main/Soubscription.vue';
     flex-grow: 1;
   }
 
-  .container, .consommation-section {
+  .container-section, .consommation-section, .soubscription-section {
     display: -ms-flexbox;
     display: -webkit-box;
     display: flex;
@@ -60,7 +60,7 @@ import Soubscription from '../main/Soubscription.vue';
         -ms-flex: 0 0 75%;
         -webkit-box-flex: 0;
         flex: 0 0 75%;
-        max-width: 75%;
+        width: 75%;
     }
 }
 
@@ -69,13 +69,21 @@ import Soubscription from '../main/Soubscription.vue';
         -ms-flex: 0 0 25%;
         -webkit-box-flex: 0;
         flex: 0 0 25%;
-        max-width: 25%;
     }
 }
 
 .main-container, .left-container {
   height: 100%;
   overflow: hidden;
+}
+
+.main-container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.left-container {
+  width: 22%;
 }
   
   

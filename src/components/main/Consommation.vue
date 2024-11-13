@@ -1,6 +1,6 @@
 <template>
     <div class="row site-page v-step-0">
-        <div class="col-md-12">
+        <div class="col-md-12" style="margin-left: 15px;">
             <div class="section-header page-title">
                 <h1 data-v-aaf95958="">Ma consommation</h1>
                 <p class="text-muted font-weight-light">
@@ -52,15 +52,14 @@
         
     </div>
     
-    <div class="col-md-12">
+    <div class="col-md-12" style="    padding: 0 40px;">
         
         <a  
             href="/me/#/consommation/" 
             class="show-more-btn float-right" 
             target="_self">
             <span >Voir plus</span>
-            
-            <i  class="mdi mdi-arrow-right"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m556-258-38-39 158-158H180v-54h496L518-667l38-39 224 224-224 224Z"/></svg>
             
         </a>
         
@@ -142,8 +141,7 @@ p {
     .col-md-3 {
         -ms-flex: 0 0 25%;
         -webkit-box-flex: 0;
-        flex: 0 0 25%;
-        max-width: 25%;
+        flex: 0 0 24%;
     }
 }
 
@@ -153,7 +151,9 @@ p {
 
 .col-6 {
     -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
+    flex: 0 0 24%;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .infos-card>div {
@@ -199,6 +199,42 @@ p {
     font-size: 12px !important;
 }
 
+
+@media (min-width: 768px) {
+    .col-md-12 {
+        -ms-flex: 0 0 100%;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+    .show-more-btn {
+    display: inline-block;
+    margin: 10px 0 0 0;
+    font-size: 14px;
+}
+
+.float-right {
+    float: right !important;
+}
+a {
+    color: #106887;
+}
+a, a:hover {
+    text-decoration: none;
+}
+
+.show-more-btn>* {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.show-more-btn>svg {
+    font-size: 18px;
+    margin-left: 5px;
+    fill: #106887;
+}
 
 
 

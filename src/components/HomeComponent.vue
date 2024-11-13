@@ -60,7 +60,7 @@
 
   .main-container {
     height: 100%;
-    padding-top: 70px;
+    padding-top: 4%;
     overflow-y: scroll;
     overflow-x: hidden !important;
   }
@@ -70,11 +70,18 @@
     top: 0;
     width: calc(100% - 250px);
     position: fixed;
-    padding: 1% 3.5%;
+    /* padding: 1% 2%; */
     background: #fff;
     height: 70px;
     border-bottom: 1px solid #e5e5e5;
     z-index: 15;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+    /* align-content: center; */
+    /* flex-wrap: wrap; */
+    align-items: center;
+    padding: 0px 2%;
   }
 
   .main-container-content {
