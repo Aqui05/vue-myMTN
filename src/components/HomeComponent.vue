@@ -47,7 +47,7 @@
     left: 0;
     top: 0;
     height: 100%;
-    width: 25%;
+    width: 250px;
     position: fixed;
     z-index: 20;
     -webkit-transition: -webkit-transform .3s ease-in-out;
@@ -66,11 +66,11 @@
   }
 
   .top-bar {
-    left: 25%;
+    left: 250px;
     top: 0;
-    width: 75%;
+    width: calc(100% - 250px);
     position: fixed;
-
+    padding: 1% 3.5%;
     background: #fff;
     height: 70px;
     border-bottom: 1px solid #e5e5e5;
@@ -79,9 +79,17 @@
 
   .main-container-content {
     padding: 40px 60px;
-    left: 25%;
+    left: 250px;
     /* top: 0; */
-    width: 75%;
+    width: calc(100% - 250px);
     position: absolute;
+    overflow: hidden;
   }
+
+  @media (max-width: 600px) {
+    .left-bar {
+      display: none;
+    }
+}    
+
   </style>
