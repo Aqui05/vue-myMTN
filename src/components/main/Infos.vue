@@ -1,5 +1,5 @@
 <template>
-    <div id="home_side_bar" class="col-md-3">
+    <div id="home_side_bar" class="col-md-3" style="padding: 0;">
       <div class="sidebar-card v-step-1">
         <h3>Infos carte SIM</h3>
         <div>

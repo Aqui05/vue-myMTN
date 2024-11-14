@@ -1,6 +1,6 @@
 <!--Home view-->
 
-<script setup lang="ts">
+<script setup>
 import HomeComponent from '@/components/HomeComponent.vue';
 </script>
 

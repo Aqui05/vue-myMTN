@@ -1,36 +1,33 @@
 <!--Home component-->
 
 <template>
-    <div class="container">
-        <section class="left-bar">
-            <LeftNav />
-        </section>
-
-        <div class="main-container">
-            <section class="top-bar">
-                <TopNav />
-            </section>
-
-            <section class="main-container-content">
-                <MainContent />
-            </section>
-
-        </div>
+  <div class="container">
+    <section class="left-bar">
+      <LeftNav />
+    </section>
+    <div class="main-container">
+      <section class="top-bar">
+        <TopNav />
+      </section>
+      <!-- Render content based on current route -->
+      <section class="main-container-content">
+        <router-view />
+      </section>
     </div>
-  </template>
+  </div>
+</template>
+
   
   <script>
 
     import LeftNav from './nav/LeftNav.vue';
     import TopNav from './nav/TopNav.vue';
-    import MainContent from './nav/MainContent.vue';
   
   export default {
     name: 'home',
     components: {
         LeftNav,
-        TopNav,
-        MainContent
+        TopNav
     },
   }
   </script>

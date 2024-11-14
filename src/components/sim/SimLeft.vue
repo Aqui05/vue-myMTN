@@ -1,13 +1,5 @@
 <template>
     <div data-v-012ad630="" class="row mt-3 v-step-4">
-      <div class="col-md-12">
-        <div class="section-header">
-          <h3>Gérer ma SIM</h3>
-          <p class="text-muted font-weight-light">
-            Opérations et paramétrages pour carte SIM
-          </p>
-        </div>
-      </div>
   
       <div class="col-md-3 service-card">
         <div>
@@ -66,7 +58,51 @@
           </div>
         </div>
       </div>
+
+      <div class="col-md-3 service-card">
+        <div>
+          <h3 class="text-truncate">PUK</h3>
+          <p class="text-muted">Récupérer mon code PUK</p>
+          <div class="service-card-bottom">
+            <button class="btn btn-secondary ripple">
+              <span class="float-left">Afficher</span>
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
   
+      <div class="col-md-3 service-card">
+        <div>
+          <h3 class="text-truncate">Activer internet</h3>
+          <p class="text-muted">
+            Recevoir les paramètres internet
+          </p>
+          <div class="service-card-bottom">
+            <button class="btn btn-secondary ripple">
+              <span class="float-left">Afficher</span>
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-3 service-card">
+        <div>
+          <h3 class="text-truncate">Désactiver internet</h3>
+          <p class="text-muted">
+            Désactiver internet sur ma SIM
+          </p>
+          <div class="service-card-bottom">
+            <button class="btn btn-secondary ripple">
+              <span class="float-left">Afficher</span>
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <!--
       <div class="col-md-12 see-more">
         <a
          
@@ -79,13 +115,13 @@
           <svg class="mdi mdi-arrow-right" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m556-258-38-39 158-158H180v-54h496L518-667l38-39 224 224-224 224Z"/></svg>
             
         </a>
-      </div>
+      </div> -->
     </div>
   </template>
   
   <script>
   export default {
-    name: 'Sim',
+    name: 'SimLeft',
   };
   </script>
   

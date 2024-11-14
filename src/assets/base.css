@@ -57,6 +57,10 @@
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  display: none; /* Masque la barre de défilement */
+}
+
 @font-face {
   font-family: "MTNBrighterSans";
   src: url("../fonts/MTNBrighterSans-Regular.otf") format("opentype"),

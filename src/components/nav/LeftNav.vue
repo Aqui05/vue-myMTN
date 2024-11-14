@@ -5,64 +5,71 @@
         </div>
 
         <div class="user-infos">
-            <div class="user-name">
-                <span>KIKISSAGBE Aquilas Oluwatobi Elisée</span>
+            <div class="user-name text-truncate">
+                <span>KIKISSAGBE AQUILAS OLUWATOBI ELISEE</span>
             </div>
             <div class="user-number">
                 <span>61255118</span>
             </div>
         </div>
-        <ul>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
-                  <path d="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 10 21 L 10 14 L 14 14 L 14 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z"></path>
-              </svg>
-              <a 
-                    href="/#/" aria-current="page" 
-                    class="router-link-exact-active router-link-active" 
-                    target="_self">Accueil
-                </a>
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#e8eaed"><path d="M0 0h24v24H0zm10 5h4v2h-4zm0 0h4v2h-4z" fill="none"/><path d="M10 16v-1H3.01L3 19c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-4h-7v1h-4zm10-9h-4.01V5l-2-2h-4l-2 2v2H4c-1.1 0-2 .9-2 2v3c0 1.11.89 2 2 2h6v-2h4v2h6c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-6 0h-4V5h4v2z"/></svg>
-                <a 
-                    href="/me/#/business/" class="" 
-                    target="_self">MTN Business
-                </a>
-            </li>
-            <li>
-                <img src="@/assets/carte-sim.png" alt="carte">
-                <a href="/me/#/carte-sim/" class="" target="_self">Carte SIM
-
-                </a>
-            </li>
-            <li>
-              <img src="@/assets/iot.png" alt="carte">
-                <a 
-                    href="/me/#/forfaits-services/" 
-                    class="" target="_self">Forfaits &amp; services
-                </a><!---->
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-80v-800l60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60v800l-60-60-60 60-60-60-60 60-60-60-60 60-60-60-60 60-60-60-60 60-60-60-60 60Zm120-200h480v-80H240v80Zm0-160h480v-80H240v80Zm0-160h480v-80H240v80Z"/></svg>
-                <a 
-                    href="/me/#/consommation/" class="" target="_self">Consommation
-                </a>
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/></svg>
-                <a target="_blank" 
-                    href="https://auth.mtn.bj/profile">
-                    Profil
-                </a>
-            </li>
+        <ul> 
+          <li> 
+            <router-link to="/acceuil" class="router-link"> 
+              <svg xmlns="http://www.w3.org/2000/svg" 
+                x="0px" y="0px" width="100" height="100" 
+                viewBox="0 0 24 24"> 
+                <path d="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 10 21 L 10 14 L 14 14 L 14 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z"></path> 
+              </svg> 
+              <span>Accueil</span> 
+            </router-link> 
+          </li> 
+          <li> 
+            <router-link to="/business" class="router-link"> 
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#e8eaed"> <path d="M0 0h24v24H0zm10 5h4v2h-4zm0 0h4v2h-4z" fill="none"/> 
+                <path d="M10 16v-1H3.01L3 19c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-4h-7v1h-4zm10-9h-4.01V5l-2-2h-4l-2 2v2H4c-1.1 0-2 .9-2 2v3c0 1.11.89 2 2 2h6v-2h4v2h6c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-6 0h-4V5h4v2z"/> 
+              </svg> 
+              <span>MTN Business</span>
+           </router-link> 
+          </li> 
+          <li> 
+            <router-link to="/sim" class="router-link"> 
+              <img src="@/assets/carte-sim.png" alt="carte"> 
+              <span>Carte SIM</span> 
+            </router-link> 
+          </li> 
+          <li> 
+            <router-link to="/forfaits-services" class="router-link"> 
+              <img src="@/assets/iot.png" alt="carte"> 
+              <span>Forfaits &amp; services</span> 
+            </router-link> 
+          </li> 
+          <li> 
+            <router-link to="/consommation" class="router-link"> 
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"> 
+                <path d="M120-80v-800l60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60 60 60v800l-60-60-60 60-60-60-60 60-60-60-60 60-60-60-60 60-60-60-60 60-60-60-60 60Zm120-200h480v-80H240v80Zm0-160h480v-80H240v80Zm0-160h480v-80H240v80Z"/> 
+              </svg> 
+              <span>Consommation</span> 
+            </router-link> 
+          </li> 
+          <li> 
+            <a href="https://auth.mtn.bj/profile" target="_blank" class="router-link"> 
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"> 
+                <path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/> 
+              </svg> 
+              <span>Profil</span> 
+            </a> 
+          </li> 
         </ul>
 
-        <div class="left-menu-bottom">
+        <div id="main_left_menu_bottom">
+          <div>
             <a href="#">
-                <i class="mdi mdi-logout"></i>
-                <span>Déconnexion</span>
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M206.78-100.78q-44.3 0-75.15-30.85-30.85-30.85-30.85-75.15v-546.44q0-44.3 30.85-75.15 30.85-30.85 75.15-30.85h277.74v106H206.78v546.44h277.74v106H206.78Zm425.87-152.09L559-328.39 657.61-427H355.48v-106h302.13L559-631.61l73.65-75.52L859.22-480 632.65-252.87Z"/></svg>
+              <span data-v-453dbfae="" class="link">
+                Déconnexion
+              </span>
             </a>
+          </div>
         </div>
 
         <div class="svg-show">
@@ -89,12 +96,17 @@
     fill: black;
   }
 
+  .router-link-active {
+    font-weight: 700 !important;
+  }
+
   li img {
     width: 20px;
     height: 20px;
   }
   .left-bar {
-    padding: 20px;
+    padding: 60px 30px 30px 30px;
+    overflow: hidden;
   }
 
   .left-bar ul {
@@ -105,8 +117,17 @@
 
   .left-bar ul li{
     position: relative;
-    padding-left: 35px;
     margin-bottom: 15px;
+}
+
+.router-link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 20px;
 }
 
   .user-infos {
@@ -143,27 +164,33 @@
     margin-right: 10px;
   }
 
-  .left-menu-bottom {
+  #main_left_menu_bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 30px;
+    font-weight: 700 !important;
+}
+
+#main_left_menu_bottom>div{
     padding: 15px 0;
     border-top: 2px solid #d3ad13;
-  }
+}
 
-  .left-menu-bottom a {
+#main_left_menu_bottom a {
     color: #b81e50;
     position: relative;
     -webkit-transition: .3s;
     transition: .3s;
-  }
+}
 
-  .left-menu-bottom i {
+#main_left_menu_bottom svg {
     font-size: 22px;
     margin-right: 5px;
-  }
+    fill: #b81e50;
+}
 
-  .left-menu-bottom span {
-    position: relative;
-    top: -2px;
-  }
 
   svg {
     overflow: hidden;
@@ -178,4 +205,19 @@
     text-decoration: none;
     color: black;
   }
+
+  img, svg {
+    vertical-align: middle;
+}
+
+img {
+    border-style: none;
+    object-fit: cover;
+}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
   </style>
