@@ -6,9 +6,10 @@
           <div>
             <div class="sidebar-sim-line" style="">
               <i class="kgk-mtn-sim-card"></i>
-              <div>
+              <div style="    display: flex; flex-wrap: wrap; align-content: center; align-items: stretch;">
+                <img src="@/assets/carte-sim.png" alt="carte" style="width: 20px;"> 
                 <span>61255118</span>
-                <i class="kgk-mtn-verified ml-1" style="color: rgb(20, 182, 237);"></i>
+                <img src="@/assets/facebook-verified.png" alt="facebook-certified">
               </div>
             </div>
             <div>
@@ -17,7 +18,9 @@
                 type="button"
                 class="btn btn-outline-secondary w-100 rounded-pill"
               >
+              <span style="color: #106887; " >
                 Afficher les détails
+              </span>
               </button>
             </div>
           </div>
@@ -86,7 +89,7 @@ h1, h2, h3, h4, h5, strong {
 }
 
 
-.sidebar-sim-line>i {
+.sidebar-sim-line>img {
     font-size: 22px;
     width: 18px;
 }
@@ -112,17 +115,18 @@ h1, h2, h3, h4, h5, strong {
     color: #106887;
     border-color: #106887;
 }
+
 .btn-outline-secondary {
-    color: #95aac9;
-    border-color: #95aac9;
+    color: #106887;
+    border-color: #106887;
 }
+
 .btn, .btn>span {
     vertical-align: middle;
 }
 .btn {
     border-radius: 30px !important;
     font-size: 14px;
-    font-family: MTNBrighterSans-Medium, Century Gothic, Arial, sans-serif;
     font-weight: 500;
     padding-left: 15px;
     padding-right: 15px;
@@ -133,30 +137,7 @@ h1, h2, h3, h4, h5, strong {
 .rounded-pill {
     border-radius: 50rem !important;
 }
-.btn-outline-secondary {
-    color: #6c757d;
-    border-color: #6c757d;
-}
-.btn {
-    display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-}
+
 [type=button], [type=reset], [type=submit], button {
     -webkit-appearance: button;
 }
