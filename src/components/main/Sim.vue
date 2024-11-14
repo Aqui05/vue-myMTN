@@ -145,7 +145,6 @@ h1, h2, h3, h4, h5, strong {
         -ms-flex: 0 0 25%;
         -webkit-box-flex: 0;
         flex: 0 0 25%;
-        max-width: 25%;
         padding-left: 15px;
         padding-right: 15px;
     }
