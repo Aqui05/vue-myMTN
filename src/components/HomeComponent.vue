@@ -108,6 +108,11 @@ import TopNavMobile from './nav/TopNavMobile.vue';
     .top-bar {
       display: none;
   }
+  .main-container {
+    padding-top: 0px;
+  }
+  
+
   .main-container-content {
     padding: 40px 60px;
     left: 0px;
@@ -118,7 +123,13 @@ import TopNavMobile from './nav/TopNavMobile.vue';
   }
 
   .top-bar-mobile {
-    display: block;
+    top: 0;
+    width:100%;
+    z-index: 15;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
   }
 }   
 

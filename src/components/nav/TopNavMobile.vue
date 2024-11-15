@@ -1,11 +1,12 @@
 <template>
     <div id="main_header">
       <div id="mobile_menu" class="position-relative">
-        <button>
-          <i class="kgk-mtn-menu"></i>
+        <!--Open leftbar component-->
+        <button @click.stop="toggleLeftNav">
+          <svg style="fill: black; width: 32px;" xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
         </button>
         <button class="ml-1 search">
-          <i class="kgk-mtn-search"></i>
+          <svg style="fill: black; width: 32px;  height: 32px;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
         </button>
       </div>
       <div id="main_header_welcome">
@@ -26,24 +27,25 @@
             </div>
           </div>
         </div>
-        <div id="main_header_right">
-          <div class="d-flex align-items-center">
-            <a href="#" class="mr-3 d-lg-none d-md-flex">
-              <i class="mtn-icon mtn-icon-search"></i>
-            </a>
-            <div class="d-sm-none d-lg-flex position-relative mr-3">
-              <input type="text" placeholder="Recherche">
-              <i class="kgk-mtn-search icon-search"></i>
-            </div>
-            <div data-v-e1ad11a6="" class="user-profil-avatar">
-              <div data-v-e1ad11a6="" class="user-profil-avatar-pic"></div>
-              <div data-v-e1ad11a6="" class="user-profil-avatar-details">
-                <span data-v-e1ad11a6="">KIKISSAGBE</span>
-                <span data-v-e1ad11a6="">61255118</span>
+        <!-- <div id="main_header_right">
+              <div class="d-flex align-items-center">
+                <a href="#" class="mr-3 d-lg-none d-md-flex">
+                  <i class="mtn-icon mtn-icon-search"></i>
+                </a>
+                <div class="d-sm-none d-lg-flex position-relative mr-3">
+                  <input type="text" placeholder="Recherche">
+                  <i class="kgk-mtn-search icon-search"></i>
+                </div>
+                <div data-v-e1ad11a6="" class="user-profil-avatar">
+                  <div data-v-e1ad11a6="" class="user-profil-avatar-pic"></div>
+                  <div data-v-e1ad11a6="" class="user-profil-avatar-details">
+                    <span data-v-e1ad11a6="">KIKISSAGBE</span>
+                    <span data-v-e1ad11a6="">61255118</span>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
+        -->
       </div>
       <div id="main_header_left_backdrop" class="modal-backdrop d-none" style="display: none;"></div>
       <div class="mtn-separator">
@@ -67,12 +69,48 @@
         </div>
       </div>
     </div>
+     <!-- LeftNav component -->
+     <LeftNav v-if="isLeftNavVisible" @click.stop />
   </template>
 
-  <script>
-    export default {
-        name:'TopNavMobile'
+<script>
+
+//La propriété display: none est appliqué à la section qui appelle le composant leftNav dans le composant principal.
+//Quand on clique sur le bouton de menu, dans l'actuel composant, pouvoir mettre cette propriété sur block, et quan on clique ailleurs, remettre sur none.
+import LeftNav from './LeftNav.vue';
+
+export default {
+  name: 'TopNavMobile',
+  components: {
+    LeftNav
+  },
+  data() {
+    return {
+      isLeftNavVisible: false
+    };
+  },
+  methods: {
+    toggleLeftNav() {
+      this.isLeftNavVisible = !this.isLeftNavVisible;
+    },
+    closeLeftNav() {
+      this.isLeftNavVisible = false;
+    },
+    handleClickOutside(event) {
+      if (!this.$el.contains(event.target)) {
+        this.closeLeftNav();
+      }
     }
+  },
+  mounted() {
+    // Add click event listener when component is mounted
+    document.addEventListener('click', this.handleClickOutside);
+  },
+  beforeUnmount() {
+    // Remove click event listener when component is unmounted
+    document.removeEventListener('click', this.handleClickOutside);
+  }
+}
 </script>
   
 <style>
@@ -275,6 +313,29 @@
 }
 .header-balance-details span {
     display: block;
+}
+
+.mtn-separator {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .mtn-separator {
+        position: relative;
+        top: 30px;
+        display: block;
+    }
+}
+
+.mtn-separator svg {
+    fill: #ffcc01;
+    width: 100%;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+svg {
+    overflow: hidden;
 }
 
 
