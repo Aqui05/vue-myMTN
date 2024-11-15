@@ -233,7 +233,7 @@ address, dl, ol, ul {
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
-.table:nth-last-of-type(odd) tr[data-v-60f42554] {
+.table:nth-last-of-type(odd) tr {
     border-bottom: 0 solid transparent !important;
 }
 

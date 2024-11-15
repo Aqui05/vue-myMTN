@@ -1,6 +1,6 @@
 <template>
-    <div data-v-d9af3d92="">
-  <div data-v-d9af3d92="" class="v-step-0">
+    <div >
+  <div  class="v-step-0">
     <div class="row">
       <div class="col-md-12">
         <div class="section-header">

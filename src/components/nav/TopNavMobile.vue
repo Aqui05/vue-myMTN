@@ -1,7 +1,7 @@
 <template>
     <div id="main_header">
       <div id="mobile_menu" class="position-relative">
-        <!--Open leftbar component-->
+        <!--ouvrir leftbar component quand on clique sur ce bouton en étant sur l'affichage mobile-->
         <button @click.stop="toggleLeftNav">
           <svg style="fill: black; width: 32px;" xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
         </button>
@@ -73,46 +73,7 @@
      <LeftNav v-if="isLeftNavVisible" @click.stop />
   </template>
 
-<script>
-
-//La propriété display: none est appliqué à la section qui appelle le composant leftNav dans le composant principal.
-//Quand on clique sur le bouton de menu, dans l'actuel composant, pouvoir mettre cette propriété sur block, et quan on clique ailleurs, remettre sur none.
-import LeftNav from './LeftNav.vue';
-
-export default {
-  name: 'TopNavMobile',
-  components: {
-    LeftNav
-  },
-  data() {
-    return {
-      isLeftNavVisible: false
-    };
-  },
-  methods: {
-    toggleLeftNav() {
-      this.isLeftNavVisible = !this.isLeftNavVisible;
-    },
-    closeLeftNav() {
-      this.isLeftNavVisible = false;
-    },
-    handleClickOutside(event) {
-      if (!this.$el.contains(event.target)) {
-        this.closeLeftNav();
-      }
-    }
-  },
-  mounted() {
-    // Add click event listener when component is mounted
-    document.addEventListener('click', this.handleClickOutside);
-  },
-  beforeUnmount() {
-    // Remove click event listener when component is unmounted
-    document.removeEventListener('click', this.handleClickOutside);
-  }
-}
-</script>
-  
+<script> import LeftNav from './LeftNav.vue'; export default { name: 'TopNavMobile', components: { LeftNav }, data() { return { isLeftNavVisible: false }; }, methods: { toggleLeftNav() { this.isLeftNavVisible = !this.isLeftNavVisible; if (this.isLeftNavVisible) { document.addEventListener('click', this.handleClickOutside); } else { document.removeEventListener('click', this.handleClickOutside); } }, handleClickOutside(event) { if (!this.$el.contains(event.target)) { this.isLeftNavVisible = false; document.removeEventListener('click', this.handleClickOutside); } } }, beforeDestroy() { document.removeEventListener('click', this.handleClickOutside); } } </script>
 <style>
 
 @media screen and (max-width: 600px) {

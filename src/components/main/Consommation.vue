@@ -132,29 +132,30 @@ p {
     margin-bottom: 15px;
 }
 
+@media (min-width: 768px) {
+    .col-md-3 {
+        -ms-flex: 0 0 25%;
+        -webkit-box-flex: 0;
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding-right: 15px;
+    padding-left: 15px;
+    }
+}
+
+.col-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 15px;
+        padding-left: 15px;
+}
+
 
 .text-center {
     text-align: center !important;
 }
 
-@media (min-width: 768px) {
-    .col-md-3 {
-        -ms-flex: 0 0 25%;
-        -webkit-box-flex: 0;
-        flex: 0 0 24%;
-    }
-}
-
-.col-6, .col-7 {
-    -webkit-box-flex: 0;
-}
-
-.col-6 {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 24%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
 
 .infos-card>div {
     height: 160px;

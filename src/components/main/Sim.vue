@@ -11,38 +11,14 @@
   
       <div class="col-md-3 service-card">
         <div>
-          <h3 class="text-truncate">Infos carte SIM</h3>
-          <p class="text-muted">
-            Informations perso liées à la SIM
-          </p>
-          <div class="service-card-bottom">
-            <button class="btn btn-secondary ripple">
-              <span class="float-left">Afficher</span>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-md-3 service-card">
-        <div>
-          <h3 class="text-truncate">PUK</h3>
-          <p class="text-muted">Récupérer mon code PUK</p>
-          <div class="service-card-bottom">
-            <button class="btn btn-secondary ripple">
-              <span class="float-left">Afficher</span>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-md-3 service-card">
-        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
           <h3 class="text-truncate">Activer internet</h3>
           <p class="text-muted">
             Recevoir les paramètres internet
-          </p>
+          </p></div>
+          <svg class="sim-svg" style="fill: #106887;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M694-466H212v-28h482L460-728l20-20 268 268-268 268-20-20 234-234Z"/></svg>
+        </div>
           <div class="service-card-bottom">
             <button class="btn btn-secondary ripple">
               <span class="float-left">Afficher</span>
@@ -54,10 +30,52 @@
   
       <div class="col-md-3 service-card">
         <div>
-          <h3 class="text-truncate">Désactiver internet</h3>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+          <h3 class="text-truncate">Activer internet</h3>
           <p class="text-muted">
-            Désactiver internet sur ma SIM
-          </p>
+            Recevoir les paramètres internet
+          </p></div>
+          <svg class="sim-svg" style="fill: #106887;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M694-466H212v-28h482L460-728l20-20 268 268-268 268-20-20 234-234Z"/></svg>
+        </div>
+          <div class="service-card-bottom">
+            <button class="btn btn-secondary ripple">
+              <span class="float-left">Afficher</span>
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-3 service-card">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+          <h3 class="text-truncate">Activer internet</h3>
+          <p class="text-muted">
+            Recevoir les paramètres internet
+          </p></div>
+          <svg class="sim-svg" style="fill: #106887;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M694-466H212v-28h482L460-728l20-20 268 268-268 268-20-20 234-234Z"/></svg>
+        </div>
+          <div class="service-card-bottom">
+            <button class="btn btn-secondary ripple">
+              <span class="float-left">Afficher</span>
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-3 service-card">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+          <h3 class="text-truncate">Activer internet</h3>
+          <p class="text-muted">
+            Recevoir les paramètres internet
+          </p></div>
+          <svg class="sim-svg" style="fill: #106887;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M694-466H212v-28h482L460-728l20-20 268 268-268 268-20-20 234-234Z"/></svg>
+        </div>
           <div class="service-card-bottom">
             <button class="btn btn-secondary ripple">
               <span class="float-left">Afficher</span>
@@ -69,8 +87,6 @@
   
       <div class="col-md-12 see-more">
         <a
-         
-         
           href="/me/#/carte-sim/"
           class="show-more-btn float-right"
           target="_self"
@@ -91,6 +107,10 @@
   
 
   <style scoped>
+
+
+
+
     .mt-3, .my-3 {
     margin-top: 1rem !important;
 }
@@ -147,6 +167,7 @@ h1, h2, h3, h4, h5, strong {
         flex: 0 0 25%;
         padding-left: 15px;
         padding-right: 15px;
+        max-width: 25%;
     }
 }
 
@@ -284,5 +305,23 @@ h1, h2, h3, h4, h5, strong {
 .see-more svg{
   fill: #106887;
 }
+
+.sim-svg {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .service-card-bottom {
+        display: none;
+    }
+  .sim-svg {
+    display: block;
+  }  
+  .service-card h3, .service-card p {
+    margin-top: 0px;
+    margin-bottom: .5rem;
+  }
+}
+
 
 </style>

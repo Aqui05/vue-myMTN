@@ -8,7 +8,7 @@
                 </p>
             </div>
         </div>
-            <div class="subscriptions-card" style="display: flex;">
+            <div class="subscriptions-card" style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-between; width: 100%;">
                 <div class="col-md-6 subscription-card">
                 <div>
                     <div class="subscription-card-title">
@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, strong {
     margin-left: 5px;
 }
 
-.description[data-v-5df97c6d] {
+.description {
     font-size: 12px !important;
     font-weight: 400 !important;
     display: -webkit-box;

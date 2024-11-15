@@ -1,46 +1,56 @@
 <!--Home component-->
-
 <template>
   <div class="container">
-    <section class="left-bar">
+    <section class="left-bar" :style="{ display: isLeftNavVisible ? 'block' : 'none' }">
       <LeftNav />
     </section>
-    <div class="main-container">
-      <section class="top-bar">
-        <TopNav />
-      </section>
-      <section  class="top-bar-mobile">
-        <TopNavMobile />
-      </section>
-      <!-- Render content based on current route -->
-      <section class="main-container-content">
-        <router-view />
-      </section>
+    <section class="left-bar bureau">
+      <LeftNav />
+    </section>
+    <div class="main-container" :class="{ 'dimmed': isLeftNavVisible }"> 
+      <section class="top-bar"> 
+        <TopNav /> 
+      </section> 
+      <section class="top-bar-mobile"> 
+        <TopNavMobile /> 
+      </section> <!-- Render content based on current route --> 
+      <section class="main-container-content"> 
+        <router-view /> 
+      </section> 
     </div>
   </div>
 </template>
 
-  
-  <script>
 
-    import LeftNav from './nav/LeftNav.vue';
-    import TopNav from './nav/TopNav.vue';
+<script>
+import LeftNav from './nav/LeftNav.vue';
+import TopNav from './nav/TopNav.vue';
 import TopNavMobile from './nav/TopNavMobile.vue';
-  
-  export default {
-    name: 'home',
-    components: {
-        LeftNav,
-        TopNav,
-        TopNavMobile
-    },
+
+export default {
+  name: 'home',
+  components: {
+    LeftNav,
+    TopNav,
+    TopNavMobile
+  },
+  data() {
+    return {
+      isLeftNavVisible: false
+    };
+  },
+  methods: {
+    toggleLeftNav() {
+      this.isLeftNavVisible = !this.isLeftNavVisible;
+    }
   }
-  </script>
-  
+}
+</script>
+
+
   <style>
-  
+  .main-container.dimmed { opacity: 0.5;}
   .container {
-    display: flex;
     height: 100vh;
   }
 
@@ -102,9 +112,6 @@ import TopNavMobile from './nav/TopNavMobile.vue';
   }
 
   @media (max-width: 600px) {
-    .left-bar {
-      display: none;
-    }
     .top-bar {
       display: none;
   }
@@ -143,6 +150,12 @@ import TopNavMobile from './nav/TopNavMobile.vue';
 @media screen and (max-width: 600px) {
   .main-container-content {
         margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .bureau {
+        display: none;
     }
 }
 

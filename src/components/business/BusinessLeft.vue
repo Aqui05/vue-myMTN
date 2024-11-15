@@ -63,7 +63,7 @@
 </script>
 
 <style scoped>
-  .sidebar-card[data-v-f893c5d8] {
+  .sidebar-card{
     overflow: hidden !important;
 }
 
@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5, strong {
     margin-top: 1rem !important;
 }
 
-.b2b-overlay-content-mini[data-v-0b32a0a4] {
+.b2b-overlay-content-mini {
     height: 200px;
     overflow: hidden;
 }
