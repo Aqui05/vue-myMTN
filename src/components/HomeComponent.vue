@@ -9,6 +9,9 @@
       <section class="top-bar">
         <TopNav />
       </section>
+      <section  class="top-bar-mobile">
+        <TopNavMobile />
+      </section>
       <!-- Render content based on current route -->
       <section class="main-container-content">
         <router-view />
@@ -22,12 +25,14 @@
 
     import LeftNav from './nav/LeftNav.vue';
     import TopNav from './nav/TopNav.vue';
+import TopNavMobile from './nav/TopNavMobile.vue';
   
   export default {
     name: 'home',
     components: {
         LeftNav,
-        TopNav
+        TopNav,
+        TopNavMobile
     },
   }
   </script>
@@ -81,6 +86,12 @@
     padding: 0px 2%;
   }
 
+  .top-bar-mobile {
+  display: none;
+  width: 100%;
+  top: 0;
+}
+
   .main-container-content {
     padding: 40px 60px;
     left: 250px;
@@ -94,6 +105,36 @@
     .left-bar {
       display: none;
     }
-}    
+    .top-bar {
+      display: none;
+  }
+  .main-container-content {
+    padding: 40px 60px;
+    left: 0px;
+    /* top: 0; */
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .top-bar-mobile {
+    display: block;
+  }
+}   
+
+
+@media screen and (max-width: 600px) {
+  .main-container-content {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .main-container-content {
+        margin-top: 60px;
+    }
+}
+
+
 
   </style>
