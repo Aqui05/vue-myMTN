@@ -134,7 +134,7 @@
 
   </script>
   
-  <style>
+  <style scoped>
  .nav-tabs .nav-link.active {
     color: #000 !important;
     font-weight: 500 !important;

@@ -183,6 +183,7 @@ h1, h2, h3, h4, h5, strong {
         flex: 0 0 25%;
         padding-left: 15px;
         padding-right: 15px;
+        max-width: 25%;
     }
 }
 

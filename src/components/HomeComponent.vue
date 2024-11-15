@@ -121,7 +121,6 @@ export default {
   
 
   .main-container-content {
-    padding: 40px 60px;
     left: 0px;
     /* top: 0; */
     width: 100%;
@@ -143,7 +142,7 @@ export default {
 
 @media screen and (max-width: 600px) {
   .main-container-content {
-        padding: 15px;
+        padding: 0 15px;
     }
 }
 

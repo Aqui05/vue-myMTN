@@ -92,7 +92,7 @@
 </script>
 
 
-<style>
+<style scoped>
     .row {
     display: -ms-flexbox;
     display: -webkit-box;

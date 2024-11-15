@@ -74,7 +74,7 @@
   </template>
 
 <script> import LeftNav from './LeftNav.vue'; export default { name: 'TopNavMobile', components: { LeftNav }, data() { return { isLeftNavVisible: false }; }, methods: { toggleLeftNav() { this.isLeftNavVisible = !this.isLeftNavVisible; if (this.isLeftNavVisible) { document.addEventListener('click', this.handleClickOutside); } else { document.removeEventListener('click', this.handleClickOutside); } }, handleClickOutside(event) { if (!this.$el.contains(event.target)) { this.isLeftNavVisible = false; document.removeEventListener('click', this.handleClickOutside); } } }, beforeDestroy() { document.removeEventListener('click', this.handleClickOutside); } } </script>
-<style>
+<style scoped>
 
 @media screen and (max-width: 600px) {
     #main_header {

@@ -90,5 +90,10 @@ h1, h2, h3, h4, h5, strong {
     margin-bottom: 30px;
 }
 
+@media (max-width: 768px) {
+    .consommation-content {
+        padding: 0 15px;
+    }
+}
 
 </style>

@@ -53,6 +53,7 @@ import Infos from '../main/Infos.vue';
         flex: 0 0 25%;
         padding-right: 15px;
         padding-left: 15px;
+        min-width: 10%;
     }
 }
 
@@ -62,7 +63,11 @@ import Infos from '../main/Infos.vue';
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+}
+
+@media (max-width: 768px) {
+    .sim-content {
+        padding: 0 15px;
+    }
 }
 </style>

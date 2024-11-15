@@ -1,6 +1,6 @@
 <template>
     <div class="row site-page v-step-0">
-        <div class="col-md-12" style="margin-left: 15px;">
+        <div class="col-md-12" style="">
             <div class="section-header page-title">
                 <h1 data-v-aaf95958="">Ma consommation</h1>
                 <p class="text-muted font-weight-light">
@@ -88,14 +88,6 @@
 }
 
 
-    @media (min-width: 768px) {
-        .col-md-12 {
-            -ms-flex: 0 0 100%;
-            -webkit-box-flex: 0;
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-    }
 
     .site-page .page-title h1, .site-page .page-title h2 {
     font-size: 24px;
@@ -132,23 +124,13 @@ p {
     margin-bottom: 15px;
 }
 
-@media (min-width: 768px) {
-    .col-md-3 {
-        -ms-flex: 0 0 25%;
-        -webkit-box-flex: 0;
-        flex: 0 0 25%;
-        max-width: 25%;
-        padding-right: 15px;
-    padding-left: 15px;
-    }
-}
 
 .col-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
     padding-right: 15px;
-        padding-left: 15px;
+    padding-left: 15px;
 }
 
 
@@ -235,6 +217,17 @@ a, a:hover {
     font-size: 18px;
     margin-left: 5px;
     fill: #106887;
+}
+
+@media (min-width: 768px) {
+    .col-md-3 {
+        -ms-flex: 0 0 25%;
+        -webkit-box-flex: 0;
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
 
 

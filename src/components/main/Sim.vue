@@ -11,7 +11,7 @@
   
       <div class="col-md-3 service-card">
         <div>
-          <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div class="del-flex">
             <div>
           <h3 class="text-truncate">Activer internet</h3>
           <p class="text-muted">
@@ -30,7 +30,7 @@
   
       <div class="col-md-3 service-card">
         <div>
-          <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div class="del-flex">
             <div>
           <h3 class="text-truncate">Activer internet</h3>
           <p class="text-muted">
@@ -49,7 +49,7 @@
   
       <div class="col-md-3 service-card">
         <div>
-          <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div class="del-flex">
             <div>
           <h3 class="text-truncate">Activer internet</h3>
           <p class="text-muted">
@@ -68,7 +68,7 @@
   
       <div class="col-md-3 service-card">
         <div>
-          <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div class="del-flex">
             <div>
           <h3 class="text-truncate">Activer internet</h3>
           <p class="text-muted">
@@ -135,6 +135,8 @@
         padding-right: 15px;
     }
 }
+
+
 
 .section-header h3 {
     font-size: 18px;
@@ -320,6 +322,11 @@ h1, h2, h3, h4, h5, strong {
   .service-card h3, .service-card p {
     margin-top: 0px;
     margin-bottom: .5rem;
+  }
+  .del-flex {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
   }
 }
 

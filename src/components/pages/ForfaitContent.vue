@@ -22,4 +22,12 @@ import ServiceContent from '../forfait/ServiceContent.vue';
   }
   </script>
   
+
+  <style scoped>
+  @media (max-width: 768px) {
+    .forfait-content {
+        padding: 0 15px;
+    }
+}
+</style>
   
