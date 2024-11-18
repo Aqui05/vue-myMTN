@@ -1,28 +1,36 @@
 <!--Home component-->
+
 <template>
   <div class="container">
     <section class="left-bar" :style="{ display: isLeftNavVisible ? 'block' : 'none' }">
       <LeftNav />
     </section>
+
     <section class="left-bar bureau">
       <LeftNav />
     </section>
-    <div class="main-container" :class="{ 'dimmed': isLeftNavVisible }"> 
-      <section class="top-bar"> 
-        <TopNav /> 
-      </section> 
-      <section class="top-bar-mobile"> 
-        <TopNavMobile /> 
-      </section> <!-- Render content based on current route --> 
-      <section class="main-container-content"> 
-        <router-view /> 
-      </section> 
+
+    <div class="main-container" :class="{ 'overlay-active': isLeftNavVisible }">
+      <section class="top-bar">
+        <TopNav />
+      </section>
+
+      <section class="top-bar-mobile">
+        <TopNavMobile @search-clicked="showSearchComponent" />
+      </section>
+
+      <section class="main-container-content">
+        <router-view v-if="!isSearchVisible" />
+        <SearchComponent v-if="isSearchVisible" />
+      </section>
+
+      <div v-if="isLeftNavVisible" class="overlay"></div>
     </div>
   </div>
 </template>
 
-
 <script>
+import SearchComponent from '@/components/pages/SearchComponent.vue';
 import LeftNav from './nav/LeftNav.vue';
 import TopNav from './nav/TopNav.vue';
 import TopNavMobile from './nav/TopNavMobile.vue';
@@ -32,23 +40,52 @@ export default {
   components: {
     LeftNav,
     TopNav,
-    TopNavMobile
+    TopNavMobile,
+    SearchComponent
   },
   data() {
     return {
-      isLeftNavVisible: false
+      isLeftNavVisible: false,
+      isSearchVisible: false
     };
   },
   methods: {
     toggleLeftNav() {
       this.isLeftNavVisible = !this.isLeftNavVisible;
+    },
+
+    showSearchComponent() {
+      this.isSearchVisible = true;
+    },
+    hideSearchComponent() {
+      this.isSearchVisible = false;
     }
-  }
+  },
+  watch: {
+    $route() {
+      this.hideSearchComponent();
+    }
+  },
 }
 </script>
 
 
   <style>
+
+.overlay { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: #000; 
+  z-index: 10; 
+} 
+
+.main-container.overlay-active { 
+  position: relative;
+}
+
   .main-container.dimmed { opacity: 0.5;}
   .container {
     height: 100vh;

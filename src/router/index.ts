@@ -7,6 +7,7 @@ import ProfilContent from '@/components/pages/ProfilContent.vue'
 import SimContent from '@/components/pages/SimContent.vue'
 import HomeComponent from '@/components/HomeComponent.vue'
 import MainContent from '@/components/pages/MainContent.vue'
+import SearchComponent from '@/components/pages/SearchComponent.vue'
 
 const routes = [
   //principal
@@ -50,6 +51,11 @@ const routes = [
       { path: '/', redirect: '/acceuil', },
     ]
   },
+  {
+    path: '/search',
+    name: 'search',
+    component: SearchComponent,
+  }  
 ]
 
 const router = createRouter({
