@@ -18,5 +18,13 @@
 
 <style scoped>
 
+    .col-md-12 {
+
+    } 
+
+    .page-title {
+
+    }
+
 
 </style>
