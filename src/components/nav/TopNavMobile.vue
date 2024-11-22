@@ -18,11 +18,13 @@
       </div>
       <div class="w-100 d-flex justify-content-between flex-wrap">
         <div id="main_header_left">
-          <div data-v-3da57f56="" class="header-balance">
-            <div data-v-3da57f56="" class="header-balance-container">
-              <i data-v-3da57f56="" class="kgk-mtn-BW_Icons_MTNBusiness_Mobility_4" style="background-color: rgb(253, 224, 199);"></i>
-              <div data-v-3da57f56="" class="header-balance-details">
-                <span data-v-3da57f56="" style="color: rgb(211, 103, 9);">0 FCFA</span>
+          <div class="header-balance">
+            <div class="header-balance-container" style="display: flex; flex-wrap: wrap; align-content: center; align-items: center; justify-content: flex-start;  gap: 15px;">
+              <div class="svg-container">
+                <svg style="position: relative; top: 3px; left: 0px; fill: black; width: 30px; height: 30px;" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#e8eaed"><path d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v720q0 33-23.5 56.5T680-40H280Zm0-200v120h400v-120H280Zm200 100q17 0 28.5-11.5T520-180q0-17-11.5-28.5T480-220q-17 0-28.5 11.5T440-180q0 17 11.5 28.5T480-140ZM280-320h400v-400H280v400Zm0-480h400v-40H280v40Zm0 560v120-120Zm0-560v-40 40Z"/></svg>
+              </div>
+              <div class="header-balance-details">
+                <span style="color: rgb(211, 103, 9);">0 FCFA</span>
                 <span data-v-3da57f56="">Solde principal</span>
               </div>
             </div>
@@ -235,46 +237,29 @@
     vertical-align: middle;
     min-width: 120px;
     position: relative;
-    padding-left: 60px;
 }
-@media screen and (max-width: 600px) {
     .header-balance {
         background: #fff;
         display: block !important;
         width: 100%;
-        padding: 10px 10px 10px 60px;
+        padding: 10px 10px 10px 10px;
         border-radius: 6px;
         margin-bottom: 5px !important;
         -webkit-box-shadow: 0 4px 6px rgba(54, 64, 73, .2);
         box-shadow: 0 4px 6px rgba(54, 64, 73, .2);
         border-radius: 8px;
     }
-}
 
-@media screen and (max-width: 600px) {
-    .header-balance-container svg {
-        width: 40px;
-        height: 40px;
-        font-size: 24px;
-        left: 10px;
-        line-height: 40px;
-        top: 10px;
-    }
-}
-
-.header-balance-container svg {
+.header-balance-container .svg-container {
     display: block;
-    width: 50px;
     background: #ffeea9;
-    height: 50px;
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
     font-size: 35px;
-    position: absolute;
-    top: -4px;
-    left: 0;
     line-height: 50px;
+    width: 50px;
+    height: 50px;
 }
 
 
