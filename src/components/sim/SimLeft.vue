@@ -23,7 +23,7 @@
           <h3 class="text-truncate">PUK</h3>
           <p class="text-muted">Récupérer mon code PUK</p>
           <div class="service-card-bottom">
-            <button class="btn btn-secondary ripple">
+            <button class="btn btn-secondary ripple" @click="openPukModal">
               <span class="float-left">Afficher</span>
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
             </button>
@@ -123,10 +123,10 @@
 
 
     
-        <div v-if="isModalOpen" @click.self="closeSimModal">
+          <div v-if="isModalOpen" class="modal-backdrop" @click.self="closeSimModal">
     <div class="modal fade show" style="display: block;" aria-hidden="false">
   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
+    <div class="modal-content modal-content1">
       <header class="b-sidebar-header d-flex justify-content-between align-items-center p-3" style="background: #ffcc01;
   padding: 15px 20px !important;">
         <strong>Infos 61255118</strong>
@@ -199,10 +199,44 @@
             </table>
       </div>
     </div>
+
   </div>
 </div>
 </div>
 
+
+
+
+
+ <!-- Modal PUK   -->
+ <div v-if="isModalPUKOpen" class="modal-backdrop" @click.self="closePukModal">
+ <div class="modal fade show" style="display: block;" aria-hidden="false">
+      <div class="modal-dialog modal-md modal-dialog-centered" style="display: flex;align-items: flex-start;align-content: center; gap: 10px;">
+        <div class="modal-content modal-content2">
+          <header class="modal-header">
+            <h5 class="modal-title">Récupérer mon code PUK</h5>
+          </header>
+          <div class="modal-body">
+            <div class="text-center">
+              <div class="modal-header-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M634-320q-14 0-24-10t-10-24v-132q0-14 10-24t24-10h6v-40q0-33 23.5-56.5T720-640q33 0 56.5 23.5T800-560v40h6q14 0 24 10t10 24v132q0 14-10 24t-24 10H634Zm46-200h80v-40q0-17-11.5-28.5T720-600q-17 0-28.5 11.5T680-560v40ZM280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v160h-80v-40H280v480h400v-40h80v160q0 33-23.5 56.5T680-40H280Zm0-120v40h400v-40H280Zm0-640h400v-40H280v40Zm0 0v-40 40Zm0 640v40-40Z"/></svg>
+                <h3>Code PUK</h3>
+                <p class="text-muted">Veuillez cliquer sur le bouton ci-dessous pour afficher votre code PUK.</p>
+              </div>
+              <div class="mt-2 mb-2">
+                <button type="button" class="btn btn-primary">Afficher</button>
+              </div>
+            </div>
+          </div>
+        </div>
+         <button type="button" class="close text-dark" aria-label="Close" @click="closePukModal">
+          <svg viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+              </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 
   </template>
 
@@ -210,8 +244,10 @@
 import { ref } from 'vue';
 
 export default {
+
   setup() {
     const isModalOpen = ref(false);
+    const isModalPUKOpen = ref(false);
 
     const openSimModal = () => {
       isModalOpen.value = true;
@@ -221,7 +257,15 @@ export default {
       isModalOpen.value = false;
     };
 
-    return { isModalOpen, openSimModal, closeSimModal };
+    const openPukModal = () => {
+      isModalPUKOpen.value = true;
+    };
+
+    const closePukModal = () => {
+      isModalPUKOpen.value = false;
+    };
+
+    return { isModalOpen, openSimModal, closeSimModal, isModalPUKOpen, openPukModal, closePukModal  };
   }
 };
 </script>
@@ -425,7 +469,19 @@ h1, h2, h3, h4, h5, strong {
   fill: #106887;
 }
 
-.modal-content {
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(224, 207, 207, 0.5);
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content1 {
   position: fixed;
   left: 0px;
   width: 40%; 
@@ -435,7 +491,7 @@ h1, h2, h3, h4, h5, strong {
 }
 
 @media(max-width:600px) {
-  .modal-content {
+  .modal-content1 {
     position: fixed;
     left: 0px;
     top: 42%;
