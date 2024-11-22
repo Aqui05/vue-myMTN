@@ -127,7 +127,7 @@
     align-content: center;
     justify-content: flex-start;
     align-items: stretch;
-    gap: 20px;
+    gap: 15px;
 }
 
   .user-infos {
