@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="section-header">
-          <h3 data-v-888c8962="">Forfaits</h3>
+          <h3>Forfaits</h3>
           <p class="text-muted font-weight-light">
             Sélectionner le forfait que tu souhaites activer
           </p>
@@ -14,8 +14,63 @@
 
     <div class="row">
       <div  class="col-md-3 service-card">
-        <div >
-          <h3  class="text-truncate">Wabaa</h3>
+        <div>
+          <div class="mobile-align">
+            <h3  class="text-truncate">Wabaa</h3>
+          <svg class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+          
+          </div>
+          <p  class="text-muted"></p>
+          <div  class="service-card-bottom">
+            <button  class="btn btn-secondary ripple">
+              <span  class="float-left">Afficher</span>
+              <svg class="float-right" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div  class="col-md-3 service-card">
+        <div>
+          <div class="mobile-align">
+            <h3  class="text-truncate">Internet</h3>
+          <svg class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+          
+          </div>
+          <p  class="text-muted"></p>
+          <div  class="service-card-bottom">
+            <button  class="btn btn-secondary ripple">
+              <span  class="float-left">Afficher</span>
+              <svg class="float-right" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div  class="col-md-3 service-card">
+        <div>
+          <div class="mobile-align">
+            <h3  class="text-truncate">Yellow game</h3>
+          <svg class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+          
+          </div>
+          <p  class="text-muted"></p>
+          <div  class="service-card-bottom">
+            <button  class="btn btn-secondary ripple">
+              <span  class="float-left">Afficher</span>
+              <svg class="float-right" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div  class="col-md-3 service-card">
+        <div>
+          <div class="mobile-align">
+            <h3  class="text-truncate">Maxi</h3>
+          <svg class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+          
+          </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
             <button  class="btn btn-secondary ripple">
@@ -28,46 +83,11 @@
 
       <div  class="col-md-3 service-card">
         <div >
-          <h3  class="text-truncate">Internet</h3>
-          <p  class="text-muted"></p>
-          <div  class="service-card-bottom">
-            <button  class="btn btn-secondary ripple">
-              <span  class="float-left">Afficher</span>
-              <svg class="float-right" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-            </button>
+          <div class="mobile-align">
+            <h3  class="text-truncate">Go Pack</h3>
+          <svg class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+          
           </div>
-        </div>
-      </div>
-
-      <div  class="col-md-3 service-card">
-        <div >
-          <h3  class="text-truncate">Yellow Game</h3>
-          <p  class="text-muted"></p>
-          <div  class="service-card-bottom">
-            <button  class="btn btn-secondary ripple">
-              <span  class="float-left">Afficher</span>
-              <svg class="float-right" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div  class="col-md-3 service-card">
-        <div >
-          <h3  class="text-truncate">MaXi</h3>
-          <p  class="text-muted"></p>
-          <div  class="service-card-bottom">
-            <button  class="btn btn-secondary ripple">
-              <span  class="float-left">Afficher</span>
-              <svg class="float-right" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div  class="col-md-3 service-card">
-        <div >
-          <h3  class="text-truncate">GoPack</h3>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
             <button  class="btn btn-secondary ripple">
@@ -93,6 +113,7 @@
 
 
 <style scoped>
+
     .row {
     display: -ms-flexbox;
     display: -webkit-box;
@@ -247,6 +268,35 @@ h1, h2, h3, h4, h5, strong {
     padding-right: 15px;
 }
 
+
+@media (min-width: 600px) {
+  .svg-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .svg-mobile {
+    display: block;
+    fill: #106887;
+  }
+
+  .service-card-bottom {
+    display: none;
+  }
+
+  .mobile-align {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .service-card > * {
+    height: 77px;
+  }
+}
 
 
 

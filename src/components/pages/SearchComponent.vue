@@ -1,5 +1,5 @@
 <template>
-    <div class="col-md-12 page-title mb-4 d-flex align-items-center">
+    <div class="col-md-12 page-title mb-4 d-flex align-items-center" style="margin-top: 2rem;">
     <div class="input-group w-100 mb-3 position-relative">
         <input type="text" placeholder="Rechercher un service" class="form-control">
         <button type="button" class="btn search-button d-flex align-items-center text-center">
@@ -126,7 +126,7 @@ button, input {
   margin-left: -18px !important;
   position: absolute;
   right: 0;
-  top: 0 ;
+  top: 1px;
   background-color: #fc0 !important;
   z-index: 1000 !important;
   align-content: center;
