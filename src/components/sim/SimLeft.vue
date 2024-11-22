@@ -127,7 +127,8 @@
     <div class="modal fade show" style="display: block;" aria-hidden="false">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <header class="b-sidebar-header d-flex justify-content-between align-items-center p-3">
+      <header class="b-sidebar-header d-flex justify-content-between align-items-center p-3" style="background: #ffcc01;
+  padding: 15px 20px !important;">
         <strong>Infos 61255118</strong>
         <button type="button" class="close text-dark" aria-label="Close" @click="closeSimModal">
           <svg viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
@@ -435,13 +436,14 @@ h1, h2, h3, h4, h5, strong {
 
 @media(max-width:600px) {
   .modal-content {
-  position: fixed;
-  left: 0px;
-  top: 50%;
-  width: 100%; 
-  height: auto; 
-  overflow-y: 
-  scroll; height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 42%;
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+    /* height: 50%; */
+    bottom: 0px;
 }
 
 }
