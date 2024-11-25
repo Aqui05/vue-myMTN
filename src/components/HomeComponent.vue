@@ -2,6 +2,7 @@
 
 <template>
   <div class="contaner">
+    <!-- Section de LeftNav avec visibilité conditionnelle -->
     <section class="left-bar" :style="{ display: isLeftNavVisible ? 'block' : 'none' }">
       <LeftNav />
     </section>
@@ -10,7 +11,7 @@
       <LeftNav />
     </section>
 
-    <div class="main-container" :class="{ 'overlay-active': isLeftNavVisible }">
+    <div class="main-container">
       <section class="top-bar">
         <TopNav />
       </section>
@@ -23,8 +24,6 @@
         <router-view v-if="!isSearchVisible" />
         <SearchComponent v-if="isSearchVisible" />
       </section>
-
-      <div v-if="isLeftNavVisible" class="overlay"></div>
     </div>
   </div>
 </template>
@@ -70,19 +69,12 @@ export default {
 </script>
 
 
+
   <style>
 
-.overlay { 
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%; 
-  background-color: #000; 
-  z-index: 10; 
-} 
 
-.main-container.overlay-active { 
+
+.main-container ,.overlay-active { 
   position: relative;
 }
 
@@ -180,7 +172,7 @@ export default {
 
 @media screen and (max-width: 600px) {
   .main-container-content {
-        padding: 0 15px;
+        padding: 0px;
     }
 }
 

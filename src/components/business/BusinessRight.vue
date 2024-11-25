@@ -100,6 +100,7 @@ h1, h2, h3, h4, h5, strong {
     fill: #000;
     height: 50px;
     width: 50px;
+    padding-bottom: 10px;
 }
 
 .message {

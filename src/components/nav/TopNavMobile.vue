@@ -10,6 +10,9 @@
         </button>
         <router-link to="/search" class="router-link">  </router-link> 
       </div>
+            <!-- Overlay visible uniquement si isLeftNavVisible est vrai --> 
+             <div class="overlay" v-if="isLeftNavVisible"></div>
+
       <div id="main_header_welcome">
         <div class="text-truncate">Y'ello 
           <span class="ml-1">AQUILAS OLUWATOBI ELISEE</span>
@@ -114,6 +117,17 @@
   } 
 </script>
 <style scoped>
+
+.overlay {
+  position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgb(163 163 163 / 50%);
+    z-index: 11;
+    width: 100%;
+}
+
 
 @media screen and (max-width: 600px) {
     #main_header {

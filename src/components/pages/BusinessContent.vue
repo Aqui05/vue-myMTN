@@ -41,7 +41,7 @@ import BusinessLeft from '../business/BusinessLeft.vue';
     margin-bottom: 1.5rem !important;
 }
 
-.site-page .page-title h1, .site-page .page-title h2 {
+.page-title h1, .page-title h2 {
     font-size: 24px;
     margin: 0;
 }
@@ -94,6 +94,26 @@ h1, h2, h3, h4, h5, strong {
 @media (max-width: 768px) {
     .business-content {
         padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .site-page, .page-title h1, .site-page, .page-title h2 {
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .site-page, .page-title p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-header p {
+        font-size: 14px;
+        line-height: 18px;
     }
 }
 
