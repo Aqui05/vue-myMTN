@@ -91,6 +91,10 @@ padding-right: 15px;
   padding-left: 15px;
 }
 
+.sim-section {
+  margin: 3px;
+}
+
   
 }
 

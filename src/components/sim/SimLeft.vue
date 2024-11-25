@@ -474,7 +474,7 @@ h1, h2, h3, h4, h5, strong {
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(224, 207, 207, 0.5);
+  background: rgb(51 51 51 / 50%);
   z-index: 1050;
   display: flex;
   justify-content: center;

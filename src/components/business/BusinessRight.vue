@@ -6,16 +6,20 @@
       <div  class="d-flex justify-content-between">
         <div >
           <h2  class="font-bold mb-0">Liste des factures</h2>
-          <p  class="m-0 font-12">
+          <p  class="m-0 font-12" v-show="!collapses['ListeFacture']">
             Veuillez cocher les factures que vous souhaitez payer
           </p>
         </div>
+        <div class="chevron-parent d-flex align-items-center justify-content-center" @click="toggleCollapse('ListeFacture')">
+              <svg :class="{'rotate': !collapses['ListeFacture']}" 
+              style="font-size: 24px !important; width: 15px; height: 15px;" width="157px" height="157px" viewBox="0 0 1024.00 1024.00" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M106.666667 659.2L172.8 725.333333 512 386.133333 851.2 725.333333l66.133333-66.133333L512 256z" fill="#000*"></path></g></svg>    
+            </div>
       </div>
     </div>
     <!-- Content for Liste des factures -->
     <div >
       <div >
-        <div   class="py-4 text-center">
+        <div   class="py-4 text-center" v-show="!collapses['ListeFacture']">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M170-74q-57.12 0-96.56-39.44Q34-152.88 34-210v-152h316v85h260v-85h316v152q0 57.12-39.44 96.56Q847.13-74 790-74H170Zm270-293v-80h80v80h-80ZM34-452v-157q0-57.13 39.44-96.56Q112.88-745 170-745h108v-80q0-57.13 39.44-96.56Q356.88-961 414-961h132q57.13 0 96.56 39.44Q682-882.13 682-825v80h108q57.13 0 96.56 39.44Q926-666.13 926-609v157H610v-85H350v85H34Zm380-293h132v-80H414v80Z"/></svg>
             <div class="px-2 message"> 
             Aucune facture disponible
@@ -25,6 +29,8 @@
     </div>
   </div>
 
+
+
   <div class="b2b-details-box">
     <!-- Header for Mini relevé de compte -->
     <div class="b2b-details-box-header">
@@ -32,12 +38,16 @@
         <div class="d-flex align-items-center justify-content-between flex-wrap">
           <h2 class="font-bold mb-0">Mini relevé de compte</h2>
         </div>
+        <div class="chevron-parent d-flex align-items-center justify-content-center" @click="toggleCollapse('MiniReleve')">
+              <svg :class="{'rotate': !collapses['MiniReleve']}" 
+              style="font-size: 24px !important; width: 15px; height: 15px;" width="157px" height="157px" viewBox="0 0 1024.00 1024.00" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M106.666667 659.2L172.8 725.333333 512 386.133333 851.2 725.333333l66.133333-66.133333L512 256z" fill="#000*"></path></g></svg>    
+            </div>
       </div>
     </div>
     <!-- Content for Mini relevé de compte -->
     <div>
       <div>
-        <div  class="py-4 text-center">
+        <div  class="py-4 text-center" v-show="!collapses['MiniReleve']">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M170-74q-57.12 0-96.56-39.44Q34-152.88 34-210v-152h316v85h260v-85h316v152q0 57.12-39.44 96.56Q847.13-74 790-74H170Zm270-293v-80h80v80h-80ZM34-452v-157q0-57.13 39.44-96.56Q112.88-745 170-745h108v-80q0-57.13 39.44-96.56Q356.88-961 414-961h132q57.13 0 96.56 39.44Q682-882.13 682-825v80h108q57.13 0 96.56 39.44Q926-666.13 926-609v157H610v-85H350v85H34Zm380-293h132v-80H414v80Z"/></svg>
           <div  class="px-2 message">
             Aucune relevé disponible
@@ -53,11 +63,61 @@
 <script>
           export default {
     name: 'BusinessRight',
+    data() {
+    return {
+      collapses: {
+        MiniReleve: true,
+        ListeFacture: true
+      }
+    };
+  },
+  methods: {
+
+    toggleCollapse(section) {
+      this.collapses[section] = !this.collapses[section];
+    }
+  }
   }
 </script>
 
 
 <style scoped>
+
+.font-12 {
+    font-size: 12px !important;
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+
+.rotate {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+
+.chevron-parent {
+    border: 2px solid #ccc !important;
+    height: 30px !important;
+    width: 30px !important;
+    border-radius: 50% !important;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.align-items-center {
+    -ms-flex-align: center !important;
+    -webkit-box-align: center !important;
+    align-items: center !important;
+}
+.justify-content-center {
+    -ms-flex-pack: center !important;
+    -webkit-box-pack: center !important;
+    justify-content: center !important;
+}
+
+
+
  .sidebar-card {
     overflow: hidden !important;
 }

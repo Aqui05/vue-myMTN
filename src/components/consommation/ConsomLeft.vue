@@ -135,9 +135,25 @@
   </script>
   
   <style scoped>
+
+.tab-content>.tab-pane {
+    display: block;
+}
  .nav-tabs .nav-link.active {
     color: #000 !important;
     font-weight: 500 !important;
+}
+
+.nav-tabs .nav-link.active:after {
+    content: "";
+    position: absolute !important;
+    left: 0;
+    bottom: -10px;
+    background: #000 !important;
+    height: 4px !important;
+    width: 100% !important;
+    -webkit-transition: .3s !important;
+    transition: .3s !important;
 }
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {

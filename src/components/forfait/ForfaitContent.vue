@@ -102,10 +102,11 @@
 </div>
 
 
-<div v-if="isModalOpen" id="bundle_sidebar_yellow_game" class="modal-backdrop b-sidebar shadow b-sidebar-right bg-light text-dark" tabindex="-1" role="dialog" aria-modal="true"  aria-labelledby="bundle_sidebar_yellow_game___title__" @click.self="closePukModal">
+<div v-if="isModalOpen" id="bundle_sidebar_yellow_game" class="modal-backdrop" tabindex="-1" role="dialog" aria-modal="true"  aria-labelledby="bundle_sidebar_yellow_game___title__">
+<div class="b-sidebar shadow b-sidebar-right bg-light text-dark">
 
 <header class="b-sidebar-header">
-  <button type="button" aria-label="Close" class="close text-dark">
+  <button type="button" aria-label="Close" class="close text-dark"  @click="closeModal">
     <svg
       viewBox="0 0 16 16"
       width="1em"
@@ -454,6 +455,7 @@
   </div>
 </div>
 </div>
+</div>
 
 </template>
 <script>
@@ -748,6 +750,7 @@ h1, h2, h3, h4, h5, strong {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    width: 100%;
 }
 .b-sidebar-header {
     background: #ffcc01;
@@ -785,9 +788,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     justify-content: center;
     display: flex;
     border: none;
-}
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-    cursor: pointer;
 }
 
 .b-icon.bi {
@@ -1137,7 +1137,7 @@ label input:checked~.bundle-mode-icon {
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(224, 207, 207, 0.5);
+  background: rgb(51 51 51 / 50%);
   z-index: 1050;
   display: flex;
   justify-content: center;

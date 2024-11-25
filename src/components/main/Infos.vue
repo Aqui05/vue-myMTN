@@ -12,8 +12,8 @@
               </div>
             </div>
             <div>
-              <button
-               
+              <button 
+                @click="openSimModal"
                 type="button"
                 class="btn btn-outline-secondary w-100 rounded-pill"
               >
@@ -36,11 +36,110 @@
       <div class="v-tour">
       </div>
     </div>
+
+
+        
+    <div v-if="isModalOpen" class="modal-backdrop" @click.self="closeSimModal">
+    <div class="modal fade show" style="display: block;" aria-hidden="false">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content modal-content1">
+      <header class="b-sidebar-header d-flex justify-content-between align-items-center p-3" style="background: #ffcc01;
+  padding: 15px 20px !important;">
+        <strong>Infos 61255118</strong>
+        <button type="button" class="close text-dark" aria-label="Close" @click="closeSimModal">
+          <svg viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+              </svg>
+        </button>
+      </header>
+      <div class="modal-body">
+        <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td class="font-weight-bold">Numéro</td>
+                  <td>61255118</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Date d'enregistrement</td>
+                  <td>01-10-2024 à 16:19</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Nom</td>
+                  <td>AQUILAS OLUWATOBI ELISEE</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Prénom</td>
+                  <td>KIKISSAGBE</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Occupation</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Commune</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Ville</td>
+                  <td>cotonou</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Quartier</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Naissance</td>
+                  <td>20-02-2005</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Lieu Naissance</td>
+                  <td>kouti-karo</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Pièce</td>
+                  <td>Autre</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">N° Pièce</td>
+                  <td>20276401733524</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Lieu de délivrance</td>
+                  <td>ANIP</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Maison</td>
+                  <td>KIKISSAGBE</td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
   </template>
   
   <script>
+  import { ref } from 'vue';
   export default {
     name: 'Infos',
+
+    setup() {
+    const isModalOpen = ref(false);
+
+    const openSimModal = () => {
+      isModalOpen.value = true;
+    };
+
+    const closeSimModal = () => {
+      isModalOpen.value = false;
+    };
+
+
+    return { isModalOpen, openSimModal, closeSimModal };
+  }
   };
   </script>
   
@@ -159,6 +258,41 @@ button {
 }
 
 
+
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgb(51 51 51 / 50%);
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content1 {
+  position: fixed;
+  left: 0px;
+  width: 40%; 
+  height: auto; 
+  overflow-y: scroll; 
+  height: 100%;
+}
+
+@media(max-width:600px) {
+  .modal-content1 {
+    position: fixed;
+    left: 0px;
+    top: 42%;
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+    /* height: 50%; */
+    bottom: 0px;
+}
+
+}
 
 
 </style>

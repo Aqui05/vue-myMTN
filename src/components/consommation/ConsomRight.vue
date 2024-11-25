@@ -82,6 +82,7 @@
         -ms-flex: 0 0 25%;
         -webkit-box-flex: 0;
         flex: 0 0 25%;
+        min-width: 5%;
     }
 }
 .order-first {
