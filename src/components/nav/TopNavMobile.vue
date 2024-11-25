@@ -19,9 +19,9 @@
       <div class="w-100 d-flex justify-content-between flex-wrap">
         <div id="main_header_left">
           <div class="header-balance">
-            <div class="header-balance-container" style="display: flex; flex-wrap: wrap; align-content: center; align-items: center; justify-content: flex-start;  gap: 15px;">
+            <div class="header-balance-container" style="display: flex; flex-wrap: wrap; align-content: center; align-items: center; justify-content: flex-start;  gap: 10px;">
               <div class="svg-container">
-                <svg style="position: relative; top: 3px; left: 0px; fill: black; width: 30px; height: 30px;" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#e8eaed"><path d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v720q0 33-23.5 56.5T680-40H280Zm0-200v120h400v-120H280Zm200 100q17 0 28.5-11.5T520-180q0-17-11.5-28.5T480-220q-17 0-28.5 11.5T440-180q0 17 11.5 28.5T480-140ZM280-320h400v-400H280v400Zm0-480h400v-40H280v40Zm0 560v120-120Zm0-560v-40 40Z"/></svg>
+                <svg style="position: relative; top: 3px; left: 0px; fill: black; width: 20px; height: 20px;" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#e8eaed"><path d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v720q0 33-23.5 56.5T680-40H280Zm0-200v120h400v-120H280Zm200 100q17 0 28.5-11.5T520-180q0-17-11.5-28.5T480-220q-17 0-28.5 11.5T440-180q0 17 11.5 28.5T480-140ZM280-320h400v-400H280v400Zm0-480h400v-40H280v40Zm0 560v120-120Zm0-560v-40 40Z"/></svg>
               </div>
               <div class="header-balance-details">
                 <span style="color: rgb(211, 103, 9);">0 FCFA</span>
@@ -204,20 +204,8 @@
     display: flex !important;
 }
 
-@media screen and (max-width: 600px) {
-    #main_header_left {
-        background: transparent;
-        padding: 0;
-        border-radius: 0;
-        margin-bottom: -80px;
-        position: relative;
-        z-index: 10;
-        width: 100%;
-    }
-}
 
 #main_header_left {
-    padding-top: 13px;
     float: left;
 }
 
@@ -225,13 +213,7 @@
     margin-right: 60px;
 }
 
-@media screen and (max-width: 600px) {
-    #main_header_left>div {
-        min-width: auto;
-        margin: 0;
-        padding-right: 0;
-    }
-}
+
 #main_header_left>div {
     display: inline-block;
     vertical-align: middle;
@@ -251,15 +233,18 @@
     }
 
 .header-balance-container .svg-container {
-    display: block;
-    background: #ffeea9;
+    display: flex;
+    background-color: rgb(253, 224, 199);
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
     font-size: 35px;
     line-height: 50px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 
@@ -268,11 +253,6 @@
     top: 0;
 }
 
-@media screen and (max-width: 600px) {
-    .header-balance-details span:first-child {
-        font-size: 16px;
-    }
-}
 
 .header-balance-details span:first-child {
     font-weight: 700;
@@ -282,11 +262,7 @@
     display: block;
 }
 
-@media screen and (max-width: 600px) {
-    .header-balance-details span:last-child {
-        font-size: 12px;
-    }
-}
+
 
 .header-balance-details span:last-child {
     font-weight: lighter;
@@ -302,13 +278,6 @@
     display: none;
 }
 
-@media screen and (max-width: 600px) {
-    .mtn-separator {
-        position: relative;
-        top: 30px;
-        display: block;
-    }
-}
 
 .mtn-separator svg {
     fill: #ffcc01;
@@ -321,5 +290,44 @@ svg {
     overflow: hidden;
 }
 
+@media screen and (max-width: 600px) {
+    .header-balance-details span:first-child {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header-balance-details span:last-child {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mtn-separator {
+        position: relative;
+        top: 30px;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #main_header_left>div {
+        min-width: auto;
+        margin: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #main_header_left {
+        background: transparent;
+        padding: 0;
+        border-radius: 0;
+        margin-bottom: -80px;
+        position: relative;
+        z-index: 10;
+        width: 100%;
+    }
+}
 
 </style>

@@ -260,7 +260,7 @@ export default {
     const openPukModal = () => {
       isModalPUKOpen.value = true;
     };
-
+    
     const closePukModal = () => {
       isModalPUKOpen.value = false;
     };

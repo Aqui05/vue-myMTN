@@ -5,9 +5,8 @@
         <div>
           <div>
             <div class="sidebar-sim-line" style="">
-              <i class="kgk-mtn-sim-card"></i>
-              <div style="    display: flex; flex-wrap: wrap; align-content: center; align-items: stretch;">
-                <img src="@/assets/carte-sim.png" alt="carte" style="width: 20px;"> 
+              <div style="    display: flex; flex-wrap: wrap; align-content: center; align-items: center;">
+                <img src="@/assets/carte-sim.png" alt="carte" style="width: 20px; height: 20px;"> 
                 <span>61255118</span>
                 <img src="@/assets/facebook-verified.png" alt="facebook-certified">
               </div>

@@ -1,7 +1,7 @@
 <!--Home component-->
 
 <template>
-  <div class="container">
+  <div class="contaner">
     <section class="left-bar" :style="{ display: isLeftNavVisible ? 'block' : 'none' }">
       <LeftNav />
     </section>
@@ -87,7 +87,8 @@ export default {
 }
 
   .main-container.dimmed { opacity: 0.5;}
-  .container {
+  
+  .contaner {
     height: 100vh;
   }
 
