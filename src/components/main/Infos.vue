@@ -39,7 +39,7 @@
 
 
         
-    <div v-if="isModalOpen" class="modal-backdrop" @click.self="closeSimModal">
+    <div v-if="isModalOpen" class="modal-backdrop" @click.stop="closeSimModal">
     <div class="modal fade show" style="display: block;" aria-hidden="false">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content modal-content1">

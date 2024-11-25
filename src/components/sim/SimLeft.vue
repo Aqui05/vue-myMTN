@@ -209,7 +209,7 @@
 
 
  <!-- Modal PUK   -->
- <div v-if="isModalPUKOpen" class="modal-backdrop" @click.self="closePukModal">
+ <div v-if="isModalPUKOpen" class="modal-backdrop" @click="closePukModal">
  <div class="modal fade show" style="display: block;" aria-hidden="false">
       <div class="modal-dialog modal-md modal-dialog-centered" style="display: flex;align-items: flex-start;align-content: center; gap: 10px;">
         <div class="modal-content modal-content2">
