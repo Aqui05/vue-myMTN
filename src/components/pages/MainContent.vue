@@ -54,6 +54,13 @@ export default {
   flex-wrap: wrap;
 }
 
+.main-container, .left-container {
+height: 100%;
+overflow: hidden;
+padding-right: 15px;
+}
+
+
 @media (min-width: 768px) {
   .col-md-9 {
       -ms-flex: 0 0 75%;
@@ -69,16 +76,25 @@ export default {
       -webkit-box-flex: 0;
       flex: 0 0 25%;
       padding-right: 15px;
-padding-left: 15px;
+      padding-left: 15px;
   }
+  
+  .main-container{
+    padding: 15px;
+  }
+
+
 }
 
-.main-container, .left-container {
-height: 100%;
-overflow: hidden;
-padding-right: 15px;
-padding-left: 15px;
+@media (max-width: 768px) {
+  .main-content {
+  padding-left: 15px;
 }
+
+  
+}
+
+
 
 
 

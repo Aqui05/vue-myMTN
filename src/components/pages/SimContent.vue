@@ -1,12 +1,12 @@
 <template>
-    <div class="sim-content row">
+    <div class="sim-content roww">
         <div class="col-md-12 page-title">
             <h1>Gérer ma carte SIM</h1>
             <p class="text-muted">
                 Opérations et paramétrages pour carte SIM
             </p>
         </div>
-        <div class="container-section row">
+        <div class="container-section roww">
           <div class="left-container col-md-9">
                   <SimLeft />
           </div>
@@ -57,7 +57,7 @@ import Infos from '../main/Infos.vue';
     }
 }
 
-.row {
+.roww {
     display: -ms-flexbox;
     display: -webkit-box;
     display: flex;
