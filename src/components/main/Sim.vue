@@ -22,7 +22,8 @@
           <div class="service-card-bottom">
             <button class="btn btn-secondary ripple">
               <span class="float-left">Afficher</span>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
+              
+              <i class="mdi mdi-arrow-right float-right"></i>
             </button>
           </div>
         </div>
@@ -41,7 +42,26 @@
           <div class="service-card-bottom">
             <button class="btn btn-secondary ripple">
               <span class="float-left">Afficher</span>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
+              <i class="mdi mdi-arrow-right float-right"></i>
+             </button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-3 service-card">
+        <div>
+          <div class="del-flex">
+            <div>
+          <h3 class="text-truncate">Activer internet</h3>
+          <p class="text-muted">
+            Recevoir les paramètres internet
+          </p></div>
+          <svg class="sim-svg" style="fill: #106887;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M694-466H212v-28h482L460-728l20-20 268 268-268 268-20-20 234-234Z"/></svg>
+        </div>
+          <div class="service-card-bottom">
+            <button class="btn btn-secondary ripple">
+              <span class="float-left">Afficher</span>
+              <i class="mdi mdi-arrow-right float-right"></i>
             </button>
           </div>
         </div>
@@ -60,26 +80,7 @@
           <div class="service-card-bottom">
             <button class="btn btn-secondary ripple">
               <span class="float-left">Afficher</span>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-md-3 service-card">
-        <div>
-          <div class="del-flex">
-            <div>
-          <h3 class="text-truncate">Activer internet</h3>
-          <p class="text-muted">
-            Recevoir les paramètres internet
-          </p></div>
-          <svg class="sim-svg" style="fill: #106887;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M694-466H212v-28h482L460-728l20-20 268 268-268 268-20-20 234-234Z"/></svg>
-        </div>
-          <div class="service-card-bottom">
-            <button class="btn btn-secondary ripple">
-              <span class="float-left">Afficher</span>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
+              <i class="mdi mdi-arrow-right float-right"></i>
             </button>
           </div>
         </div>
@@ -92,8 +93,7 @@
           target="_self"
         >
           <span>Voir plus</span>
-          <svg class="mdi mdi-arrow-right" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m556-258-38-39 158-158H180v-54h496L518-667l38-39 224 224-224 224Z"/></svg>
-            
+          <i class="mdi mdi-arrow-right"></i> 
         </a>
       </div>
     </div>
@@ -123,7 +123,9 @@
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    width: 100%;
 }
+
 
 @media (min-width: 768px) {
     .col-md-12 {
@@ -186,7 +188,7 @@ h1, h2, h3, h4, h5, strong {
 }
 
 .btn {
-    border-radius: 30px !important;
+  border-radius: 30px !important;
     font-size: 14px;
     font-family: MTNBrighterSans-Medium, Century Gothic, Arial, sans-serif;
     font-weight: 500;
@@ -234,19 +236,11 @@ h1, h2, h3, h4, h5, strong {
 }
 
 .service-card .service-card-bottom .btn {
-    vertical-align: middle;
+  vertical-align: middle;
     width: 100%;
     border-radius: 0 !important;
     font-weight: 400;
     border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5% 3%;
 }
 
 .ripple {

@@ -6,9 +6,9 @@
           <div>
             <div class="sidebar-sim-line" style="">
               <div style="    display: flex; flex-wrap: wrap; align-content: center; align-items: center;">
-                <img src="@/assets/carte-sim.png" alt="carte" style="width: 20px; height: 20px;"> 
+                <i class="kgk-mtn-sim-card"></i>
                 <span>61255118</span>
-                <img src="@/assets/facebook-verified.png" alt="facebook-certified">
+                <i class="kgk-mtn-verified ml-1" style="color: rgb(20, 182, 237);"></i>
               </div>
             </div>
             <div>
@@ -152,6 +152,10 @@
     }
 }
 
+.ml-1, .mx-1 {
+    margin-left: .25rem !important;
+}
+
 .sidebar-card {
     background: #fff;
     padding: 20px;
@@ -184,6 +188,16 @@ h1, h2, h3, h4, h5, strong {
     border-left: none;
     border-right: none;
     margin-bottom: 15px;
+}
+
+.sidebar-sim-line>i {
+    font-size: 22px;
+    width: 18px;
+}
+
+.sidebar-sim-line>* {
+    vertical-align: middle;
+    display: inline-block;
 }
 
 
@@ -255,6 +269,10 @@ button, input, optgroup, select, textarea {
 }
 button {
     border-radius: 0;
+}
+
+.btn:hover {
+  color: #ffcc01;
 }
 
 

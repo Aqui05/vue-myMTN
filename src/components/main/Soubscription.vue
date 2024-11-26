@@ -8,7 +8,7 @@
                 </p>
             </div>
         </div>
-            <div class="subscriptions-card" style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-between; width: 100%;">
+            
                 <div class="col-md-6 subscription-card">
                 <div>
                     <div class="subscription-card-title">
@@ -76,7 +76,7 @@
                     </button>
                 </div>
             </div>
-            </div>
+            
     </div>
 </template>
 
@@ -90,6 +90,16 @@
 <style scoped>
     .mt-3, .my-3 {
     margin-top: 1rem !important;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 @media (min-width: 768px) {

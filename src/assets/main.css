@@ -1,4 +1,13 @@
 @import './base.css';
+@import './mdi/css/materialdesignicons.css';
+/*@import './mdi/css/materialdesignicons.css.map';*/
+@import './mdi/css/materialdesignicons.min.css';
+/*@import './mdi/css/materialdesignicons.min.css.map';*/
+/*@import './mdi/fonts/materialdesignicons-webfont.ttf';*/
+/*@import './mdi/scss/materialdesignicons.scss';
+@import './mdi/scss/_icons.scss';*/
+/*@import '/src/assets/fonts/mtn-icon-font.svg';*/
+@import '/src/assets/fonts/kgk/style.css';
 
 #app {
   width: 100%;

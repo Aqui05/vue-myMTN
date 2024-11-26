@@ -15,9 +15,9 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeComponent,
-    children: [ 
+    children: [
       {
-        path: '/acceuil',
+        path: '/accueil',
         name: 'accueil',
         component: MainContent,
       },

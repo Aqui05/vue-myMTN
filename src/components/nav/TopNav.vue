@@ -4,8 +4,7 @@
       <div id="main_header_left">
         <div class="header-balance">
           <div class="header-balance-container">
-            <!-- Utilisez une classe Font Awesome ou une autre bibliothèque d'icônes compatible -->
-            <i class="fas fa-mobile-alt balance-icon" style="background-color: rgb(253, 224, 199);"></i>
+            <i class="kgk-mtn-BW_Icons_MTNBusiness_Mobility_4" style="background-color: rgb(253, 224, 199);"></i>
             <div class="header-balance-details">
               <span class="balance-amount" style="    color: rgb(211, 103, 9);">0 FCFA</span>
               <span class="balance-label">Solde principal</span>

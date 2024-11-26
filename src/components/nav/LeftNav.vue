@@ -15,47 +15,37 @@
         <ul> 
           <li> 
             <router-link to="/accueil" class="router-link"> 
-              <svg xmlns="http://www.w3.org/2000/svg" 
-                x="0px" y="0px" width="100" height="100" 
-                viewBox="0 0 24 24"> 
-                <path d="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 10 21 L 10 14 L 14 14 L 14 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z"></path> 
-              </svg> 
+              <i class="kgk-mtn-home"></i>
               <span>Accueil</span> 
             </router-link> 
           </li> 
           <li> 
             <router-link to="/business" class="router-link"> 
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#e8eaed"> <path d="M0 0h24v24H0zm10 5h4v2h-4zm0 0h4v2h-4z" fill="none"/> 
-                <path d="M10 16v-1H3.01L3 19c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-4h-7v1h-4zm10-9h-4.01V5l-2-2h-4l-2 2v2H4c-1.1 0-2 .9-2 2v3c0 1.11.89 2 2 2h6v-2h4v2h6c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-6 0h-4V5h4v2z"/> 
-              </svg> 
+              <i class="kgk-mtn-BW_Icons_MTNBusiness_4"></i>
               <span>MTN Business</span>
            </router-link> 
           </li> 
           <li> 
             <router-link to="/sim" class="router-link"> 
-              <img src="@/assets/carte-sim.png" alt="carte"> 
+              <i class="kgk-mtn-sim-card"></i>
               <span>Carte SIM</span> 
             </router-link> 
           </li> 
           <li> 
             <router-link to="/forfaits-services" class="router-link"> 
-              <img src="@/assets/iot.png" alt="carte"> 
+              <i class="kgk-mtn-BW_Icons_MTNPlay_Social_4"></i>
               <span>Forfaits &amp; services</span> 
             </router-link> 
           </li> 
           <li> 
             <router-link to="/consommation" class="router-link"> 
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"> 
-                <path d="M120-80v-800l60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60 60 60v800l-60-60-60 60-60-60-60 60-60-60-60 60-60-60-60 60-60-60-60 60-60-60-60 60Zm120-200h480v-80H240v80Zm0-160h480v-80H240v80Zm0-160h480v-80H240v80Z"/> 
-              </svg> 
+              <i class="kgk-mtn-receipt"></i>
               <span>Consommation</span> 
             </router-link> 
           </li> 
           <li> 
             <a href="https://auth.mtn.bj/profile" target="_blank" class="router-link"> 
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"> 
-                <path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/> 
-              </svg> 
+              <i class="kgk-mtn-BW_Icons_MyMTN_4"></i> 
               <span>Profil</span> 
             </a> 
           </li> 
@@ -64,8 +54,8 @@
         <div id="main_left_menu_bottom">
           <div>
             <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M206.78-100.78q-44.3 0-75.15-30.85-30.85-30.85-30.85-75.15v-546.44q0-44.3 30.85-75.15 30.85-30.85 75.15-30.85h277.74v106H206.78v546.44h277.74v106H206.78Zm425.87-152.09L559-328.39 657.61-427H355.48v-106h302.13L559-631.61l73.65-75.52L859.22-480 632.65-252.87Z"/></svg>
-              <span data-v-453dbfae="" class="link">
+              <i class="mdi mdi-logout"></i>
+              <span class="link">
                 Déconnexion
               </span>
             </a>
@@ -90,20 +80,24 @@
   </script>
   
   <style scoped>
-  li svg {
-    width: 20px;
-    height: 20px;
-    fill: black;
-  }
+
+.left-bar>ul li i {
+    position: absolute;
+    font-size: 22px;
+    top: 0;
+    left: 0;
+}
+
+.left-bar>ul li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+}
 
   .router-link-active {
     font-weight: 700 !important;
   }
 
-  li img {
-    width: 20px;
-    height: 20px;
-  }
   .left-bar {
     padding: 60px 30px 30px 30px;
     overflow: hidden;

@@ -46,7 +46,7 @@ export default {
 }
 
 
-.container-section, .consommation-section, .soubscription-section {
+.container-section, .consommation-section, .soubscription-section, .sim-section {
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
