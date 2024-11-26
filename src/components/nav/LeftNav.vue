@@ -1,8 +1,10 @@
 <template>
     <div class="left-bar">
-        <div class="logo">
-            <img src="@/assets/mtn-logo.svg" alt="MTN">
-        </div>
+      <div >
+        <a >
+          <img  width="100" src="@/assets/mtn-logo.svg" alt="MTN">
+        </a>
+      </div>
 
         <div class="user-infos">
             <div class="user-name text-truncate">
@@ -53,7 +55,7 @@
 
         <div id="main_left_menu_bottom">
           <div>
-            <a href="#">
+            <a href="#" style="    display: flex; align-items: center;">
               <i class="mdi mdi-logout"></i>
               <span class="link">
                 Déconnexion
@@ -80,6 +82,19 @@
   </script>
   
   <style scoped>
+
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+img {
+    border-style: none;
+}
 
 .left-bar>ul li i {
     position: absolute;
@@ -139,6 +154,7 @@
 
   .user-number {
     font-size: 14px;
+    font-weight: 300 !important;
   }
   
   .menu-item {
@@ -179,10 +195,9 @@
     transition: .3s;
 }
 
-#main_left_menu_bottom svg {
+#main_left_menu_bottom i {
     font-size: 22px;
     margin-right: 5px;
-    fill: #b81e50;
 }
 
 

@@ -13,7 +13,12 @@
     </div>
 
     <div class="row">
-      <div  class="col-md-3 service-card">
+
+      <div class="skeleton-loader" v-if="loading"> 
+          <div class="skeleton-text"></div> 
+      </div>
+
+      <div  class="col-md-3 service-card" v-else>
         <div>
           <div class="mobile-align">
             <h3  class="text-truncate">Wabaa</h3>
@@ -30,7 +35,11 @@
         </div>
       </div>
 
-      <div  class="col-md-3 service-card">
+      <div class="skeleton-loader" v-if="loading"> 
+          <div class="skeleton-text"></div> 
+      </div>
+      <div v-else  class="col-md-3 service-card">
+        
         <div>
           <div class="mobile-align">
             <h3  class="text-truncate">Internet</h3>
@@ -47,7 +56,10 @@
         </div>
       </div>
 
-      <div  class="col-md-3 service-card">
+      <div class="skeleton-loader" v-if="loading"> 
+          <div class="skeleton-text"></div> 
+      </div>
+      <div v-else class="col-md-3 service-card">
         <div>
           <div class="mobile-align">
             <h3  class="text-truncate">Yellow game</h3>
@@ -64,7 +76,10 @@
         </div>
       </div>
 
-      <div  class="col-md-3 service-card">
+      <div class="skeleton-loader" v-if="loading"> 
+          <div class="skeleton-text"></div> 
+      </div>
+      <div v-else class="col-md-3 service-card">
         <div>
           <div class="mobile-align">
             <h3  class="text-truncate">Maxi</h3>
@@ -81,7 +96,7 @@
         </div>
       </div>
 
-      <div  class="col-md-3 service-card">
+      <div v-if="!loading" class="col-md-3 service-card">
         <div >
           <div class="mobile-align">
             <h3  class="text-truncate">Go Pack</h3>
@@ -488,6 +503,16 @@ export default {
       closeModal, 
       toggleCollapse 
     };
+  },
+  data() {
+    return {
+      loading: true
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false
+    }, 2000)
   }
 };
 </script>
@@ -495,6 +520,32 @@ export default {
 
 
 <style scoped>
+
+
+.skeleton-loader { 
+          -ms-flex: 0 0 25%;
+        -webkit-box-flex: 0;
+        flex: 0 0 25%;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 20px;
+} 
+
+.skeleton-text { 
+  height: 100px;
+  border-radius: 15px; 
+  width: 100%; 
+  background: 
+  linear-gradient(-90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%); 
+  background-size: 200% 200%; 
+  animation: loading 1.5s infinite; 
+} 
+
+@keyframes loading { 
+  0% { background-position: 200% 0; } 
+  100% { background-position: -200% 0; } 
+}
+
 
     .row {
     display: -ms-flexbox;
@@ -549,6 +600,12 @@ h1, h2, h3, h4, h5, strong {
         padding-left: 15px;
         padding-right: 15px;
     }
+}
+
+@media (max-width: 768px) {
+ .skeleton-loader {
+  flex: 0 0 100%;
+ } 
 }
 
 .service-card>* {

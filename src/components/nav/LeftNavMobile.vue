@@ -1,8 +1,10 @@
 <template>
     <div class="left-bar">
-        <div class="logo">
-            <img src="@/assets/mtn-logo.svg" alt="MTN">
-        </div>
+      <div >
+        <a >
+          <img  width="100" src="@/assets/mtn-logo.svg" alt="MTN">
+        </a>
+      </div>
 
         <div class="user-infos">
             <div class="user-name text-truncate">
@@ -53,7 +55,7 @@
 
         <div id="main_left_menu_bottom">
           <div>
-            <a href="#">
+            <a href="#" style="    display: flex; align-items: center;">
               <i class="mdi mdi-logout"></i>
               <span class="link">
                 Déconnexion

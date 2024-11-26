@@ -86,9 +86,9 @@ body {
   scroll-behavior: smooth !important;
   font-family: MTNBrighterSans, Century Gothic, Arial, sans-serif;
   font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  margin: 0;
 }

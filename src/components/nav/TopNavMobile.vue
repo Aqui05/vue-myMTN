@@ -76,7 +76,13 @@
       </div>
     </div>
      <!-- LeftNav component -->
-     <LeftNav v-if="isLeftNavVisible" @click.stop class="animation"/>
+     <transition name="slide">
+      <LeftNav 
+        v-if="isLeftNavVisible" 
+        @click.stop 
+        class="left-nav"
+      />
+    </transition>
   </template>
 
 <script> 
@@ -117,6 +123,22 @@
   } 
 </script>
 <style scoped>
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(-100%);
+}
+
+.slide-enter-to,
+.slide-leave-from {
+  transform: translateX(0);
+}
+
 
 .animation {
   transition: transform 0.3s ease-in-out;

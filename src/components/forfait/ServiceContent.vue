@@ -22,3 +22,25 @@
     name: 'ServiceContent',
   };
 </script>
+
+<style scoped>
+  .section-header h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, strong {
+    font-weight: 700;
+}
+
+.section-header p {
+    font-size: 16px;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+.font-weight-light {
+    font-weight: 300 !important;
+}
+</style>
