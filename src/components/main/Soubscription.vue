@@ -373,4 +373,15 @@ button {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+@media (min-width: 600px) {
+    .subscriptions-card {
+        margin: 0 -15px;
+    }
+
+    .row {
+        width: 100%;
+    }
+    
+}
 </style>

@@ -18,7 +18,7 @@ const routes = [
     children: [ 
       {
         path: '/acceuil',
-        name: 'acceuil',
+        name: 'accueil',
         component: MainContent,
       },
       {
@@ -48,7 +48,7 @@ const routes = [
         name: 'profil',
         component: ProfilContent,
       },
-      { path: '/', redirect: '/acceuil', },
+      { path: '/', redirect: '/accueil', },
     ]
   },
   {

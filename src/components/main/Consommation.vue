@@ -1,6 +1,6 @@
 <template>
     <div class="row site-page v-step-0">
-        <div class="col-md-12" style="">
+            <div class="col-md-12" style="">
             <div class="section-header page-title title1">
                 <h1 data-v-aaf95958="">Ma consommation</h1>
                 <p class="text-muted font-weight-light">
@@ -101,6 +101,7 @@
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    width: 100%;
 }
 
 
