@@ -635,6 +635,7 @@ h1, h2, h3, h4, h5, strong {
     font-size: 14px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
