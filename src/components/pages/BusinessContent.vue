@@ -3,7 +3,10 @@
         <div class="section-header page-title mb-4">
             <h1>Aperçu de votre compte</h1>
             <div class="account-number mt-2">
-                <div>
+                <div class="skeleton-loader" v-if="loading"> 
+                    <div class="skeleton-text"></div> 
+                </div>
+                <div v-else>
                     <span>Numéro de compte: </span>
                     <span><b></b></span>
                 </div>
@@ -32,11 +35,40 @@ import BusinessLeft from '../business/BusinessLeft.vue';
         BusinessRight,
         BusinessLeft
     },
+    data() {
+    return {
+      loading: true
+    }
+  },
+    mounted() {
+    setTimeout(() => {
+      this.loading = false
+    }, 2000)
+  
+  }
   }
 
   </script>
   
   <style scoped>
+
+.skeleton-loader { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; 
+  padding: 10px; 
+} 
+
+.skeleton-text { 
+  height: 30px; 
+  width: 50%; 
+  background: 
+  linear-gradient(-90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%); 
+  background-size: 200% 200%; 
+  animation: loading 1.5s infinite; 
+} 
+
+
     .mb-4, .my-4 {
     margin-bottom: 1.5rem !important;
 }

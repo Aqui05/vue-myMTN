@@ -11,7 +11,8 @@
             
                 <div class="col-md-6 subscription-card">
                 <div>
-                    <div class="subscription-card-title">
+                    <div class="title-skeleton"  v-if="loading"></div>
+                    <div v-else class="subscription-card-title">
                         <div>
                             <span class="text-muted">INTERNET</span>
                         </div>
@@ -23,22 +24,27 @@
                         </div>
                     </div>
                     
-                    <div class="text-muted text-truncate">
+                    <div class="text-skeleton"  v-if="loading"></div>
+                    <div v-else class="text-muted text-truncate">
                         150F/120Mo/24h
                     </div>
                     
-                    <div class="description">
+                    <div class="description-skeleton"  v-if="loading"></div>
+                    <div v-else class="description">
                         150F/120Mo/24h actif. Restant 87 Mo valable jusqu au 13-11-24 20:27:26.Activez vos forfaits sans frais par MoMo
                     </div>
                     
                     <div>
-                        <div class="custom-control custom-switch b-custom-control-md">
+                        <div class="input-skeleton"  v-if="loading"></div>
+                        <div v-else class="custom-control custom-switch b-custom-control-md">
                             <input type="checkbox" class="custom-control-input" value="true" id="__BVID__76">
                             <label class="custom-control-label" for="__BVID__76"></label>
                         </div>
                     </div>
                     
-                    <button title="Reconduire" class="btn btn-outline-secondary renew-bundle-btn">
+
+                    <div class="reload-skeleton"  v-if="loading"></div>
+                    <button v-else title="Reconduire" class="btn btn-outline-secondary renew-bundle-btn">
                         <svg class="mdi mdi-reload" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M483-178q-124.23 0-212.11-87.84-87.89-87.84-87.89-212T270.89-692q87.88-90 212.11-90 73 0 136 36t104 94v-130h54v242H535v-54h162q-33-59-89.5-93.5T483-722q-103 0-174.5 71T237-478q0 103 71.5 174.5T483-232q78 0 141.5-44.5T713-396h56q-27 97-106 157.5T483-178Z"/></svg>
                     </button>
                 </div>
@@ -46,7 +52,8 @@
            
            <div class="col-md-6 subscription-card">
                 <div>
-                    <div class="subscription-card-title">
+                    <div class="title-skeleton"  v-if="loading"></div>
+                    <div v-else class="subscription-card-title">
                         <div>
                             <span class="text-muted">INTERNET</span>
                         </div>
@@ -57,21 +64,26 @@
                         </div>
                     </div>
                     
-                    <div class="text-muted text-truncate">
+                    <div class="text-skeleton"  v-if="loading"></div>
+                    <div v-else class="text-muted text-truncate">
                         4000F/3700Mo/20J 
                     </div>
                     
-                    <div class="description">
+                    <div class="description-skeleton"  v-if="loading"></div>
+                    <div v-else class="description">
                         4000F/3700Mo/20J actif. Restant 0 Mo valable jusqu au 24-11-24 20:53:24.Activez vos forfaits sans frais par MoMo.
                     </div>
                     
                     <div>
-                        <div class="custom-control custom-switch b-custom-control-md">
+                        <div class="input-skeleton"  v-if="loading"></div>
+                        <div v-else class="custom-control custom-switch b-custom-control-md">
                             <input type="checkbox" class="custom-control-input" value="true" id="__BVID__79">
                             <label class="custom-control-label" for="__BVID__79"></label>
                         </div>
                     </div>
-                    <button title="Reconduire" class="btn btn-outline-secondary renew-bundle-btn">
+
+                    <div class="reload-skeleton"  v-if="loading"></div>
+                    <button v-else title="Reconduire" class="btn btn-outline-secondary renew-bundle-btn">
                         <svg class="mdi mdi-reload" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M483-178q-124.23 0-212.11-87.84-87.89-87.84-87.89-212T270.89-692q87.88-90 212.11-90 73 0 136 36t104 94v-130h54v242H535v-54h162q-33-59-89.5-93.5T483-722q-103 0-174.5 71T237-478q0 103 71.5 174.5T483-232q78 0 141.5-44.5T713-396h56q-27 97-106 157.5T483-178Z"/></svg>
                     </button>
                 </div>
@@ -82,12 +94,83 @@
 
 <script>
     export default {
-        name: 'Soubscription'
+        name: 'Soubscription',
+        data() {
+    return {
+      loading: true
+    }
+  },
+  mounted() {
+    // Simulez le chargement des données
+    setTimeout(() => {
+      this.loading = false
+    }, 2000) // Chargement pendant 2 secondes
+  
+  }
     }
 </script>
 
 
 <style scoped>
+
+.reload-skeleton, .title-skeleton, .description-skeleton, .input-skeleton, .text-skeleton { 
+  background: 
+  linear-gradient(-90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%); 
+  background-size: 200% 200%; 
+  animation: loading 1.5s infinite; 
+  margin-bottom: 5px;
+} 
+
+.reload-skeleton {
+    border-radius: 30px !important;
+    font-size: 14px;
+    font-weight: 500;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.description-skeleton {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    display: -webkit-box;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    -webkit-line-clamp: 4 !important;
+    line-clamp: 4;
+    height: 50px;
+    /* position: absolute; */
+    bottom: 15px;
+    /* width: 64%; */
+    margin-top: 13px;
+}
+
+.text-skeleton {
+    height: 15px;
+}
+
+.title-skeleton {
+    height: 20px;
+}
+
+.input-skeleton {
+    height: 10px;
+}
+
+@keyframes loading { 
+  0% { background-position: 200% 0; } 
+  100% { background-position: -200% 0; } 
+}
+
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+  
     .mt-3, .my-3 {
     margin-top: 1rem !important;
 }
@@ -183,6 +266,7 @@ h1, h2, h3, h4, h5, strong {
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
     -webkit-line-clamp: 4 !important;
+    line-clamp: 4;
 }
 
 .subscription-card .custom-control {
@@ -358,6 +442,7 @@ button, input, optgroup, select, textarea {
 }
 [type=button], [type=reset], [type=submit], button {
     -webkit-appearance: button;
+    appearance: button;
 }
 button, select {
     text-transform: none;

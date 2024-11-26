@@ -3,7 +3,7 @@
 <template>
   <div class="contaner">
     <!-- Section de LeftNav avec visibilité conditionnelle -->
-    <section class="left-bar" :style="{ display: isLeftNavVisible ? 'block' : 'none' }">
+    <section class="left-bar animation" :style="{ display: isLeftNavVisible ? 'block' : 'none' }">
       <LeftNav />
     </section>
 
@@ -92,12 +92,20 @@ export default {
     width: 250px;
     position: fixed;
     z-index: 20;
-    -webkit-transition: -webkit-transform .3s ease-in-out;
-    transition: -webkit-transform .3s ease-in-out;
-    transition: transform .3s ease-in-out;
-    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    transition: transform .15s ease-in-out;
     overflow: hidden;
   }
+
+  section {
+    transition: transform .15s ease-in-out,
+  }
+
+  .animation {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
 
 
   .main-container {

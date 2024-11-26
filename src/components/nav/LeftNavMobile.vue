@@ -98,6 +98,7 @@
   .left-bar {
     padding: 60px 30px 30px 30px;
     overflow: hidden;
+    transition: transform .15s ease-in-out,
   }
 
   .left-bar ul {

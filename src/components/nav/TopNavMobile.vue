@@ -76,7 +76,7 @@
       </div>
     </div>
      <!-- LeftNav component -->
-     <LeftNav v-if="isLeftNavVisible" @click.stop />
+     <LeftNav v-if="isLeftNavVisible" @click.stop class="animation"/>
   </template>
 
 <script> 
@@ -117,6 +117,10 @@
   } 
 </script>
 <style scoped>
+
+.animation {
+  transition: transform 0.3s ease-in-out;
+}
 
 .overlay {
   position: fixed;

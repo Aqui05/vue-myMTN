@@ -165,10 +165,30 @@
 
 <style scoped>
 
-.skeleton-loader { display: flex; flex-direction: column; gap: 10px; padding: 10px; } .skeleton-text { height: 20px; width: 100%; background: linear-gradient(-90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%); background-size: 200% 200%; animation: loading 1.5s infinite; } @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+.skeleton-loader { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; 
+  padding: 10px; 
+} 
+
+.skeleton-text { 
+  height: 20px; 
+  width: 100%; 
+  background: 
+  linear-gradient(-90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%); 
+  background-size: 200% 200%; 
+  animation: loading 1.5s infinite; 
+} 
+
+@keyframes loading { 
+  0% { background-position: 200% 0; } 
+  100% { background-position: -200% 0; } 
+}
 
     @media (min-width: 768px) {
     .col-md-3 {
+        flex: 0 0 25%;
         -ms-flex: 0 0 25%;
         -webkit-box-flex: 0;
     }
@@ -274,6 +294,7 @@ h1, h2, h3, h4, h5, strong {
 
 [type=button], [type=reset], [type=submit], button {
     -webkit-appearance: button;
+    appearance: button;
 }
 button, input, optgroup, select, textarea {
     font-family: inherit;

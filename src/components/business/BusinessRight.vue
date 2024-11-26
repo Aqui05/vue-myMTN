@@ -10,26 +10,31 @@
             Veuillez cocher les factures que vous souhaitez payer
           </p>
         </div>
-        <div class="chevron-parent d-flex align-items-center justify-content-center" @click="toggleCollapse('ListeFacture')">
-              <svg :class="{'rotate': !collapses['ListeFacture']}" 
-              style="font-size: 24px !important; width: 15px; height: 15px;" width="157px" height="157px" viewBox="0 0 1024.00 1024.00" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M106.666667 659.2L172.8 725.333333 512 386.133333 851.2 725.333333l66.133333-66.133333L512 256z" fill="#000*"></path></g></svg>    
-            </div>
-      </div>
+        <div class="chevron-parent d-flexx align-items-center justify-content-center" @click="toggleCollapse('ListeFacture')">
+          <i :class="{'mdi mdi-chevron-right': !collapses['ListeFacture'], 'mdi mdi-chevron-down': collapses['ListeFacture']}" class="chevron-icon" style="font-size: 24px !important;"></i>
+        </div>
+        </div>
     </div>
     <!-- Content for Liste des factures -->
     <div >
       <div >
-        <div   class="py-4 text-center" v-show="!collapses['ListeFacture']">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M170-74q-57.12 0-96.56-39.44Q34-152.88 34-210v-152h316v85h260v-85h316v152q0 57.12-39.44 96.56Q847.13-74 790-74H170Zm270-293v-80h80v80h-80ZM34-452v-157q0-57.13 39.44-96.56Q112.88-745 170-745h108v-80q0-57.13 39.44-96.56Q356.88-961 414-961h132q57.13 0 96.56 39.44Q682-882.13 682-825v80h108q57.13 0 96.56 39.44Q926-666.13 926-609v157H610v-85H350v85H34Zm380-293h132v-80H414v80Z"/></svg>
-            <div class="px-2 message"> 
+
+        <div class="py-4 text-center" :class="{ 'd-none': isMobile && collapses['ListeFacture'], 'd-block': !isMobile || !collapses['ListeFacture'] }">
+
+          <div class="skeleton-loader" v-if="loading"> 
+              <div class="skeleton-text" v-for="n in 5" :key="n"></div> 
+        </div>
+        <div v-else>
+          <i class="mdi icon mdi-briefcase-variant"></i>
+          <div class="px-2 message"> 
             Aucune facture disponible
           </div>
+        </div>
+            
         </div>
       </div>
     </div>
   </div>
-
-
 
   <div class="b2b-details-box">
     <!-- Header for Mini relevé de compte -->
@@ -38,20 +43,26 @@
         <div class="d-flex align-items-center justify-content-between flex-wrap">
           <h2 class="font-bold mb-0">Mini relevé de compte</h2>
         </div>
-        <div class="chevron-parent d-flex align-items-center justify-content-center" @click="toggleCollapse('MiniReleve')">
-              <svg :class="{'rotate': !collapses['MiniReleve']}" 
-              style="font-size: 24px !important; width: 15px; height: 15px;" width="157px" height="157px" viewBox="0 0 1024.00 1024.00" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M106.666667 659.2L172.8 725.333333 512 386.133333 851.2 725.333333l66.133333-66.133333L512 256z" fill="#000*"></path></g></svg>    
-            </div>
+        <div class="chevron-parent d-flexx align-items-center justify-content-center" @click="toggleCollapse('MiniReleve')">
+          <i :class="{'mdi mdi-chevron-right': !collapses['MiniReleve'], 'mdi mdi-chevron-down': collapses['MiniReleve']}" class="chevron-icon" style="font-size: 24px !important;"></i>
+        </div>
       </div>
     </div>
     <!-- Content for Mini relevé de compte -->
     <div>
       <div>
-        <div  class="py-4 text-center" v-show="!collapses['MiniReleve']">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M170-74q-57.12 0-96.56-39.44Q34-152.88 34-210v-152h316v85h260v-85h316v152q0 57.12-39.44 96.56Q847.13-74 790-74H170Zm270-293v-80h80v80h-80ZM34-452v-157q0-57.13 39.44-96.56Q112.88-745 170-745h108v-80q0-57.13 39.44-96.56Q356.88-961 414-961h132q57.13 0 96.56 39.44Q682-882.13 682-825v80h108q57.13 0 96.56 39.44Q926-666.13 926-609v157H610v-85H350v85H34Zm380-293h132v-80H414v80Z"/></svg>
+        <div  class="py-4 text-center" :class="{ 'd-none': isMobile && collapses['MiniReleve'], 'd-block': !isMobile || !collapses['MiniReleve'] }">
+
+          <div class="skeleton-loader" v-if="loading"> 
+              <div class="skeleton-text" v-for="n in 5" :key="n"></div> 
+        </div>
+          <div v-else>
+            <i class="mdi icon mdi-briefcase-variant"></i>
           <div  class="px-2 message">
             Aucune relevé disponible
           </div>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -68,20 +79,77 @@
       collapses: {
         MiniReleve: true,
         ListeFacture: true
-      }
+      },
+      loading: true,
+      isMobile: window.innerWidth <= 600
     };
   },
+  computed: {
+    isMobile() {
+      return window.innerWidth <= 600;
+    }
+  },
   methods: {
-
     toggleCollapse(section) {
       this.collapses[section] = !this.collapses[section];
+    },
+  handleResize() {
+      this.isMobile = window.innerWidth <= 600;
+      if (!this.isMobile) {
+        this.collapses.ListeFacture = false; // Affiche le contenu par défaut sur les grands écrans
+        this.collapses.MiniReleve = false; // Affiche le contenu par défaut sur les grands écrans
+      } else {
+        this.collapses.ListeFacture = true; // Masque le contenu par défaut sur les mobiles
+        this.collapses.MiniReleve = true; // Masque le contenu par défaut sur les mobiles
+      }
     }
+  },
+  mounted() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize(); // Vérifie la taille de l'écran au montage
+    setTimeout(() => {
+      this.loading = false;
+    }, 2000);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.handleResize);
   }
   }
 </script>
 
 
 <style scoped>
+
+.chevron-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.chevron-icon.mdi-chevron-down {
+  transform: rotate(0deg);
+}
+
+
+
+.skeleton-loader { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; 
+  padding: 10px; 
+} 
+
+.skeleton-text { 
+  height: 20px; 
+  width: 100%; 
+  background: 
+  linear-gradient(-90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%); 
+  background-size: 200% 200%; 
+  animation: loading 1.5s infinite; 
+} 
+
+@keyframes loading { 
+  0% { background-position: 200% 0; } 
+  100% { background-position: -200% 0; } 
+}
 
 .font-12 {
     font-size: 12px !important;
@@ -93,8 +161,9 @@
 
 .rotate {
   transform: rotate(90deg);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
+
 
 
 .chevron-parent {
@@ -237,6 +306,20 @@ h1, h2, h3, h4, h5, strong {
     position: relative;
     padding: 5px 0;
     margin: 0;
+}
+
+.d-flexx {
+    display: -ms-flexbox !important;
+    display: -webkit-box !important;
+    display: flex !important;
+  }
+
+@media (min-width : 600px) {
+  .d-flexx {
+    display: -ms-flexbox !important;
+    display: -webkit-box !important;
+    display: none !important;
+  }
 }
 
 </style>
