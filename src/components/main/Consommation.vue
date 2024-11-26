@@ -8,36 +8,62 @@
                 </p>
             </div>
         </div>
+
         <div class="col-md-3 col-6 infos-card text-center NumCard1">
-            <div>
-                <i class="kgk-mtn-BW_Icons_MyMTN_Voice_4"></i>
-                <span class="text-muted">Appels</span>
-                <div >00:00:00</div>
-                <span class="text-muted font-12">0 FCFA</span>
-            </div>
-        </div>
+    <div>
+        <div  class="i-skeleton"  v-if="loading"></div>
+      <i v-else class="kgk-mtn-BW_Icons_MyMTN_Voice_4"></i>
+      
+      <div  class="span-skeleton"  v-if="loading"></div>
+      <span v-else class="text-muted">Appels</span>
+      
+      <div  class="div-skeleton"  v-if="loading"></div>
+      <div v-else>00:00:00</div>
+      
+      <div v-if="loading"></div>
+      <span v-else class="text-muted font-12">0 FCFA</span>
+    </div>
+  </div>
+  
+  <div class="col-md-3 col-6 infos-card text-center">
+    <div>
+      <div  class="i-skeleton"  v-if="loading"></div>
+      <i v-else class="kgk-mtn-BW_Icons_MyMTN_SMS_4"></i>
+      
+      <div  class="span-skeleton"  v-if="loading"></div>
+      <span v-else class="text-muted">SMS</span>
+      
+      <div  class="div-skeleton"  v-if="loading"></div>
+      <div v-else>0</div>
+
+      <div v-if="loading"></div>
+      <span v-else class="text-muted font-12">0 FCFA</span>
+    </div>
+  </div>
+        
         <div class="col-md-3 col-6 infos-card text-center">
             <div>
-                <i class="kgk-mtn-BW_Icons_MyMTN_SMS_4"></i>
-                <span class="text-muted">SMS</span>
-                <div>0</div>
-                <span class="text-muted font-12">0 FCFA</span>
-            </div>
-        </div><div class="col-md-3 col-6 infos-card text-center">
-            <div>
-                <i class="kgk-mtn-BW_Icons_MTNPlay_Social_4"></i>
-                <span class="text-muted">Autres</span>
-                <div>0 FCFA</div>
-                <span class="text-muted font-12"></span>
+                <div  class="i-skeleton"  v-if="loading"></div>
+                <i v-else class="kgk-mtn-BW_Icons_MTNPlay_Social_4"></i>
+
+                <div  class="span-skeleton"  v-if="loading"></div>
+                <span v-else class="text-muted">Autres</span>
+
+                <div  class="div-skeleton"  v-if="loading"></div>
+                <div v-else>0 FCFA</div>
             </div>
     </div>
-    
+   
     <div class="col-md-3 col-6 infos-card text-center">
         <div>
-            <i class="kgk-mtn-BW_Icons_MyMTN_Data_4"></i>
-            <span class="text-muted">Internet</span>
-            <div>1.17 GB</div>
-            <span class="text-muted font-12"></span>
+            <div  class="i-skeleton"  v-if="loading"></div>
+            <i v-else class="kgk-mtn-BW_Icons_MyMTN_Data_4"></i>
+
+            <div  class="span-skeleton"  v-if="loading"></div>
+            <span v-else class="text-muted">Internet</span>
+
+            <div  class="div-skeleton"  v-if="loading"></div>
+            <div v-else>1.17 GB</div>
         </div>
     </div>
     
@@ -58,12 +84,70 @@
 
 <script>
     export default {
-        name: 'Consommation'
+        name: 'Consommation',
+        data() {
+    return {
+      loading: true
+    }
+  },
+  mounted() {
+    // Simulez le chargement des données
+    setTimeout(() => {
+      this.loading = false
+    }, 2000) // Chargement pendant 2 secondes
+  }
     }
 </script>
 
 
 <style scoped>
+
+.span-skeleton { 
+    height: 20px; 
+    width: 100%; 
+    background: linear-gradient(
+        -90deg,
+        #f0f0f0 0%, 
+        #e0e0e0 50%, 
+        #f0f0f0 100%); 
+        background-size: 200% 200%; 
+        animation: loading 1.5s infinite; 
+    } 
+    .div-skeleton { 
+    height: 20px; 
+    width: 100%; 
+    background: linear-gradient(
+        -90deg,
+        #f0f0f0 0%, 
+        #e0e0e0 50%, 
+        #f0f0f0 100%); 
+        background-size: 200% 200%; 
+        animation: loading 1.5s infinite; 
+    } 
+
+    .i-skeleton { 
+        width: 32px;
+        display: block;
+        height: 32px;
+        margin: 0 auto;
+        border-radius: 50%;
+        line-height: 32px;
+        font-size: 22px;
+        background: linear-gradient(
+            -90deg,
+            #f0f0f0 0%, 
+            #e0e0e0 50%, 
+            #f0f0f0 100%); 
+        background-size: 200% 200%; 
+        animation: loading 1.5s infinite;
+    } 
+
+    
+@keyframes loading { 
+    0% { background-position: 200% 0; } 
+    100% { background-position: -200% 0; } 
+}
+
 @media screen and (min-width: 600px) {
  .title1 {
     margin-left: 5px;

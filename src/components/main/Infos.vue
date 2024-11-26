@@ -2,7 +2,11 @@
     <div id="home_side_bar" class="col-md-3" style="padding: 0;">
       <div class="sidebar-card v-step-1">
         <h3>Infos carte SIM</h3>
-        <div>
+        <div class="skeleton-loader" v-if="loading"> 
+          <div class="skeleton-text" v-for="n in 3" :key="n"></div> 
+        </div>
+
+        <div v-else>
           <div>
             <div class="sidebar-sim-line" style="">
               <div style="    display: flex; flex-wrap: wrap; align-content: center; align-items: center;">
@@ -28,9 +32,12 @@
       
       <div id="other_sim_widget" class="sidebar-card v-step-2">
         <h3>Mes autres numéros</h3>
-        <div>
-          <div></div>
+
+        <div class="skeleton-loader" v-if="loading"> 
+          <div class="skeleton-text" v-for="n in 3" :key="n"></div> 
         </div>
+        <div v-else></div>
+
       </div>
       
       <div class="v-tour">
@@ -139,12 +146,27 @@
 
 
     return { isModalOpen, openSimModal, closeSimModal };
+  },
+
+  data() {
+    return {
+      loading: true
+    }
+  },
+  mounted() {
+    // Simulez le chargement des données
+    setTimeout(() => {
+      this.loading = false
+    }, 2000) // Chargement pendant 2 secondes
   }
   };
   </script>
   
 
 <style scoped>
+
+.skeleton-loader { display: flex; flex-direction: column; gap: 10px; padding: 10px; } .skeleton-text { height: 20px; width: 100%; background: linear-gradient(-90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%); background-size: 200% 200%; animation: loading 1.5s infinite; } @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
     @media (min-width: 768px) {
     .col-md-3 {
         -ms-flex: 0 0 25%;
