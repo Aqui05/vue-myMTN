@@ -20,8 +20,8 @@
             <div>
               <h2 class="font-bold mb-0">Consommation du compte</h2>
             </div>
-            <div class="chevron-parent d-flex align-items-center justify-content-center" @click="toggleCollapse('consommationServices')">
-              <svg :class="{'rotate': !collapses['consommationServices']}" 
+            <div class="chevron-parent d-flex align-items-center justify-content-center" @click="toggleCollapse('consommationCompte')">
+              <svg :class="{'rotate': !collapses['consommationCompte']}" 
               style="font-size: 24px !important; width: 15px; height: 15px;" width="157px" height="157px" viewBox="0 0 1024.00 1024.00" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M106.666667 659.2L172.8 725.333333 512 386.133333 851.2 725.333333l66.133333-66.133333L512 256z" fill="#000*"></path></g></svg>    
             </div>
           </div>
