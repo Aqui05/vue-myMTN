@@ -244,11 +244,7 @@ address, dl, ol, ul {
     border-top: none;
 }
 
-.table td, .table th {
-    padding: .75rem;
-    vertical-align: top;
-    border-top: 1px solid #dee2e6;
-}
+
 .table:nth-last-of-type(odd) tr {
     border-bottom: 0 solid transparent !important;
 }
@@ -456,7 +452,6 @@ address, dl, ol, ul {
 .table td, .table th {
     padding: .75rem;
     vertical-align: top;
-    border-top: 1px solid #dee2e6;
 }
 td {
     vertical-align: middle !important;
@@ -512,11 +507,7 @@ table {
 .bill-details-table td, .bill-details-table th {
     border-top: none;
 }
-.table td, .table th {
-    padding: .75rem;
-    vertical-align: top;
-    border-top: 1px solid #dee2e6;
-}
+
 th {
     text-align: inherit;
     text-align: -webkit-match-parent;
