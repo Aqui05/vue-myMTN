@@ -9,8 +9,8 @@
         <div v-else>
           <div>
             <div class="sidebar-sim-line" style="">
-              <div style="    display: flex; flex-wrap: wrap; align-content: center; align-items: center;">
-                <i class="kgk-mtn-sim-card"></i>
+              <div style=" display: flex; flex-wrap: wrap; align-content: center; align-items: center;">
+                <i class="side-icon kgk-mtn-sim-card"></i>
                 <span>61255118</span>
                 <i class="kgk-mtn-verified ml-1" style="color: rgb(20, 182, 237);"></i>
               </div>
@@ -190,6 +190,16 @@
   
 
 <style scoped>
+
+.side-icon {
+    font-size: 22px;
+    width: 18px;
+}
+
+.sidebar-sim-line>* {
+    vertical-align: middle;
+    display: inline-block;
+}
 
 .skeleton-loader { 
   display: flex; 

@@ -1043,6 +1043,20 @@ button.close {
     overflow-x: hidden;
     overflow-y: auto;
 }
+/* Base Modal Styles */
+/* .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+    z-index: 1050;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+ */
 .modal {
     position: fixed;
     top: 0;
@@ -1054,15 +1068,17 @@ button.close {
     overflow: hidden;
     outline: 0;
 }
-.fade {
-    -webkit-transition: opacity .15s linear;
-    transition: opacity .15s linear;
+
+
+.modal.show {
+    display: block;
+    opacity: 1;
 }
 
-.modal-backdrop {
+
+ .modal-backdrop {
     opacity: .5;
 }
-
 .modal-backdrop {
     position: fixed;
     top: 0;
@@ -1071,20 +1087,80 @@ button.close {
     width: 100vw;
     height: 100vh;
     background-color: #000;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show .modal-backdrop {
+    opacity: 0.5;
+}
+
+/* Modal Dialog Animations */
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes modalSlideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+}
+
+.modal.fade .modal-dialog {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
 }
 
 .modal.show .modal-dialog {
-    -webkit-transform: none;
-    transform: none;
+    animation: modalSlideIn 0.3s ease-out forwards;
 }
-.modal.fade .modal-dialog {
-    transition: -webkit-transform .3s ease-out;
-    -webkit-transition: -webkit-transform .3s ease-out;
-    transition: transform .3s ease-out;
-    transition: transform .3s ease-out, -webkit-transform .3s ease-out;
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
+
+.modal.fade.closing .modal-dialog {
+    animation: modalSlideOut 0.3s ease-out forwards;
 }
+
+/* Optional: Add backdrop fade animation */
+@keyframes backdropFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+@keyframes backdropFadeOut {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.modal.show .modal-backdrop {
+    animation: backdropFadeIn 0.3s ease-out forwards;
+}
+
+.modal.fade.closing .modal-backdrop {
+    animation: backdropFadeOut 0.3s ease-out forwards;
+}
+
+
+
+
+
 @media (min-width: 576px) {
     .modal-dialog-centered {
         min-height: calc(100% - 3.5rem);
@@ -1300,6 +1376,41 @@ button.close {
     bottom: 0px;
 }
 
+}
+
+
+@media screen and (max-width: 600px) {
+    #sim_details_sidebar {
+        -webkit-animation: animatebottom .3s !important;
+        animation: animatebottom .3s !important;
+    }
+}
+
+@keyframes animatebottom {
+  0% {
+    bottom: -300px;
+    opacity: 0;
+}
+100% {
+    bottom: 0;
+    opacity: 1;
+}
+}
+
+@media screen and (max-width: 600px) {
+    .my-sidebar-popup .b-sidebar {
+        width: 100%;
+        height: 80%;
+        bottom: 0;
+        top: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .b-sidebar-right .close, .my-sidebar-popup .b-sidebar:not(.b-sidebar-right)>.b-sidebar-header .close {
+        right: 15px !important;
+        top: -45px !important;
+    }
 }
 
 </style>

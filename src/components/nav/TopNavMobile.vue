@@ -140,9 +140,6 @@
 }
 
 
-.animation {
-  transition: transform 0.3s ease-in-out;
-}
 
 .overlay {
   position: fixed;
