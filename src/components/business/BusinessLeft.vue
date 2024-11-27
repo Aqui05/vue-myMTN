@@ -24,12 +24,12 @@
         <h2 class="font-bold mb-0">Consommation du compte</h2>
       </div>
       <div class="chevron-parent d-flexx align-items-center justify-content-center d-md-none chevron-parent " @click="toggleCollapse('consommationCompte')">
-        <i :class="{'mdi mdi-chevron-right': !collapses['consommationCompte'], 'mdi mdi-chevron-down': collapses['consommationCompte']}" class="chevron-icon" style="font-size: 24px !important;"></i>
+        <i :class="{'mdi mdi-chevron-down': !collapses['consommationCompte'], 'mdi mdi-chevron-right': collapses['consommationCompte']}" class="chevron-icon" style="font-size: 24px !important;"></i>
       </div>
     </div>
   </div>
 
-  <div class="mt-3" :class="{ 'd-none': isMobile && collapses['consommationCompte'], 'd-block': !isMobile || !collapses['consommationCompte'] }">
+  <div v-show="!collapses['consommationCompte']" class="mt-3" :class="{ 'd-none': isMobile && collapses['consommationCompte'], 'd-block': !isMobile || !collapses['consommationCompte'] }">
     <div class="skeleton-loader" v-if="loading"> 
       <div class="skeleton-text" v-for="n in 3" :key="n"></div> 
     </div>
@@ -51,11 +51,11 @@
               <h2 class="font-bold mb-0">Consommation des services</h2>
             </div>
             <div class="chevron-parent d-flexx align-items-center justify-content-center" @click="toggleCollapse('consommationServices')">
-              <i :class="{'mdi mdi-chevron-right': !collapses['consommationServices'], 'mdi mdi-chevron-down': collapses['consommationServices']}" class="chevron-icon" style="font-size: 24px !important;"></i>
+              <i :class="{'mdi mdi-chevron-down': !collapses['consommationServices'], 'mdi mdi-chevron-right': collapses['consommationServices']}" class="chevron-icon" style="font-size: 24px !important;"></i>
             </div>
           </div>
         </div>
-          <div class="mt-3" :class="{ 'd-none': isMobile && collapses['consommationServices'], 'd-block': !isMobile || !collapses['consommationServices'] }">  
+          <div v-show="!collapses['consommationServices']" class="mt-3" :class="{ 'd-none': isMobile && collapses['consommationServices'], 'd-block': !isMobile || !collapses['consommationServices'] }">  
           <div class="skeleton-loader" v-if="loading"> 
               <div class="skeleton-text" v-for="n in 3" :key="n"></div> 
             </div>
@@ -309,14 +309,14 @@ h1, h2, h3, h4, h5, strong {
     margin: 0;
 }
 
-.d-flexx {
+.d-flex {
     display: -ms-flexbox !important;
     display: -webkit-box !important;
     display: flex !important;
   }
 
 @media (min-width : 600px) {
-  .d-flex {
+  .d-flexx {
     display: -ms-flexbox !important;
     display: -webkit-box !important;
     display: none !important;

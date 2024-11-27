@@ -97,8 +97,6 @@ h1, h2, h3, h4, h5, strong {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
 }
 
 
@@ -125,7 +123,7 @@ h1, h2, h3, h4, h5, strong {
 
 @media (max-width: 768px) {
     .business-content {
-        padding: 0 15px;
+        padding: 15px;
     }
 }
 

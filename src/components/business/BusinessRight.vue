@@ -11,7 +11,7 @@
           </p>
         </div>
         <div class="chevron-parent d-flexx align-items-center justify-content-center" @click="toggleCollapse('ListeFacture')">
-          <i :class="{'mdi mdi-chevron-right': !collapses['ListeFacture'], 'mdi mdi-chevron-down': collapses['ListeFacture']}" class="chevron-icon" style="font-size: 24px !important;"></i>
+          <i :class="{'mdi mdi-chevron-down': !collapses['ListeFacture'], 'mdi mdi-chevron-right': collapses['ListeFacture']}" class="chevron-icon" style="font-size: 24px !important;"></i>
         </div>
         </div>
     </div>
@@ -19,7 +19,7 @@
     <div >
       <div >
 
-        <div class="py-4 text-center" :class="{ 'd-none': isMobile && collapses['ListeFacture'], 'd-block': !isMobile || !collapses['ListeFacture'] }">
+        <div class="py-4 text-center" v-show="!collapses['ListeFacture']" :class="{ 'd-none': isMobile && collapses['ListeFacture'], 'd-block': !isMobile || !collapses['ListeFacture'] }">
 
           <div class="skeleton-loader" v-if="loading"> 
               <div class="skeleton-text" v-for="n in 5" :key="n"></div> 
@@ -44,14 +44,14 @@
           <h2 class="font-bold mb-0">Mini relevé de compte</h2>
         </div>
         <div class="chevron-parent d-flexx align-items-center justify-content-center" @click="toggleCollapse('MiniReleve')">
-          <i :class="{'mdi mdi-chevron-right': !collapses['MiniReleve'], 'mdi mdi-chevron-down': collapses['MiniReleve']}" class="chevron-icon" style="font-size: 24px !important;"></i>
+          <i :class="{'mdi mdi-chevron-down': !collapses['MiniReleve'], 'mdi mdi-chevron-right': collapses['MiniReleve']}" class="chevron-icon" style="font-size: 24px !important;"></i>
         </div>
       </div>
     </div>
     <!-- Content for Mini relevé de compte -->
     <div>
       <div>
-        <div  class="py-4 text-center" :class="{ 'd-none': isMobile && collapses['MiniReleve'], 'd-block': !isMobile || !collapses['MiniReleve'] }">
+        <div v-show="!collapses['MiniReleve']"  class="py-4 text-center" :class="{ 'd-none': isMobile && collapses['MiniReleve'], 'd-block': !isMobile || !collapses['MiniReleve'] }">
 
           <div class="skeleton-loader" v-if="loading"> 
               <div class="skeleton-text" v-for="n in 5" :key="n"></div> 
