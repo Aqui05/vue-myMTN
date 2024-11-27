@@ -27,6 +27,7 @@
   .section-header h3 {
     font-size: 18px;
     margin: 0;
+    font-family: 'MTNBrighterSans-Bold';
 }
 
 h1, h2, h3, h4, h5, strong {
@@ -35,6 +36,7 @@ h1, h2, h3, h4, h5, strong {
 
 .section-header p {
     font-size: 16px;
+    font-family: 'MTNBrighterSans-light';
 }
 
 p {

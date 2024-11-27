@@ -27,9 +27,9 @@
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
-            <button  class="btn btn-secondary ripple" @click="openModal">
-              <span  class="float-left">Afficher</span>
-              <svg class="float-right" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+            <button class="btn btn-secondary ripple" @click="openModal">
+              <span class="float-left">Afficher</span>
+              <i class="mdi mdi-arrow-right float-right"></i>
             </button>
           </div>
         </div>
@@ -48,9 +48,9 @@
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
-            <button  class="btn btn-secondary ripple" @click="openModal">
-              <span  class="float-left">Afficher</span>
-              <svg class="float-right" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+            <button class="btn btn-secondary ripple" @click="openModal">
+              <span class="float-left">Afficher</span>
+              <i class="mdi mdi-arrow-right float-right"></i>
             </button>
           </div>
         </div>
@@ -68,9 +68,9 @@
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
-            <button  class="btn btn-secondary ripple" @click="openModal">
-              <span  class="float-left">Afficher</span>
-              <svg class="float-right" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+            <button class="btn btn-secondary ripple" @click="openModal">
+              <span class="float-left">Afficher</span>
+              <i class="mdi mdi-arrow-right float-right"></i>
             </button>
           </div>
         </div>
@@ -88,9 +88,9 @@
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
-            <button  class="btn btn-secondary ripple" @click="openModal">
-              <span  class="float-left">Afficher</span>
-              <svg class="float-right" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+            <button class="btn btn-secondary ripple" @click="openModal">
+              <span class="float-left">Afficher</span>
+              <i class="mdi mdi-arrow-right float-right"></i>
             </button>
           </div>
         </div>
@@ -105,9 +105,9 @@
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
-            <button  class="btn btn-secondary ripple" @click="openModal">
-              <span  class="float-left">Afficher</span>
-              <svg class="float-right" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+            <button class="btn btn-secondary ripple" @click="openModal">
+              <span class="float-left">Afficher</span>
+              <i class="mdi mdi-arrow-right float-right"></i>
             </button>
           </div>
         </div>
@@ -582,6 +582,7 @@ h1, h2, h3, h4, h5, h6 {
 .section-header h3 {
     font-size: 18px;
     margin: 0;
+    font-family: 'MTNBrighterSans-Bold';
 }
 
 h1, h2, h3, h4, h5, strong {
@@ -590,6 +591,7 @@ h1, h2, h3, h4, h5, strong {
 
 .section-header p {
     font-size: 16px;
+    font-family: 'MTNBrighterSans-light';
 }
 
 .text-muted {
@@ -676,7 +678,6 @@ h1, h2, h3, h4, h5, strong {
     align-content: flex-start;
     flex-wrap: wrap;
     /* flex-direction: row; */
-    padding: 10px;
 }
 
 .btn, .btn>span {
@@ -685,6 +686,7 @@ h1, h2, h3, h4, h5, strong {
 
 .float-left {
     float: left !important;
+    font-family: MTNBrighterSans-Medium;
 }
 
 .service-card .service-card-bottom .btn i {
