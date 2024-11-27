@@ -1456,7 +1456,7 @@ button.close {
         padding: 0;
         left: 0;
         border-radius: 0;
-        bottom: 0;
+        bottom: -15px;
         max-height: 75%;
         -webkit-animation: animatebottom .3s !important;
         animation: animatebottom .3s !important;
@@ -1493,6 +1493,12 @@ button.close {
 @media (max-width: 600px) {
     .site-page, .page-title p {
         font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .service-card {
+        margin-bottom: 15px;
     }
 }
 
