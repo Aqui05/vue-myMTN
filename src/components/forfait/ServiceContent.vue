@@ -37,6 +37,22 @@ h1, h2, h3, h4, h5, strong {
     font-size: 16px;
 }
 
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .col-md-12 {
+        -ms-flex: 0 0 100%;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
 .text-muted {
     color: #6c757d !important;
 }

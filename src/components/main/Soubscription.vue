@@ -3,7 +3,7 @@
         <div class="col-md-12">
             <div class="section-header">
                 <h3>Mes souscriptions</h3>
-                <p class="text-muted font-weight-light" style="margin: 0;"> 
+                <p class="text-muted font-weight-light"> 
                     Produits &amp; services souscrits et en cours de validité sur mon compte
                 </p>
             </div>
@@ -130,6 +130,11 @@
     position: absolute;
     right: 20px;
     bottom: 20px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 .description-skeleton {

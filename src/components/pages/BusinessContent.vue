@@ -140,6 +140,13 @@ h1, h2, h3, h4, h5, strong {
     }
 }
 
+@media screen and (min-width: 600px) {
+    .page-title {
+        padding: 0 15px;
+    }
+}
+
+
 @media screen and (max-width: 600px) {
     .section-header p {
         font-size: 14px;

@@ -6,7 +6,7 @@
           <div class="header-balance-container">
             <i class="kgk-mtn-BW_Icons_MTNBusiness_Mobility_4" style="background-color: rgb(253, 224, 199);"></i>
             <div class="header-balance-details">
-              <span class="balance-amount" style="    color: rgb(211, 103, 9);">0 FCFA</span>
+              <span class="balance-amount" style="    color: rgb(211, 103, 9); top: 3px; position: relative;">0 FCFA</span>
               <span class="balance-label" style="font-family: MTNBrighterSans-lighter;">Solde principal</span>
             </div>
           </div>
@@ -109,7 +109,6 @@
     line-height: 40px;
     font-size: 35px;
     position: absolute;
-    top: -4px;
     left: 0;
     line-height: 50px;
 }
@@ -133,7 +132,6 @@
     font-weight: lighter;
     font-size: 14px;
     position: relative;
-    top: -4px;
 }
 
 .header-balance-details span {

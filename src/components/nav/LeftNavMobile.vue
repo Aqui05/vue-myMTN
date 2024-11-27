@@ -8,7 +8,7 @@
 
         <div class="user-infos">
             <div class="user-name text-truncate">
-                <span>KIKISSAGBE AQUILAS OLUWATOBI ELISEE</span>
+                <span style="font-family: MTNBrighterSans-Bold;">KIKISSAGBE AQUILAS OLUWATOBI ELISEE</span>
             </div>
             <div class="user-number">
                 <span>61255118</span>
@@ -83,14 +83,10 @@
   </script>
   
   <style scoped>
-  li svg {
-    width: 20px;
-    height: 20px;
-    fill: black;
-  }
 
   .router-link-active {
     font-weight: 700 !important;
+    font-family: MTNBrighterSans-Bold;
   }
 
   li img {
@@ -179,11 +175,6 @@
     transition: .3s;
 }
 
-#main_left_menu_bottom svg {
-    font-size: 22px;
-    margin-right: 5px;
-    fill: #b81e50;
-}
 
 
   svg {
@@ -194,6 +185,10 @@
     z-index: 1;
     overflow: hidden;
   }
+
+  i {
+  color: #212529;
+}
 
   a {
     text-decoration: none;

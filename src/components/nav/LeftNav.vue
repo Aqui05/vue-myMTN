@@ -8,7 +8,7 @@
 
         <div class="user-infos">
             <div class="user-name text-truncate">
-                <span>KIKISSAGBE AQUILAS OLUWATOBI ELISEE</span>
+                <span style="font-family: MTNBrighterSans-Bold;">KIKISSAGBE AQUILAS OLUWATOBI ELISEE</span>
             </div>
             <div class="user-number">
                 <span>61255118</span>
@@ -118,6 +118,7 @@ img {
 
   .router-link-active {
     font-weight: 700 !important;
+    font-family: MTNBrighterSans-Bold;
   }
 
   .left-bar {
@@ -144,6 +145,10 @@ img {
     justify-content: flex-start;
     align-items: stretch;
     gap: 15px;
+}
+
+i {
+  color: #212529;
 }
 
   .user-infos {

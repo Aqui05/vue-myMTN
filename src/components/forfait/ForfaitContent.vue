@@ -568,6 +568,17 @@ export default {
     }
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
 .section-header h3 {
     font-size: 18px;
     margin: 0;
@@ -913,6 +924,11 @@ h1, h2, h3, h4, h5, strong {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 .bundle-filter-item {

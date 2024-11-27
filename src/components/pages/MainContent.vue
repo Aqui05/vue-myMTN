@@ -81,6 +81,7 @@ padding-right: 15px;
   
   .main-container{
     padding: 15px;
+    padding-top: 0px;
   }
 
 
