@@ -10,9 +10,7 @@
     <div class="service-card-bottom">
       <button class="btn btn-secondary ripple" @click="openSimModal">
         <span class="float-left">Afficher</span>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-          <path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z" />
-        </svg>
+        <i class="mdi mdi-arrow-right float-right"></i>
       </button>
     </div>
   </div>
@@ -25,7 +23,7 @@
           <div class="service-card-bottom">
             <button class="btn btn-secondary ripple" @click="openPukModal">
               <span class="float-left">Afficher</span>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
+              <i class="mdi mdi-arrow-right float-right"></i>
             </button>
           </div>
         </div>
@@ -40,7 +38,7 @@
           <div class="service-card-bottom">
             <button class="btn btn-secondary ripple">
               <span class="float-left">Afficher</span>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
+              <i class="mdi mdi-arrow-right float-right"></i>
             </button>
           </div>
         </div>
@@ -55,8 +53,8 @@
           <div class="service-card-bottom">
             <button class="btn btn-secondary ripple">
               <span class="float-left">Afficher</span>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
-            </button>
+              <i class="mdi mdi-arrow-right float-right"></i>
+             </button>
           </div>
         </div>
       </div>
@@ -68,8 +66,8 @@
           <div class="service-card-bottom">
             <button class="btn btn-secondary ripple">
               <span class="float-left">Afficher</span>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
-            </button>
+              <i class="mdi mdi-arrow-right float-right"></i>
+             </button>
           </div>
         </div>
       </div>
@@ -83,8 +81,8 @@
           <div class="service-card-bottom">
             <button class="btn btn-secondary ripple">
               <span class="float-left">Afficher</span>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
-            </button>
+              <i class="mdi mdi-arrow-right float-right"></i>
+                 </button>
           </div>
         </div>
       </div>
@@ -98,7 +96,7 @@
           <div class="service-card-bottom">
             <button class="btn btn-secondary ripple">
               <span class="float-left">Afficher</span>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m561-208-88-88 121-121H126v-126h468L473-664l88-88 273 272-273 272Z"/></svg>
+              <i class="mdi mdi-arrow-right float-right"></i>
             </button>
           </div>
         </div>
@@ -123,119 +121,188 @@
 
 
     
-          <div v-if="isModalOpen" class="modal-backdrop" @click.self="closeSimModal">
-    <div class="modal fade show" style="display: block;" aria-hidden="false">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content modal-content1">
-      <header class="b-sidebar-header d-flex justify-content-between align-items-center p-3" style="background: #ffcc01;
-  padding: 15px 20px !important;">
-        <strong>Infos 61255118</strong>
-        <button type="button" class="close text-dark" aria-label="Close" @click="closeSimModal">
-          <svg viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+    <div  v-if="isModalOpen">
+      <div  tabindex="-1" class="b-sidebar-outer my-sidebar-popup">
+        <div tabindex="0"></div>
+        <div 
+          id="sim_details_sidebar" 
+          tabindex="-1" 
+          role="dialog" 
+          aria-modal="true" 
+          class="b-sidebar shadow bg-light text-dark" 
+          style="" 
+          aria-labelledby="sim_details_sidebar___title__"
+        >
+          <header class="b-sidebar-header">
+            <strong id="sim_details_sidebar___title__">Infos 61255118</strong>
+            <button type="button" aria-label="Close" class="close text-dark" @click="closeSimModal">
+              <svg 
+                viewBox="0 0 16 16" 
+                width="1em" 
+                height="1em" 
+                focusable="false" 
+                role="img" 
+                aria-label="x" 
+                xmlns="http://www.w3.org/2000/svg" 
+                fill="currentColor" 
+                class="bi-x b-icon bi"
+              >
+                <g>
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
+                </g>
               </svg>
-        </button>
-      </header>
-      <div class="modal-body">
-        <table class="table table-striped">
-              <tbody>
-                <tr>
-                  <td class="font-weight-bold">Numéro</td>
-                  <td>61255118</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Date d'enregistrement</td>
-                  <td>01-10-2024 à 16:19</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Nom</td>
-                  <td>AQUILAS OLUWATOBI ELISEE</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Prénom</td>
-                  <td>KIKISSAGBE</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Occupation</td>
-                  <td>4</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Commune</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Ville</td>
-                  <td>cotonou</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Quartier</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Naissance</td>
-                  <td>20-02-2005</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Lieu Naissance</td>
-                  <td>kouti-karo</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Pièce</td>
-                  <td>Autre</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">N° Pièce</td>
-                  <td>20276401733524</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Lieu de délivrance</td>
-                  <td>ANIP</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Maison</td>
-                  <td>KIKISSAGBE</td>
-                </tr>
-              </tbody>
-            </table>
+            </button>
+          </header>
+          
+          <div class="b-sidebar-body">
+            <div >
+              <table  class="table table-striped">
+                <tbody >
+                  <tr >
+                    <td  class="font-weight-bold">Numéro</td>
+                    <td >61255118</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Date d'enregistrement</td>
+                    <td >01-10-2024 à 16:19</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Nom</td>
+                    <td >AQUILAS OLUWATOBI ELISEE</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Prénom</td>
+                    <td >KIKISSAGBE</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Occupation</td>
+                    <td >4</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Commune</td>
+                    <td >-</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Ville</td>
+                    <td >cotonou</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Quartier</td>
+                    <td >-</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Naissance</td>
+                    <td >20-02-2005</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Lieu Naissance</td>
+                    <td >kouti-karo</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Pièce</td>
+                    <td >Autre</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">N° Pièce</td>
+                    <td >20276401733524</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Lieu de délivrance</td>
+                    <td >ANIP</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Maison</td>
+                    <td >KIKISSAGBE</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!----></div>
+        <div tabindex="0"></div>
+        <div class="b-sidebar-backdrop bg-dark" style="" @click.self="closeSimModal"></div>
       </div>
     </div>
-
-  </div>
-</div>
-</div>
 
 
 
 
 
  <!-- Modal PUK   -->
- <div v-if="isModalPUKOpen" class="modal-backdrop" @click="closePukModal">
- <div class="modal fade show" style="display: block;" aria-hidden="false">
-      <div class="modal-dialog modal-md modal-dialog-centered" style="display: flex;align-items: flex-start;align-content: center; gap: 10px;">
-        <div class="modal-content modal-content2">
-          <header class="modal-header">
-            <h5 class="modal-title">Récupérer mon code PUK</h5>
+ <div
+    
+    id="sim_card_pin_puk_modal___BV_modal_outer_"
+    style="position: absolute; z-index: 1040;"
+    v-if="isModalPUKOpen"
+  >
+    <div
+      id="sim_card_pin_puk_modal"
+      role="dialog"
+      aria-labelledby="sim_card_pin_puk_modal___BV_modal_title_"
+      aria-describedby="sim_card_pin_puk_modal___BV_modal_body_"
+      class="modal fade show"
+      aria-modal="true"
+      style="display: block;"
+    >
+      <div class="modal-dialog modal-md modal-dialog-centered">
+        <span tabindex="0"></span>
+        <div
+          id="sim_card_pin_puk_modal___BV_modal_content_"
+          tabindex="-1"
+          class="modal-content"
+        >
+          <header
+            id="sim_card_pin_puk_modal___BV_modal_header_"
+            class="modal-header"
+          >
+            <h5
+              id="sim_card_pin_puk_modal___BV_modal_title_"
+              class="modal-title"
+            >
+              Récupérer mon code PUK
+            </h5>
+            <button type="button" aria-label="Close" class="close" @click="closePukModal">×</button>
           </header>
-          <div class="modal-body">
-            <div class="text-center">
-              <div class="modal-header-wrap">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M634-320q-14 0-24-10t-10-24v-132q0-14 10-24t24-10h6v-40q0-33 23.5-56.5T720-640q33 0 56.5 23.5T800-560v40h6q14 0 24 10t10 24v132q0 14-10 24t-24 10H634Zm46-200h80v-40q0-17-11.5-28.5T720-600q-17 0-28.5 11.5T680-560v40ZM280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v160h-80v-40H280v480h400v-40h80v160q0 33-23.5 56.5T680-40H280Zm0-120v40h400v-40H280Zm0-640h400v-40H280v40Zm0 0v-40 40Zm0 640v40-40Z"/></svg>
-                <h3>Code PUK</h3>
-                <p class="text-muted">Veuillez cliquer sur le bouton ci-dessous pour afficher votre code PUK.</p>
+          <div
+            id="sim_card_pin_puk_modal___BV_modal_body_"
+            class="modal-body"
+          >
+            <div  class="text-center">
+              <div  class="modal-header-wrap">
+                <i
+                  
+                  class="kgk-mtn-phonelink_lock modal-header-icon yellow-muted"
+                ></i>
+                <h3 >Code PUK</h3>
+                <p  class="text-muted">
+                  Veuillez cliquer sur le bouton ci dessous pour afficher votre
+                  code PUK.
+                </p>
               </div>
-              <div class="mt-2 mb-2">
-                <button type="button" class="btn btn-primary">Afficher</button>
+              <!---->
+              <!---->
+              <div  class="mt-2 mb-2">
+                <button
+                  
+                  type="button"
+                  class="btn btn-primary"
+                >
+                  Afficher
+                </button>
               </div>
             </div>
+            <div ></div>
           </div>
+          <!---->
         </div>
-         <button type="button" class="close text-dark" aria-label="Close" @click="closePukModal">
-          <svg viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-              </svg>
-        </button>
+        <span tabindex="0"></span>
       </div>
     </div>
+    <div
+      id="sim_card_pin_puk_modal___BV_modal_backdrop_"
+      class="modal-backdrop"
+      @click="closePukModal"
+    ></div>
   </div>
 
   </template>
@@ -274,10 +341,42 @@ export default {
   
 
   <style scoped>
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 .5rem 0;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+
+.service-card .service-card-bottom .btn i {
+    font-size: 16px;
+}
+
+
+.ripple:after {
+    content: "";
+    background: hsla(0, 0%, 100%, .3);
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    padding-top: 240%;
+    padding-left: 240%;
+    margin-top: -120%;
+    margin-left: -120%;
+    opacity: 0;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+/*
     .mt-3, .my-3 {
     margin-top: 1rem !important;
 }
+*/
 
+span {
+  font-family: MTNBrighterSans, Century Gothic, Arial, sans-serif;
+}
 .row {
     display: -ms-flexbox;
     display: -webkit-box;
@@ -286,6 +385,12 @@ export default {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+}
+
+@media (max-width: 600px) {
+  .row {
+    margin: 0px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -381,7 +486,8 @@ h1, h2, h3, h4, h5, strong {
 .service-card p {
     font-size: 14px;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -407,7 +513,6 @@ h1, h2, h3, h4, h5, strong {
     align-content: center;
     justify-content: space-between;
     align-items: center;
-    padding: 5% 3%;
 }
 
 .ripple {
@@ -470,7 +575,7 @@ h1, h2, h3, h4, h5, strong {
 }
 
 
-.modal-backdrop {
+/* .modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -488,7 +593,513 @@ h1, h2, h3, h4, h5, strong {
   height: auto; 
   overflow-y: scroll; 
   height: 100%;
+} */
+
+.b-sidebar-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    overflow: visible;
+    z-index: 1035;
 }
+
+.b-sidebar:not(.b-sidebar-right) {
+    left: 0;
+    right: auto;
+}
+.b-sidebar {
+    width: 40%;
+}
+.b-sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 320px;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    outline: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.b-sidebar, .b-sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+}
+.text-dark {
+    color: #343a40 !important;
+}
+.shadow {
+    -webkit-box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.b-sidebar>.b-sidebar-header {
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.b-sidebar:not(.b-sidebar-right) {
+    left: 0;
+    right: auto;
+    width: 40%;
+}
+.b-sidebar {
+    width: 40%;
+}
+.b-sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 320px;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    outline: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.b-sidebar, .b-sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+}
+
+
+.b-sidebar-header {
+    background: #ffcc01;
+    padding: 15px 20px !important;
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+.b-sidebar, .b-sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+}
+
+.b-sidebar-backdrop {
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    opacity: .6;
+}
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.b-sidebar:not(.b-sidebar-right)>.b-sidebar-header .close {
+    right: -60px;
+}
+.b-sidebar:not(.b-sidebar-right)>.b-sidebar-header .close {
+    margin-left: auto;
+}
+.b-sidebar>.b-sidebar-header .close {
+    float: none;
+    font-size: 1.5rem;
+}
+.b-sidebar-header .close {
+    position: absolute;
+    right: -50px;
+    background: 40px;
+    width: 30px;
+    background: #fff;
+    opacity: 1;
+    margin: 0;
+    display: block;
+    border-radius: 50%;
+    height: 30px;
+    line-height: 34px;
+    color: #bfbfbf !important;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+.b-icon.bi {
+    display: inline-block;
+    overflow: visible;
+    vertical-align: -.15em;
+}
+
+svg {
+    overflow: hidden;
+}
+
+.b-sidebar>.b-sidebar-body {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, .05);
+}
+
+#sim_details_sidebar .table td, #sim_details_sidebar .table th {
+    padding: 10px 20px;
+    border-top: none !important;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+#sim_details_sidebar .table td, #sim_details_sidebar .table th {
+    padding: 10px 20px;
+    border-top: none !important;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+.text-dark {
+    color: #343a40 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MODAL PUK STYLES */
+
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+.fade {
+    -webkit-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+
+.modal-backdrop {
+    opacity: .5;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+
+.modal.show .modal-dialog {
+    -webkit-transform: none;
+    transform: none;
+}
+.modal.fade .modal-dialog {
+    transition: -webkit-transform .3s ease-out;
+    -webkit-transition: -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+}
+@media (min-width: 576px) {
+    .modal-dialog-centered {
+        min-height: calc(100% - 3.5rem);
+    }
+}
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+}
+.modal-dialog-centered {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex
+;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: .5rem;
+    pointer-events: none;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog-centered:before {
+        height: calc(100vh - 3.5rem);
+        height: -webkit-min-content;
+        height: -moz-min-content;
+        height: min-content;
+    }
+}
+.modal-dialog-centered:before {
+    display: block;
+    height: calc(100vh - 1rem);
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    content: "";
+}
+
+.modal-content {
+    border: none;
+}
+.modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex
+;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    outline: 0;
+}
+
+
+.modal-header {
+    background: #ffcc01;
+    border: none;
+}
+
+.modal-header {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex
+;
+    -ms-flex-align: start;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px);
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+.modal-body {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, strong {
+    font-weight: 700;
+}
+
+.modal-header .close {
+    position: absolute;
+    right: -30px;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 0;
+    opacity: 1;
+    top: 28px;
+    font-size: 16px;
+}
+.modal-header .close {
+    padding: 1rem 1rem;
+    margin: -1rem -1rem -1rem auto;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+
+.text-center {
+    text-align: center !important;
+}
+
+.modal-header-wrap {
+    padding: 30px 30px 0 30px;
+}
+
+.modal-header-wrap .modal-header-icon {
+    font-size: 42px;
+}
+
+.yellow-muted {
+    color: #d1a000;
+}
+
+.modal-header-wrap p {
+    font-size: 14px;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.mb-2, .my-2 {
+    margin-bottom: .5rem !important;
+}
+
+.mt-2, .my-2 {
+    margin-top: .5rem !important;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+.btn-primary {
+    color: #000;
+    border: none;
+    background-color: #fc0;
+}
+.btn, .btn>span {
+    vertical-align: middle;
+}
+.btn {
+    border-radius: 30px !important;
+    font-size: 14px;
+    font-family: MTNBrighterSans-Medium, Century Gothic, Arial, sans-serif;
+    font-weight: 500;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
 
 @media(max-width:600px) {
   .modal-content1 {

@@ -892,13 +892,13 @@ h1, h2, h3, h4, h5, strong {
     color: #6c757d;
 }
 
-#bundle_filter_list>div[data-v-58f8d25d] {
+#bundle_filter_list>div {
     padding: 0 !important;
 }
 #bundle_filter_list>div {
     padding: 0 10px;
 }
-.row[data-v-58f8d25d] {
+.row {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     width: 100% !important;

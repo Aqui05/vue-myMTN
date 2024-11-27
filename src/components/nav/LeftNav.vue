@@ -83,6 +83,13 @@
   
   <style scoped>
 
+@font-face {
+  font-family: "MTNBrighterSans-lighter";
+  src: url("../fonts/MTNBrighterSans-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
     color: inherit;
     text-decoration: none;
@@ -155,6 +162,7 @@ img {
   .user-number {
     font-size: 14px;
     font-weight: 300 !important;
+    font-family: MTNBrighterSans-lighter;
   }
   
   .menu-item {

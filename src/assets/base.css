@@ -50,6 +50,16 @@
   }
 }
 
+:root {
+  --dt-row-selected: 13, 110, 253;
+  --dt-row-selected-text: 255, 255, 255;
+  --dt-row-selected-link: 9, 10, 11;
+  --dt-row-stripe: 0, 0, 0;
+  --dt-row-hover: 0, 0, 0;
+  --dt-column-ordering: 0, 0, 0;
+  --dt-html-background: #fff;
+}
+
 *,
 *::before,
 *::after {
@@ -57,9 +67,7 @@
   box-sizing: border-box;
 }
 
-*::-webkit-scrollbar {
-  display: none; /* Masque la barre de défilement */
-}
+
 
 @font-face {
   font-family: "MTNBrighterSans";
@@ -76,6 +84,13 @@
     url("../fonts/MTNBrighterSans-MediumItalic.otf") format("opentype"),
     url("../fonts/MTNBrighterSans-Regular.otf") format("opentype"),
     url("../fonts/MTNBrighterSans-RegularItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MTNBrighterSans-lighter";
+  src: url("../fonts/MTNBrighterSans-Light.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }

@@ -2,7 +2,7 @@
     <div class="row site-page v-step-0">
             <div class="col-md-12" style="">
             <div class="section-header page-title title1">
-                <h1 data-v-aaf95958="">Ma consommation</h1>
+                <h1>Ma consommation</h1>
                 <p class="text-muted font-weight-light">
                     Consommation sur les sept derniers jours
                 </p>
@@ -261,7 +261,7 @@ p {
 
 
 @media (min-width: 768px) {
-    .col-md-12[data-v-f895c461] {
+    .col-md-12 {
         -ms-flex: 0 0 100%;
         -webkit-box-flex: 0;
         flex: 0 0 100%;
@@ -328,5 +328,12 @@ a, a:hover {
         line-height: 18px;
     }
 }
+
+@media (max-width: 600px)  {
+    .title1, .show-more-btn  {
+        padding: 0 15px;
+    }
+}
+
 
 </style>

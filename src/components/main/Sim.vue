@@ -1,5 +1,5 @@
 <template>
-    <div data-v-012ad630="" class="row mt-3 v-step-4">
+    <div class="row mt-3 v-step-4">
       <div class="col-md-12">
         <div class="section-header">
           <h3>Gérer ma SIM</h3>
@@ -325,6 +325,12 @@ h1, h2, h3, h4, h5, strong {
     align-items: center; 
     justify-content: space-between;
   }
+}
+
+@media (max-width: 600px)  {
+    .v-step-4 {
+        padding: 0 15px;
+    }
 }
 
 

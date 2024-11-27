@@ -57,12 +57,41 @@ import Infos from '../main/Infos.vue';
     }
 }
 
+@media (min-width: 768px) {
+    .col-md-12 {
+        -ms-flex: 0 0 100%;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+a, body, div, h1, h2, h3, h4, h5, p, span, strong {
+    font-family: MTNBrighterSans, Century Gothic, Arial, sans-serif;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
 .roww {
     display: -ms-flexbox;
     display: -webkit-box;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    width: 100%;
+}
+
+.site-page, .page-title h1, .site-page, .page-title h2 {
+    font-size: 24px;
+    margin: 0;
 }
 
 @media (max-width: 768px) {

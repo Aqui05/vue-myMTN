@@ -28,7 +28,7 @@
               </div>
               <div class="header-balance-details">
                 <span style="color: rgb(211, 103, 9);">0 FCFA</span>
-                <span data-v-3da57f56="">Solde principal</span>
+                <span style="font-family: MTNBrighterSans-lighter;">Solde principal</span>
               </div>
             </div>
           </div>
@@ -42,11 +42,11 @@
                   <input type="text" placeholder="Recherche">
                   <i class="kgk-mtn-search icon-search"></i>
                 </div>
-                <div data-v-e1ad11a6="" class="user-profil-avatar">
-                  <div data-v-e1ad11a6="" class="user-profil-avatar-pic"></div>
-                  <div data-v-e1ad11a6="" class="user-profil-avatar-details">
-                    <span data-v-e1ad11a6="">KIKISSAGBE</span>
-                    <span data-v-e1ad11a6="">61255118</span>
+                <div  class="user-profil-avatar">
+                  <div  class="user-profil-avatar-pic"></div>
+                  <div  class="user-profil-avatar-details">
+                    <span >KIKISSAGBE</span>
+                    <span >61255118</span>
                   </div>
                 </div>
               </div>

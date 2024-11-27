@@ -3,7 +3,7 @@
         <div class="col-md-12">
             <div class="section-header">
                 <h3>Mes souscriptions</h3>
-                <p class="text-muted font-weight-light"> 
+                <p class="text-muted font-weight-light" style="margin: 0;"> 
                     Produits &amp; services souscrits et en cours de validité sur mon compte
                 </p>
             </div>
@@ -187,7 +187,7 @@
 
 
 @media (min-width: 768px) {
-    .col-md-12[data-v-f895c461] {
+    .col-md-12 {
         -ms-flex: 0 0 100%;
         -webkit-box-flex: 0;
         flex: 0 0 100%;
@@ -476,10 +476,11 @@ button {
     .subscriptions-card {
         margin: 0 -15px;
     }
+}
 
-    .row {
-        /*width: 100%;*/
+@media (max-width: 600px)  {
+    .v-step-3 {
+        padding: 0 15px;
     }
-    
 }
 </style>

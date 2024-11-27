@@ -7,7 +7,7 @@
             <i class="kgk-mtn-BW_Icons_MTNBusiness_Mobility_4" style="background-color: rgb(253, 224, 199);"></i>
             <div class="header-balance-details">
               <span class="balance-amount" style="    color: rgb(211, 103, 9);">0 FCFA</span>
-              <span class="balance-label">Solde principal</span>
+              <span class="balance-label" style="font-family: MTNBrighterSans-lighter;">Solde principal</span>
             </div>
           </div>
         </div>
@@ -24,7 +24,7 @@
           <!-- Desktop Search -->
           <div class="d-sm-none d-lg-flex position-relative mr-3">
             <input type="text" placeholder="Recherche">
-            <i class="fas fa-search icon-search"></i>
+            <i class="kgk-mtn-search icon-search"></i>
           </div>
   
           <!-- User Profile -->
@@ -56,6 +56,12 @@
 
 .w-100 {
     width: 100% ;
+}
+
+.icon-search {
+    position: absolute;
+    right: 10px;
+    top: 9px;
 }
 
 .justify-content-between {

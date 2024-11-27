@@ -16,7 +16,11 @@
               </div>
             </div>
             <div>
-              <button 
+
+              <button type="button" @click="openSimModal" class="btn btn-outline-secondary w-100 rounded-pill">
+                Afficher les détails
+              </button>
+<!--               <button 
                 @click="openSimModal"
                 type="button"
                 class="btn btn-outline-secondary w-100 rounded-pill"
@@ -24,7 +28,7 @@
               <span style="color: #106887; " >
                 Afficher les détails
               </span>
-              </button>
+              </button> -->
             </div>
           </div>
         </div>
@@ -46,86 +50,108 @@
 
 
         
-    <div v-if="isModalOpen" class="modal-backdrop" @click.stop="closeSimModal">
-    <div class="modal fade show" style="display: block;" aria-hidden="false">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content modal-content1">
-      <header class="b-sidebar-header d-flex justify-content-between align-items-center p-3" style="background: #ffcc01;
-  padding: 15px 20px !important;">
-        <strong>Infos 61255118</strong>
-        <button type="button" class="close text-dark" aria-label="Close" @click="closeSimModal">
-          <svg viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+    <div  v-if="isModalOpen">
+      <div  tabindex="-1" class="b-sidebar-outer my-sidebar-popup">
+        <div tabindex="0"></div>
+        <div 
+          id="sim_details_sidebar" 
+          tabindex="-1" 
+          role="dialog" 
+          aria-modal="true" 
+          class="b-sidebar shadow bg-light text-dark" 
+          style="" 
+          aria-labelledby="sim_details_sidebar___title__"
+        >
+          <header class="b-sidebar-header">
+            <strong id="sim_details_sidebar___title__">Infos 61255118</strong>
+            <button type="button" aria-label="Close" class="close text-dark" @click="closeSimModal">
+              <svg 
+                viewBox="0 0 16 16" 
+                width="1em" 
+                height="1em" 
+                focusable="false" 
+                role="img" 
+                aria-label="x" 
+                xmlns="http://www.w3.org/2000/svg" 
+                fill="currentColor" 
+                class="bi-x b-icon bi"
+              >
+                <g>
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
+                </g>
               </svg>
-        </button>
-      </header>
-      <div class="modal-body">
-        <table class="table table-striped">
-              <tbody>
-                <tr>
-                  <td class="font-weight-bold">Numéro</td>
-                  <td>61255118</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Date d'enregistrement</td>
-                  <td>01-10-2024 à 16:19</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Nom</td>
-                  <td>AQUILAS OLUWATOBI ELISEE</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Prénom</td>
-                  <td>KIKISSAGBE</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Occupation</td>
-                  <td>4</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Commune</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Ville</td>
-                  <td>cotonou</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Quartier</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Naissance</td>
-                  <td>20-02-2005</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Lieu Naissance</td>
-                  <td>kouti-karo</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Pièce</td>
-                  <td>Autre</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">N° Pièce</td>
-                  <td>20276401733524</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Lieu de délivrance</td>
-                  <td>ANIP</td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold">Maison</td>
-                  <td>KIKISSAGBE</td>
-                </tr>
-              </tbody>
-            </table>
+            </button>
+          </header>
+          
+          <div class="b-sidebar-body">
+            <div >
+              <table  class="table table-striped">
+                <tbody >
+                  <tr >
+                    <td  class="font-weight-bold">Numéro</td>
+                    <td >61255118</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Date d'enregistrement</td>
+                    <td >01-10-2024 à 16:19</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Nom</td>
+                    <td >AQUILAS OLUWATOBI ELISEE</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Prénom</td>
+                    <td >KIKISSAGBE</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Occupation</td>
+                    <td >4</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Commune</td>
+                    <td >-</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Ville</td>
+                    <td >cotonou</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Quartier</td>
+                    <td >-</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Naissance</td>
+                    <td >20-02-2005</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Lieu Naissance</td>
+                    <td >kouti-karo</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Pièce</td>
+                    <td >Autre</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">N° Pièce</td>
+                    <td >20276401733524</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Lieu de délivrance</td>
+                    <td >ANIP</td>
+                  </tr>
+                  <tr >
+                    <td  class="font-weight-bold">Maison</td>
+                    <td >KIKISSAGBE</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!----></div>
+        <div tabindex="0"></div>
+        <div class="b-sidebar-backdrop bg-dark" style="" @click.self="closeSimModal"></div>
       </div>
     </div>
-
-  </div>
-</div>
-</div>
   </template>
   
   <script>
@@ -314,13 +340,10 @@ button {
     border-radius: 0;
 }
 
-.btn:hover {
-  color: #ffcc01;
-}
 
 
 
-
+/* 
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -339,6 +362,233 @@ button {
   height: auto; 
   overflow-y: scroll; 
   height: 100%;
+} */
+
+
+.b-sidebar-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    overflow: visible;
+    z-index: 1035;
+}
+
+.b-sidebar:not(.b-sidebar-right) {
+    left: 0;
+    right: auto;
+}
+.b-sidebar {
+    width: 40%;
+}
+.b-sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 320px;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    outline: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.b-sidebar, .b-sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+}
+.text-dark {
+    color: #343a40 !important;
+}
+.shadow {
+    -webkit-box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.b-sidebar>.b-sidebar-header {
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.b-sidebar:not(.b-sidebar-right) {
+    left: 0;
+    right: auto;
+    width: 40%;
+}
+.b-sidebar {
+    width: 40%;
+}
+.b-sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 320px;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    outline: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.b-sidebar, .b-sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+}
+
+
+.b-sidebar-header {
+    background: #ffcc01;
+    padding: 15px 20px !important;
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+.b-sidebar, .b-sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+}
+
+.b-sidebar-backdrop {
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    opacity: .6;
+}
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.b-sidebar:not(.b-sidebar-right)>.b-sidebar-header .close {
+    right: -60px;
+}
+.b-sidebar:not(.b-sidebar-right)>.b-sidebar-header .close {
+    margin-left: auto;
+}
+.b-sidebar>.b-sidebar-header .close {
+    float: none;
+    font-size: 1.5rem;
+}
+.b-sidebar-header .close {
+    position: absolute;
+    right: -50px;
+    background: 40px;
+    width: 30px;
+    background: #fff;
+    opacity: 1;
+    margin: 0;
+    display: block;
+    border-radius: 50%;
+    height: 30px;
+    line-height: 34px;
+    color: #bfbfbf !important;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+.b-icon.bi {
+    display: inline-block;
+    overflow: visible;
+    vertical-align: -.15em;
+}
+
+svg {
+    overflow: hidden;
+}
+
+.b-sidebar>.b-sidebar-body {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, .05);
+}
+
+#sim_details_sidebar .table td, #sim_details_sidebar .table th {
+    padding: 10px 20px;
+    border-top: none !important;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+#sim_details_sidebar .table td, #sim_details_sidebar .table th {
+    padding: 10px 20px;
+    border-top: none !important;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+.text-dark {
+    color: #343a40 !important;
 }
 
 @media(max-width:600px) {
