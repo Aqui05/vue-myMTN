@@ -185,12 +185,15 @@
     margin-left: -15px;
 }
 
+
 @media (min-width: 768px) {
-    .col-md-12 {
+    .col-md-12[data-v-f895c461] {
         -ms-flex: 0 0 100%;
         -webkit-box-flex: 0;
         flex: 0 0 100%;
         max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
@@ -475,7 +478,7 @@ button {
     }
 
     .row {
-        width: 100%;
+        /*width: 100%;*/
     }
     
 }

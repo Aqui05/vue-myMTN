@@ -110,7 +110,7 @@ export default {
 
   .main-container {
     height: 100%;
-    padding-top: 4%;
+    padding-top: 70px;
     overflow-y: scroll;
     overflow-x: hidden !important;
   }
@@ -120,18 +120,18 @@ export default {
     top: 0;
     width: calc(100% - 250px);
     position: fixed;
-    /* padding: 1% 2%; */
+    padding: 0 30px;
+
     background: #fff;
+
     height: 70px;
     border-bottom: 1px solid #e5e5e5;
     z-index: 15;
     margin: auto;
     justify-content: space-between;
     display: flex;
-    /* align-content: center; */
-    /* flex-wrap: wrap; */
     align-items: center;
-    padding: 0px 2%;
+    flex-wrap: wrap
   }
 
   .top-bar-mobile {
@@ -141,7 +141,7 @@ export default {
 }
 
   .main-container-content {
-    padding: 40px 60px;
+    padding: 40px 45px;
     left: 250px;
     /* top: 0; */
     width: calc(100% - 250px);

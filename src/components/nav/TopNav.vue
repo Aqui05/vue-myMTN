@@ -108,6 +108,7 @@
     line-height: 50px;
 }
 
+
 .header-balance-details {
     position: relative;
     top: -3px;
