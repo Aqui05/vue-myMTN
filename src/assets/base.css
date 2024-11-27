@@ -90,11 +90,18 @@
 
 @font-face {
   font-family: "MTNBrighterSans-lighter";
-  src: url("../fonts/MTNBrighterSans-Light.otf") format("opentype");
+  src: url("../fonts/MTNBrighterSans-ExtraLight.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: "MTNBrighterSans-light";
+  src: url("../fonts/MTNBrighterSans-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background: #f2f2f2 !important;
   overflow-x: hidden !important;

@@ -1502,5 +1502,17 @@ button.close {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .service-card p {
+        margin-top: -2px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .service-card>* {
+        min-height: 77px;
+    }
+}
+
 
 </style>

@@ -14,8 +14,8 @@
              <div class="overlay" v-if="isLeftNavVisible"></div>
 
       <div id="main_header_welcome">
-        <div class="text-truncate">Y'ello 
-          <span class="ml-1">AQUILAS OLUWATOBI ELISEE</span>
+        <div class="text-truncate" style="font-family: MTNBrighterSans-Bold;">Y'ello 
+          <span class="ml-1" style="font-family: MTNBrighterSans-Bold;">AQUILAS OLUWATOBI ELISEE</span>
         </div>
         <p>Bienvenue sur votre espace personnel.</p>
       </div>
@@ -25,7 +25,7 @@
             <div class="header-balance-container">
               <i  class="kgk-mtn-BW_Icons_MTNBusiness_Mobility_4" style="background-color: rgb(253, 224, 199);"></i>
               <div  class="header-balance-details">
-                <span  style="color: rgb(211, 103, 9); font-family: MTNBrighterSans-lighter, Century Gothic, Arial, sans-serif;">0 FCFA</span>
+                <span  style="color: rgb(211, 103, 9); font-family: MTNBrighterSans-Bold, Century Gothic, Arial, sans-serif;">0 FCFA</span>
                 <span style="    font-family: MTNBrighterSans-lighter, Century Gothic, Arial, sans-serif;">Solde principal</span>
               </div>
             </div>

@@ -1,7 +1,7 @@
 <template>
     <div class="sim-content roww">
         <div class="col-md-12 page-title">
-            <h1>Gérer ma carte SIM</h1>
+            <h1 style="font-family: MTNBrighterSans-Bold;">Gérer ma carte SIM</h1>
             <p class="text-muted">
                 Opérations et paramétrages pour carte SIM
             </p>
@@ -96,7 +96,7 @@ p {
 
 @media (max-width: 768px) {
     .sim-content {
-        padding: 0 15px;
+        padding: 15px ;
     }
 }
 
