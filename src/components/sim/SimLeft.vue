@@ -1413,4 +1413,75 @@ button.close {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .modal.fade .modal-dialog {
+        -webkit-transition: none !important;
+        transition: none !important;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .service-card .service-card-bottom .btn {
+        position: absolute;
+        width: 5%;
+        height: 45px;
+        border-radius: 50% !important;
+        right: 15px;
+        top: 18px;
+        text-align: right;
+        padding: 0;
+        line-height: 40px;
+        background: transparent;
+        border: none;
+        color: #106887;
+    }
+}
+
+.modal-dialog-centered {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+@media screen and (max-width: 600px) {
+    #sim_swap_popup .modal-dialog, .modal-content {
+        position: fixed;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        border-radius: 0;
+        bottom: 0;
+        max-height: 75%;
+        -webkit-animation: animatebottom .3s !important;
+        animation: animatebottom .3s !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .modal-header .close {
+        right: 30px;
+        top: -30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .service-card .service-card-bottom .btn span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .service-card .service-card-bottom .btn i {
+        float: none !important;
+        font-size: 22px;
+    }
+}
+
+
 </style>
