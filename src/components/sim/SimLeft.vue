@@ -1484,4 +1484,17 @@ button.close {
 }
 
 
+@media (max-width: 600px) {
+    .site-page, .page-title h1, .site-page, .page-title h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-page, .page-title p {
+        font-size: 14px;
+    }
+}
+
+
 </style>
