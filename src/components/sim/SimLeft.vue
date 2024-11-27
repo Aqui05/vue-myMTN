@@ -36,7 +36,7 @@
             Recevoir les paramètres internet
           </p>
           <div class="service-card-bottom">
-            <button class="btn btn-secondary ripple">
+            <button class="btn btn-secondary ripple" @click="openAInternet">
               <span class="float-left">Afficher</span>
               <i class="mdi mdi-arrow-right float-right"></i>
             </button>
@@ -51,7 +51,7 @@
             Désactiver internet sur ma SIM
           </p>
           <div class="service-card-bottom">
-            <button class="btn btn-secondary ripple">
+            <button class="btn btn-secondary ripple" @click="openDInternet">
               <span class="float-left">Afficher</span>
               <i class="mdi mdi-arrow-right float-right"></i>
              </button>
@@ -305,6 +305,176 @@
     ></div>
   </div>
 
+
+
+
+
+
+
+
+  <!-- Modal Activer INTERNET -->
+
+
+  <div 
+  v-if="isModalAInternet"
+  footer="{null}" 
+  id="sim_card_gprs_activate___BV_modal_outer_" 
+  style="position: absolute; z-index: 1040;"
+>
+  <div 
+    id="sim_card_gprs_activate" 
+    role="dialog" 
+    aria-labelledby="sim_card_gprs_activate___BV_modal_title_" 
+    aria-describedby="sim_card_gprs_activate___BV_modal_body_" 
+    class="modal fade show" 
+    aria-modal="true" 
+    style="display: block;"
+  >
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <span tabindex="0"></span>
+      
+      <div 
+        id="sim_card_gprs_activate___BV_modal_content_" 
+        tabindex="-1" 
+        class="modal-content"
+      >
+        <header 
+          id="sim_card_gprs_activate___BV_modal_header_" 
+          class="modal-header"
+        >
+          <h5 
+            id="sim_card_gprs_activate___BV_modal_title_" 
+            class="modal-title"
+          >
+            Activer Internet
+          </h5>
+          <button 
+            @click="closeAInternet"
+            type="button" 
+            aria-label="Close" 
+            class="close"
+          >
+            ×
+          </button>
+        </header>
+        
+        <div 
+          id="sim_card_gprs_activate___BV_modal_body_" 
+          class="modal-body"
+        >
+          <div >
+            <div >
+              <div class="modal-header-wrap text-center">
+                <i class="kgk-mtn-BW_Icons_MTNMoMo_GlobalConnect_4 modal-header-icon yellow-muted"></i>
+                <h3 >Activation Internet</h3>
+                <p class="text-muted">
+                  <span >Vous n'arrivez pas à avoir accès à internet ?</span>
+                  <br >
+                  Cliquez sur le bouton recevoir les paramètres de configuration internet de MTN directement sur votre SIM.
+                </p>
+              </div>
+              
+              <div class="mt-3 mb-3 text-center">
+                <button class="btn btn-primary">
+                  <!----><span >Envoyer</span>
+                </button>
+              </div>
+            </div>
+            <!----></div>
+          <div ></div>
+        </div>
+        <!----></div>
+      <span tabindex="0"></span>
+    </div>
+  </div>
+  
+  <div 
+    id="sim_card_gprs_activate___BV_modal_backdrop_" 
+    class="modal-backdrop"
+     @click="closeAInternet"
+  ></div>
+</div>
+
+
+
+ <!-- Modal désactiver INTERNET -->
+<div 
+v-if="isModalDInternet"
+  footer="{null}" 
+  id="sim_card_gprs_deactivate___BV_modal_outer_" 
+  style="position: absolute; z-index: 1040;"
+>
+  <div 
+    id="sim_card_gprs_deactivate" 
+    role="dialog" 
+    aria-labelledby="sim_card_gprs_deactivate___BV_modal_title_" 
+    aria-describedby="sim_card_gprs_deactivate___BV_modal_body_" 
+    class="modal fade show" 
+    aria-modal="true" 
+    style="display: block;"
+  >
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <span tabindex="0"></span>
+      
+      <div 
+        id="sim_card_gprs_deactivate___BV_modal_content_" 
+        tabindex="-1" 
+        class="modal-content"
+      >
+        <header 
+          id="sim_card_gprs_deactivate___BV_modal_header_" 
+          class="modal-header"
+        >
+          <h5 
+            id="sim_card_gprs_deactivate___BV_modal_title_" 
+            class="modal-title"
+          >
+            Désactiver Internet
+          </h5>
+          <button 
+            @click="closeDInternet"
+            type="button" 
+            aria-label="Close" 
+            class="close"
+          >
+            ×
+          </button>
+        </header>
+        
+        <div 
+          id="sim_card_gprs_deactivate___BV_modal_body_" 
+          class="modal-body"
+        >
+          <div>
+            <div>
+              <div class="modal-header-wrap text-center">
+                <i class="kgk-mtn-BW_Icons_MTNMoMo_GlobalConnect_4 modal-header-icon yellow-muted"></i>
+                <h3>Désactiver Internet</h3>
+                <p class="text-muted">
+                  Si vous souhaitez désactiver internter sur votre SIM, veuillez cliquez sur le bouton ci dessous.
+                </p>
+              </div>
+              
+              <div class="mt-3 mb-3 text-center">
+                <button class="btn btn-primary">
+                  <!----><span>Envoyer</span>
+                </button>
+              </div>
+            </div>
+            <!----></div>
+          <div></div>
+        </div>
+        <!----></div>
+      <span tabindex="0"></span>
+    </div>
+  </div>
+  
+  <div 
+    id="sim_card_gprs_deactivate___BV_modal_backdrop_" 
+    class="modal-backdrop"
+    @click="closeDInternet"
+  ></div>
+</div>
   </template>
 
 <script>
@@ -315,6 +485,8 @@ export default {
   setup() {
     const isModalOpen = ref(false);
     const isModalPUKOpen = ref(false);
+    const isModalAInternet = ref(false);
+    const isModalDInternet = ref(false);
 
     const openSimModal = () => {
       isModalOpen.value = true;
@@ -332,7 +504,24 @@ export default {
       isModalPUKOpen.value = false;
     };
 
-    return { isModalOpen, openSimModal, closeSimModal, isModalPUKOpen, openPukModal, closePukModal  };
+    const openAInternet = () => {
+      isModalAInternet.value = true;
+    };
+
+    const closeAInternet = () => {
+      isModalAInternet.value = false;
+    };
+
+    const openDInternet = () => {
+      isModalDInternet.value = true;
+    };
+
+    const closeDInternet = () => {
+      isModalDInternet.value = false;
+    };
+
+
+    return { isModalOpen, openSimModal, closeSimModal, isModalPUKOpen, openPukModal, closePukModal, isModalAInternet, openAInternet, closeAInternet, isModalDInternet, openDInternet, closeDInternet  };
   }
 };
 </script>
@@ -920,7 +1109,6 @@ button.close {
 .modal-dialog {
     position: relative;
     width: auto;
-    margin: .5rem;
     pointer-events: none;
 }
 
@@ -1020,7 +1208,6 @@ h1, h2, h3, h4, h5, strong {
     font-size: 16px;
 }
 .modal-header .close {
-    padding: 1rem 1rem;
     margin: -1rem -1rem -1rem auto;
 }
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
