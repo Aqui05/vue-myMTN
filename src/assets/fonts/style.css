@@ -18,6 +18,246 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+
+[class*=" mtn-icon-"],[class^=mtn-icon-] {
+    display: inline-block;
+    font: normal normal normal 14px/1 mtn-icon;
+    font-size: inherit
+}
+
+.mtn-icon-camera:before {
+    content: "\e900"
+}
+
+.mtn-icon-charger:before {
+    content: "\e901"
+}
+
+.mtn-icon-clock:before {
+    content: "\e902"
+}
+
+.mtn-icon-close:before {
+    content: "\e903"
+}
+
+.mtn-icon-cloud:before {
+    content: "\e904"
+}
+
+.mtn-icon-comms:before {
+    content: "\e905"
+}
+
+.mtn-icon-data-management:before {
+    content: "\e906"
+}
+
+.mtn-icon-enterprise:before {
+    content: "\e907"
+}
+
+.mtn-icon-facebook:before {
+    content: "\e908"
+}
+
+.mtn-icon-games:before {
+    content: "\e909"
+}
+
+.mtn-icon-headphones:before {
+    content: "\e90a"
+}
+
+.mtn-icon-instagram:before {
+    content: "\e90b"
+}
+
+.mtn-icon-iot:before {
+    content: "\e90c"
+}
+
+.mtn-icon-likeheart:before {
+    content: "\e90d"
+}
+
+.mtn-icon-lock-badge:before {
+    content: "\e90e"
+}
+
+.mtn-icon-lock-filled:before {
+    content: "\e90f"
+}
+
+.mtn-icon-lock-outline:before {
+    content: "\e910"
+}
+
+.mtn-icon-map:before {
+    content: "\e911"
+}
+
+.mtn-icon-memory:before {
+    content: "\e912"
+}
+
+.mtn-icon-momo-blk:before {
+    content: "\e913"
+}
+
+.mtn-icon-momo-financial:before {
+    content: "\e914"
+}
+
+.mtn-icon-momo-manage:before {
+    content: "\e915"
+}
+
+.mtn-icon-momo-market:before {
+    content: "\e916"
+}
+
+.mtn-icon-momo-pay:before {
+    content: "\e917"
+}
+
+.mtn-icon-momo-transfer:before {
+    content: "\e918"
+}
+
+.mtn-icon-mtn-business-badge:before {
+    content: "\e919"
+}
+
+.mtn-icon-mtn-business:before {
+    content: "\e91a"
+}
+
+.mtn-icon-mtn-momo-badge:before {
+    content: "\e91b"
+}
+
+.mtn-icon-mtn-momo:before {
+    content: "\e91c"
+}
+
+.mtn-icon-mtn-play-badge:before {
+    content: "\e91d"
+}
+
+.mtn-icon-mtn-play:before {
+    content: "\e91e"
+}
+
+.mtn-icon-music:before {
+    content: "\e91f"
+}
+
+.mtn-icon-mymtn-badge:before {
+    content: "\e920"
+}
+
+.mtn-icon-mymtn:before {
+    content: "\e921"
+}
+
+.mtn-icon-networks:before {
+    content: "\e922"
+}
+
+.mtn-icon-people:before {
+    content: "\e923"
+}
+
+.mtn-icon-phone-2:before {
+    content: "\e924"
+}
+
+.mtn-icon-phone-call:before {
+    content: "\e925"
+}
+
+.mtn-icon-phone-ringing:before {
+    content: "\e926"
+}
+
+.mtn-icon-phone:before {
+    content: "\e927"
+}
+
+.mtn-icon-play-music:before {
+    content: "\e929"
+}
+
+.mtn-icon-play-video:before {
+    content: "\e92a"
+}
+
+.mtn-icon-play:before {
+    content: "\e92b"
+}
+
+.mtn-icon-plus:before {
+    content: "\e92c"
+}
+
+.mtn-icon-receipt-bill:before {
+    content: "\e92d"
+}
+
+.mtn-icon-screen-clock:before {
+    content: "\e92e"
+}
+
+.mtn-icon-search:before {
+    content: "\e92f"
+}
+
+.mtn-icon-security-lock:before {
+    content: "\e930"
+}
+
+.mtn-icon-support:before {
+    content: "\e931"
+}
+
+.mtn-icon-swap:before {
+    content: "\e932"
+}
+
+.mtn-icon-twitter:before {
+    content: "\e933"
+}
+
+.mtn-icon-upgrade:before {
+    content: "\e934"
+}
+
+.mtn-icon-upload:before {
+    content: "\e935"
+}
+
+.mtn-icon-video:before {
+    content: "\e936"
+}
+
+.mtn-icon-vpn:before {
+    content: "\e937"
+}
+
+.mtn-icon-wifi:before {
+    content: "\e938"
+}
+
+.mtn-icon-youtube:before {
+    content: "\e939"
+}
+
+.mtn-icon-play-games:before {
+    content: "\e928"
+}
+
   
   .mtn-icon-camera::before {
     content: "\e900";
