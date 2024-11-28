@@ -25,7 +25,11 @@
 
 
     <div class="tab-content">
-      <div class="tab-pane" v-if="activeTab === 'products'">
+    <div 
+      class="tab-pane" 
+      v-if="activeTab === 'products'"
+      ref="productsTab"
+    >
         <div id="myTabContent" class="tab-content">
             <div id="products" role="tabpanel" aria-labelledby="products-tab" class="tab-pane fade show">
                 <div class="card-box d-flex align-items-center justify-content-center px-0 mt-4">
@@ -69,7 +73,11 @@
                 </div>
             </div>
       </div>
-      <div class="tab-pane" v-if="activeTab === 'internet'">
+      <div 
+      class="tab-pane" 
+      v-if="activeTab === 'internet'"
+      ref="internetTab"
+    >
         <div id="myTabContent" class="tab-content">
             <div id="products" role="tabpanel" aria-labelledby="products-tab" class="tab-pane fade show">
                 <div class="card-box d-flex align-items-center justify-content-center px-0 mt-4 internet">
@@ -123,34 +131,88 @@
   </template>
   
   <script>
-  import jsPDF from 'jspdf'; 
-  import html2canvas from 'html2canvas';
-  import autoTable from 'jspdf-autotable';
-        export default {
-            name:'ConsomLeft',
-            data() {
-            return {
-                activeTab: 'products'
-            };
-            },
-            methods: {
-                downloadPdf(tab) {
-                const doc = new jsPDF();
-                
-                // Sélectionner le tableau en fonction de l'onglet actif
-                const tableId = tab === 'products' ? '#table' : '.bill-details-table.internet';
+  import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+import autoTable from 'jspdf-autotable';
 
-                autoTable(doc, {
-                    html: tableId,
-                    styles: { fillColor: [255, 255, 255] }, // Optionnel: styles pour le tableau
+export default {
+    name: 'ConsomLeft',
+    data() {
+        return {
+            activeTab: 'products'
+        };
+    },
+    methods: {
+        async downloadPdf(tab) {
+            // Wait for Vue to update the DOM
+            await this.$nextTick();
+
+            let tabContent;
+            
+            // Use a more specific selector based on the active tab
+            if (tab === 'products') {
+                tabContent = this.$refs.productsTab;
+            } else if (tab === 'internet') {
+                tabContent = this.$refs.internetTab;
+            }
+
+            if (!tabContent) {
+                console.error('Tab content not found');
+                return;
+            }
+
+            const doc = new jsPDF('p', 'mm', 'a4');
+            
+            try {
+                // Convert tab content to canvas
+                const canvas = await html2canvas(tabContent, {
+                    scale: 2,
+                    useCORS: true,
+                    logging: false
                 });
 
-                doc.save('tableau.pdf');
-                },
-            },
-            
-        };
+                // Get canvas image
+                const imgData = canvas.toDataURL('image/png');
+                
+                // Get A4 page dimensions
+                const pageWidth = doc.internal.pageSize.getWidth();
+                const pageHeight = doc.internal.pageSize.getHeight();
 
+                // Calculate image dimensions to fit the page
+                const imgWidth = pageWidth - 20; // Margin of 10mm on each side
+                const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+                // Add image to PDF
+                doc.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
+
+                // If there's a table, try to add it as well
+                const tableId = tab === 'products' ? '#table' : '.bill-details-table.internet';
+                const table = tabContent.querySelector(tableId);
+
+                if (table) {
+                    autoTable(doc, {
+                        html: tableId,
+                        startY: imgHeight + 20, // Position below the screenshot
+                        styles: { 
+                            fillColor: [255, 255, 255],
+                            fontSize: 10
+                        },
+                        columnStyles: {
+                            0: { cellWidth: 'auto' },
+                            1: { cellWidth: 'auto' },
+                            2: { cellWidth: 'auto' }
+                        }
+                    });
+                }
+
+                // Save the PDF
+                doc.save(`${tab}_details.pdf`);
+            } catch (error) {
+                console.error('Error creating PDF:', error);
+            }
+        },
+    },
+};
   </script>
 
 
