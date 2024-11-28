@@ -43,12 +43,12 @@
         <div>
           <div class="mobile-align">
             <h3  class="text-truncate">Internet</h3>
-          <svg @click="openGame" class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+          <svg @click="openInternet" class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
           
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
-            <button class="btn btn-secondary ripple" @click="openGame">
+            <button class="btn btn-secondary ripple" @click="openInternet">
               <span class="float-left">Afficher</span>
               <i class="mdi mdi-arrow-right float-right"></i>
             </button>
@@ -83,12 +83,12 @@
         <div>
           <div class="mobile-align">
             <h3  class="text-truncate">Maxi</h3>
-          <svg class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+          <svg @click="openMaxi" class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
           
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
-            <button class="btn btn-secondary ripple" @click="openGame">
+            <button class="btn btn-secondary ripple" @click="openMaxi">
               <span class="float-left">Afficher</span>
               <i class="mdi mdi-arrow-right float-right"></i>
             </button>
@@ -100,12 +100,12 @@
         <div >
           <div class="mobile-align">
             <h3  class="text-truncate">Go Pack</h3>
-          <svg class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+          <svg @click="openGopack" class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
           
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
-            <button class="btn btn-secondary ripple" @click="openGame">
+            <button class="btn btn-secondary ripple" @click="openGopack">
               <span class="float-left">Afficher</span>
               <i class="mdi mdi-arrow-right float-right"></i>
             </button>
@@ -349,6 +349,900 @@
                 </div> 
                 <div class="col bundle-filter-item" :class="{ active: activeTab === 'mois' }" @click="setActiveTab('mois')" > 
                   <div class="text-truncate">Mois</div> 
+                </div> 
+              </div> 
+            </div> 
+          </div>
+
+          
+          <div class="tab-content"> 
+            <div v-if="activeTab === 'jours'">
+              <div role="tablist" class="accordion">
+                <div class="card collapsed">
+          
+                  <header  @click="toggleCollapse(3)" role="tab" class="card-header p-1">
+                    <div
+                      class="bundle-activation-card-header"
+                      role="button"
+                      tabindex="3"
+                      :aria-expanded="collapsedCards[3]"
+                      :aria-controls="'accordion3'"
+                      style="overflow-anchor: none;"
+                    >
+                      <div class="font-weight-bold">100 FCFA</div>
+                      <p class="text-muted">Wabaa 100F (4 min/24H)</p>
+                      <span v-if="collapsedCards[3]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+                      <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+                    </div>
+                  </header>
+
+                  <transition
+      name="custom-classes-transition"
+      enter-active-class="animate__animated animate__fadeInDown"
+      leave-active-class="animate__animated animate__fadeOutUp"
+    >
+                  <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[3]" role="tabpane4">
+                    <InfosModal />
+                  </div>
+
+                  </transition>
+                </div>
+
+                <div class="card collapsed">
+    <header @click="toggleCollapse(6)" role="tab" class="card-header p-1">
+      <div 
+        class="bundle-activation-card-header not-collapsed" 
+        role="button" 
+        tabindex="6" 
+        :aria-expanded="collapsedCards[6]" 
+        :aria-controls="'accordion6'" 
+        style="overflow-anchor: none;">
+        <div class="font-weight-bold">150 FCFA</div>
+        <p class="text-muted">Wabaa 150F (6 min/24H)</p>
+        <span v-if="collapsedCards[6]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+        <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+      </div>
+    </header>
+    
+    <transition
+      name="custom-classes-transition"
+      enter-active-class="animate__animated animate__fadeInDown"
+      leave-active-class="animate__animated animate__fadeOutUp"
+    >
+
+    <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[6]" role="tabpane4">
+            <InfosModal />
+          </div>
+    </transition>
+                </div>
+
+                <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(15)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="14"
+              :aria-expanded="collapsedCards[15]"
+              :aria-controls="'accordion14'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">200 FCFA</div>
+              <p class="text-muted">Wabaa 200F (8 min/24H)</p>
+              <span v-if="collapsedCards[15]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[15]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+
+        <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(13)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="13"
+              :aria-expanded="collapsedCards[13]"
+              :aria-controls="'accordion13'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">300 FCFA</div>
+              <p class="text-muted">Wabaa 300F (12 min/24H)</p>
+              <span v-if="collapsedCards[13]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+name="custom-classes-transition"
+enter-active-class="animate__animated animate__fadeInDown"
+leave-active-class="animate__animated animate__fadeOutUp"
+>
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[13]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+
+        <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(12)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="12"
+              :aria-expanded="collapsedCards[12]"
+              :aria-controls="'accordion3'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">500 FCFA</div>
+              <p class="text-muted">Wabaa 500F (20 min/3J)</p>
+              <span v-if="collapsedCards[12]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+name="custom-classes-transition"
+enter-active-class="animate__animated animate__fadeInDown"
+leave-active-class="animate__animated animate__fadeOutUp"
+>
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[12]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+
+                
+              </div>
+            </div>
+
+            <div v-if="activeTab === 'semaines'">
+              <div role="tablist" class="accordion">
+                <div class="card collapsed">
+          
+                  <header  @click="toggleCollapse(7)" role="tab" class="card-header p-1">
+                    <div
+                      class="bundle-activation-card-header"
+                      role="button"
+                      tabindex="3"
+                      :aria-expanded="collapsedCards[7]"
+                      :aria-controls="'accordion7'"
+                      style="overflow-anchor: none;"
+                    >
+                      <div class="font-weight-bold">500 FCFA</div>
+                      <p class="text-muted">Wabaa 500F (20 min/24H)</p>
+                      <span v-if="collapsedCards[7]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+                      <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+                    </div>
+                  </header>
+
+                  <transition
+      name="custom-classes-transition"
+      enter-active-class="animate__animated animate__fadeInDown"
+      leave-active-class="animate__animated animate__fadeOutUp"
+    >
+                  <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[7]" role="tabpane4">
+                    <InfosModal />
+                  </div>
+
+                  </transition>
+                </div>
+
+                <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(8)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[8]"
+              :aria-controls="'accordion7'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">1000 FCFA</div>
+              <p class="text-muted">Wabaa 1000F (40 min/7J)</p>
+              <span v-if="collapsedCards[8]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[8]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+
+        <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(9)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[9]"
+              :aria-controls="'accordion9'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">1500 FCFA</div>
+              <p class="text-muted">Wabaa 1500F (62 min/7J)</p>
+              <span v-if="collapsedCards[9]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[9]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+              
+              </div>
+            </div>
+
+            <div v-if="activeTab === 'mois'">
+              <div role="tablist" class="accordion">
+                <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(10)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[10]"
+              :aria-controls="'accordion9'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">2500 FCFA</div>
+              <p class="text-muted">Wabaa 2500F (102 min/20J)</p>
+              <span v-if="collapsedCards[10]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[10]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+                </div>
+
+        <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(11)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[11]"
+              :aria-controls="'accordion11'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">5000 FCFA</div>
+              <p class="text-muted">Wabaa 5000F (208 min/30J)</p>
+              <span v-if="collapsedCards[11]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion11'" class="collapse show" v-show="collapsedCards[11]" role="tabpane11">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+              
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <transition
+        enter-active-class="animate__animated animate__slideInLeft"
+        leave-active-class="animate__animated animate__slideOutLeft"
+      >
+    <div 
+  class="b-sidebar-backdrop bg-dark" 
+  @click.self="closeWabaa"
+  style="cursor: pointer"
+>
+  </div>
+</transition>
+
+</div>
+
+</transition>
+
+
+
+
+
+<!-- INTERNET MODAL -->
+<transition
+    enter-active-class="animate__animated animate__fadeIn"
+    leave-active-class="animate__animated animate__fadeOut"
+  >
+  <div v-if="isInternetOpen" tabindex="-1" class="b-sidebar-outer bundle-sidebar my-sidebar-popup">
+    <div tabindex="0"></div>
+    <div
+      id="bundle_sidebar_wabaa"
+      tabindex="-1"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="bundle_sidebar_wabaa___title__"
+      class="b-sidebar shadow b-sidebar-right bg-light text-dark"
+    >
+      <header class="b-sidebar-header">
+        <button type="button" aria-label="Close" class="close text-dark" @click="closeInternet">
+          <svg
+            viewBox="0 0 16 16"
+            width="1em"
+            height="1em"
+            focusable="false"
+            role="img"
+            aria-label="x"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="bi-x b-icon bi"
+          >
+            <g>
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+              ></path>
+            </g>
+          </svg>
+        </button>
+        <strong id="bundle_sidebar_wabaa___title__">Internet</strong>
+      </header>
+      <div class="b-sidebar-body">
+        <div>
+          <div class="bundle-sidebar-header"> 
+            <div id="bundle_filter_list"> 
+              <div class="row"> 
+                <div class="col bundle-filter-item" :class="{ active: activeTab === 'jours' }" 
+                  @click="setActiveTab('jours')" > 
+                  <div class="text-truncate">Jours</div> 
+                </div> 
+                <div class="col bundle-filter-item" :class="{ active: activeTab === 'semaines' }" @click="setActiveTab('semaines')" > 
+                  <div class="text-truncate">Semaines</div> 
+                </div> 
+                <div class="col bundle-filter-item" :class="{ active: activeTab === 'mois' }" @click="setActiveTab('mois')" > 
+                  <div class="text-truncate">Mois</div> 
+                </div>
+                <div class="col bundle-filter-item" :class="{ active: activeTab === 'illimites' }" @click="setActiveTab('illimites')" > 
+                  <div class="text-truncate">Illimités</div> 
+                </div> 
+              </div> 
+            </div> 
+          </div>
+
+          
+          <div class="tab-content"> 
+            <div v-if="activeTab === 'jours'">
+              <div role="tablist" class="accordion">
+                <div class="card collapsed">
+          
+                  <header  @click="toggleCollapse(3)" role="tab" class="card-header p-1">
+                    <div
+                      class="bundle-activation-card-header"
+                      role="button"
+                      tabindex="3"
+                      :aria-expanded="collapsedCards[3]"
+                      :aria-controls="'accordion3'"
+                      style="overflow-anchor: none;"
+                    >
+                      <div class="font-weight-bold">100 FCFA</div>
+                      <p class="text-muted">100F/70Mo/24h</p>
+                      <span v-if="collapsedCards[3]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+                      <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+                    </div>
+                  </header>
+
+                  <transition
+      name="custom-classes-transition"
+      enter-active-class="animate__animated animate__fadeInDown"
+      leave-active-class="animate__animated animate__fadeOutUp"
+    >
+                  <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[3]" role="tabpane4">
+                    <InfosModal />
+                  </div>
+
+                  </transition>
+                </div>
+
+                <div class="card collapsed">
+    <header @click="toggleCollapse(6)" role="tab" class="card-header p-1">
+      <div 
+        class="bundle-activation-card-header not-collapsed" 
+        role="button" 
+        tabindex="6" 
+        :aria-expanded="collapsedCards[6]" 
+        :aria-controls="'accordion6'" 
+        style="overflow-anchor: none;">
+        <div class="font-weight-bold">150 FCFA</div>
+        <p class="text-muted">150F/120Mo/24h</p>
+        <span v-if="collapsedCards[6]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+        <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+      </div>
+    </header>
+    
+    <transition
+      name="custom-classes-transition"
+      enter-active-class="animate__animated animate__fadeInDown"
+      leave-active-class="animate__animated animate__fadeOutUp"
+    >
+
+    <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[6]" role="tabpane4">
+            <InfosModal />
+          </div>
+    </transition>
+                </div>
+
+                <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(14)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="14"
+              :aria-expanded="collapsedCards[14]"
+              :aria-controls="'accordion14'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">200 FCFA</div>
+              <p class="text-muted">200F/170Mo/24h</p>
+              <span v-if="collapsedCards[14]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[14]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+
+        <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(16)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="16"
+              :aria-expanded="collapsedCards[16]"
+              :aria-controls="'accordion16'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">250 FCFA</div>
+              <p class="text-muted">250F/220Mo/24h</p>
+              <span v-if="collapsedCards[13]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+name="custom-classes-transition"
+enter-active-class="animate__animated animate__fadeInDown"
+leave-active-class="animate__animated animate__fadeOutUp"
+>
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[16]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+
+        <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(13)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="13"
+              :aria-expanded="collapsedCards[13]"
+              :aria-controls="'accordion13'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">300 FCFA</div>
+              <p class="text-muted">300F/260Mo/24h</p>
+              <span v-if="collapsedCards[13]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+name="custom-classes-transition"
+enter-active-class="animate__animated animate__fadeInDown"
+leave-active-class="animate__animated animate__fadeOutUp"
+>
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[13]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+
+        <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(12)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="12"
+              :aria-expanded="collapsedCards[12]"
+              :aria-controls="'accordion3'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">500 FCFA</div>
+              <p class="text-muted">500F/450Mo/03J</p>
+              <span v-if="collapsedCards[12]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+name="custom-classes-transition"
+enter-active-class="animate__animated animate__fadeInDown"
+leave-active-class="animate__animated animate__fadeOutUp"
+>
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[12]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+
+                
+              </div>
+            </div>
+
+            <div v-if="activeTab === 'semaines'">
+              <div role="tablist" class="accordion">
+                <div class="card collapsed">
+          
+                  <header  @click="toggleCollapse(7)" role="tab" class="card-header p-1">
+                    <div
+                      class="bundle-activation-card-header"
+                      role="button"
+                      tabindex="3"
+                      :aria-expanded="collapsedCards[7]"
+                      :aria-controls="'accordion7'"
+                      style="overflow-anchor: none;"
+                    >
+                      <div class="font-weight-bold">500 FCFA</div>
+                      <p class="text-muted">Wabaa 500F (20 min/24H)</p>
+                      <span v-if="collapsedCards[7]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+                      <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+                    </div>
+                  </header>
+
+                  <transition
+      name="custom-classes-transition"
+      enter-active-class="animate__animated animate__fadeInDown"
+      leave-active-class="animate__animated animate__fadeOutUp"
+    >
+                  <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[7]" role="tabpane4">
+                    <InfosModal />
+                  </div>
+
+                  </transition>
+                </div>
+
+                <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(8)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[8]"
+              :aria-controls="'accordion7'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">1000 FCFA</div>
+              <p class="text-muted">Wabaa 1000F (40 min/7J)</p>
+              <span v-if="collapsedCards[8]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[8]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+
+        <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(9)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[9]"
+              :aria-controls="'accordion9'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">1500 FCFA</div>
+              <p class="text-muted">Wabaa 1500F (62 min/7J)</p>
+              <span v-if="collapsedCards[9]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[9]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+              
+              </div>
+            </div>
+
+            <div v-if="activeTab === 'mois'">
+              <div role="tablist" class="accordion">
+                <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(10)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[10]"
+              :aria-controls="'accordion9'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">2500 FCFA</div>
+              <p class="text-muted">Wabaa 2500F (102 min/20J)</p>
+              <span v-if="collapsedCards[10]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[10]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+                </div>
+
+        <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(11)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[11]"
+              :aria-controls="'accordion11'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">5000 FCFA</div>
+              <p class="text-muted">Wabaa 5000F (208 min/30J)</p>
+              <span v-if="collapsedCards[11]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion11'" class="collapse show" v-show="collapsedCards[11]" role="tabpane11">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+              
+              </div>
+            </div>
+
+            <div v-if="activeTab === 'illimites'">
+              <div role="tablist" class="accordion">
+                <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(10)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[10]"
+              :aria-controls="'accordion9'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">2500 FCFA</div>
+              <p class="text-muted">Wabaa 2500F (102 min/20J)</p>
+              <span v-if="collapsedCards[10]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[10]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+                </div>
+
+        <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(11)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[11]"
+              :aria-controls="'accordion11'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">5000 FCFA</div>
+              <p class="text-muted">Wabaa 5000F (208 min/30J)</p>
+              <span v-if="collapsedCards[11]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion11'" class="collapse show" v-show="collapsedCards[11]" role="tabpane11">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+              
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <transition
+        enter-active-class="animate__animated animate__slideInLeft"
+        leave-active-class="animate__animated animate__slideOutLeft"
+      >
+    <div 
+  class="b-sidebar-backdrop bg-dark" 
+  @click.self="closeInternet"
+  style="cursor: pointer"
+>
+  </div>
+</transition>
+
+</div>
+
+</transition>
+
+
+<!-- Maxi MODAL -->
+<transition
+    enter-active-class="animate__animated animate__fadeIn"
+    leave-active-class="animate__animated animate__fadeOut"
+  >
+  <div v-if="isMaxiOpen" tabindex="-1" class="b-sidebar-outer bundle-sidebar my-sidebar-popup">
+    <div tabindex="0"></div>
+    <div
+      id="bundle_sidebar_wabaa"
+      tabindex="-1"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="bundle_sidebar_wabaa___title__"
+      class="b-sidebar shadow b-sidebar-right bg-light text-dark"
+    >
+      <header class="b-sidebar-header">
+        <button type="button" aria-label="Close" class="close text-dark" @click="closeMaxi">
+          <svg
+            viewBox="0 0 16 16"
+            width="1em"
+            height="1em"
+            focusable="false"
+            role="img"
+            aria-label="x"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="bi-x b-icon bi"
+          >
+            <g>
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+              ></path>
+            </g>
+          </svg>
+        </button>
+        <strong id="bundle_sidebar_wabaa___title__">MaXi</strong>
+      </header>
+      <div class="b-sidebar-body">
+        <div>
+          <div class="bundle-sidebar-header"> 
+            <div id="bundle_filter_list"> 
+              <div class="row"> 
+                <div class="col bundle-filter-item" :class="{ active: activeTab === 'jours' }" 
+                  @click="setActiveTab('jours')" > 
+                  <div class="text-truncate">Jours</div> 
+                </div> 
+                <div class="col bundle-filter-item" :class="{ active: activeTab === 'semaines' }" @click="setActiveTab('semaines')" > 
+                  <div class="text-truncate">Semaines</div> 
+                </div> 
+                <div class="col bundle-filter-item" :class="{ active: activeTab === 'mois' }" @click="setActiveTab('mois')" > 
+                  <div class="text-truncate">Mois</div> 
+                </div>
+                <div class="col bundle-filter-item" :class="{ active: activeTab === 'illimites' }" @click="setActiveTab('illimites')" > 
+                  <div class="text-truncate">Illimités</div> 
                 </div> 
               </div> 
             </div> 
@@ -670,6 +1564,71 @@ leave-active-class="animate__animated animate__fadeOutUp"
               </div>
             </div>
 
+            <div v-if="activeTab === 'illimites'">
+              <div role="tablist" class="accordion">
+                <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(10)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[10]"
+              :aria-controls="'accordion9'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">2500 FCFA</div>
+              <p class="text-muted">Wabaa 2500F (102 min/20J)</p>
+              <span v-if="collapsedCards[10]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[10]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+                </div>
+
+        <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(11)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[11]"
+              :aria-controls="'accordion11'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">5000 FCFA</div>
+              <p class="text-muted">Wabaa 5000F (208 min/30J)</p>
+              <span v-if="collapsedCards[11]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion11'" class="collapse show" v-show="collapsedCards[11]" role="tabpane11">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+              
+              </div>
+            </div>
+
 
           </div>
         </div>
@@ -682,7 +1641,7 @@ leave-active-class="animate__animated animate__fadeOutUp"
       >
     <div 
   class="b-sidebar-backdrop bg-dark" 
-  @click.self="closeWabaa"
+  @click.self="closeMaxi"
   style="cursor: pointer"
 >
   </div>
@@ -691,6 +1650,372 @@ leave-active-class="animate__animated animate__fadeOutUp"
 </div>
 
 </transition>
+
+
+<!-- GoPack MODAL -->
+<transition
+    enter-active-class="animate__animated animate__fadeIn"
+    leave-active-class="animate__animated animate__fadeOut"
+  >
+  <div v-if="isGopackOpen" tabindex="-1" class="b-sidebar-outer bundle-sidebar my-sidebar-popup">
+    <div tabindex="0"></div>
+    <div
+      id="bundle_sidebar_wabaa"
+      tabindex="-1"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="bundle_sidebar_wabaa___title__"
+      class="b-sidebar shadow b-sidebar-right bg-light text-dark"
+    >
+      <header class="b-sidebar-header">
+        <button type="button" aria-label="Close" class="close text-dark" @click="closeGopack">
+          <svg
+            viewBox="0 0 16 16"
+            width="1em"
+            height="1em"
+            focusable="false"
+            role="img"
+            aria-label="x"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="bi-x b-icon bi"
+          >
+            <g>
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+              ></path>
+            </g>
+          </svg>
+        </button>
+        <strong id="bundle_sidebar_wabaa___title__">Go Pack</strong>
+      </header>
+      <div class="b-sidebar-body">
+        <div>
+          <div class="bundle-sidebar-header"> 
+            <div id="bundle_filter_list"> 
+              <div class="row"> 
+                <div class="col bundle-filter-item" :class="{ active: activeTab === 'jours' }" 
+                  @click="setActiveTab('jours')" > 
+                  <div class="text-truncate">Jours</div> 
+                </div> 
+                <div class="col bundle-filter-item" :class="{ active: activeTab === 'semaines' }" @click="setActiveTab('semaines')" > 
+                  <div class="text-truncate">Semaines</div> 
+                </div> 
+                <div class="col bundle-filter-item" :class="{ active: activeTab === 'mois' }" @click="setActiveTab('mois')" > 
+                  <div class="text-truncate">Mois</div> 
+                </div>
+              </div> 
+            </div> 
+          </div>
+
+          
+          <div class="tab-content"> 
+            <div v-if="activeTab === 'jours'">
+              <div role="tablist" class="accordion">
+                <div class="card collapsed">
+          
+                  <header  @click="toggleCollapse(3)" role="tab" class="card-header p-1">
+                    <div
+                      class="bundle-activation-card-header"
+                      role="button"
+                      tabindex="3"
+                      :aria-expanded="collapsedCards[3]"
+                      :aria-controls="'accordion3'"
+                      style="overflow-anchor: none;"
+                    >
+                      <div class="font-weight-bold">100 FCFA</div>
+                      <p class="text-muted">Wabaa 100F (4 min/24H)</p>
+                      <span v-if="collapsedCards[3]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+                      <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+                    </div>
+                  </header>
+
+                  <transition
+      name="custom-classes-transition"
+      enter-active-class="animate__animated animate__fadeInDown"
+      leave-active-class="animate__animated animate__fadeOutUp"
+    >
+                  <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[3]" role="tabpane4">
+                    <InfosModal />
+                  </div>
+
+                  </transition>
+                </div>
+
+                <div class="card collapsed">
+    <header @click="toggleCollapse(6)" role="tab" class="card-header p-1">
+      <div 
+        class="bundle-activation-card-header not-collapsed" 
+        role="button" 
+        tabindex="6" 
+        :aria-expanded="collapsedCards[6]" 
+        :aria-controls="'accordion6'" 
+        style="overflow-anchor: none;">
+        <div class="font-weight-bold">150 FCFA</div>
+        <p class="text-muted">Wabaa 150F (6 min/24H)</p>
+        <span v-if="collapsedCards[6]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+        <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+      </div>
+    </header>
+    
+    <transition
+      name="custom-classes-transition"
+      enter-active-class="animate__animated animate__fadeInDown"
+      leave-active-class="animate__animated animate__fadeOutUp"
+    >
+
+    <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[6]" role="tabpane4">
+            <InfosModal />
+          </div>
+    </transition>
+                </div>
+
+                <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(14)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="14"
+              :aria-expanded="collapsedCards[14]"
+              :aria-controls="'accordion14'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">200 FCFA</div>
+              <p class="text-muted">Wabaa 200F (8 min/24H)</p>
+              <span v-if="collapsedCards[14]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[14]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+
+        <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(13)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="13"
+              :aria-expanded="collapsedCards[13]"
+              :aria-controls="'accordion13'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">300 FCFA</div>
+              <p class="text-muted">Wabaa 300F (12 min/24H)</p>
+              <span v-if="collapsedCards[13]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+name="custom-classes-transition"
+enter-active-class="animate__animated animate__fadeInDown"
+leave-active-class="animate__animated animate__fadeOutUp"
+>
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[13]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+
+        <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(12)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="12"
+              :aria-expanded="collapsedCards[12]"
+              :aria-controls="'accordion3'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">500 FCFA</div>
+              <p class="text-muted">Wabaa 500F (20 min/3J)</p>
+              <span v-if="collapsedCards[12]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+name="custom-classes-transition"
+enter-active-class="animate__animated animate__fadeInDown"
+leave-active-class="animate__animated animate__fadeOutUp"
+>
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[12]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+
+                
+              </div>
+            </div>
+
+            <div v-if="activeTab === 'semaines'">
+              <div role="tablist" class="accordion">
+
+                <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(8)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[8]"
+              :aria-controls="'accordion7'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">1000 FCFA</div>
+              <p class="text-muted">Wabaa 1000F (40 min/7J)</p>
+              <span v-if="collapsedCards[8]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[8]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+
+        <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(9)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[9]"
+              :aria-controls="'accordion9'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">1500 FCFA</div>
+              <p class="text-muted">Wabaa 1500F (62 min/7J)</p>
+              <span v-if="collapsedCards[9]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[9]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+              
+              </div>
+            </div>
+
+            <div v-if="activeTab === 'mois'">
+              <div role="tablist" class="accordion">
+                <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(10)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[10]"
+              :aria-controls="'accordion9'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">2500 FCFA</div>
+              <p class="text-muted">Wabaa 2500F (102 min/20J)</p>
+              <span v-if="collapsedCards[10]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[10]" role="tabpane4">
+            <InfosModal />
+          </div>
+
+          </transition>
+                </div>
+
+        <div class="card collapsed">
+          
+          <header  @click="toggleCollapse(11)" role="tab" class="card-header p-1">
+            <div
+              class="bundle-activation-card-header"
+              role="button"
+              tabindex="3"
+              :aria-expanded="collapsedCards[11]"
+              :aria-controls="'accordion11'"
+              style="overflow-anchor: none;"
+            >
+              <div class="font-weight-bold">5000 FCFA</div>
+              <p class="text-muted">Wabaa 5000F (208 min/30J)</p>
+              <span v-if="collapsedCards[11]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+              <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+            </div>
+          </header>
+
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
+          <div :id="'accordion11'" class="collapse show" v-show="collapsedCards[11]" role="tabpane11">
+            <InfosModal />
+          </div>
+
+          </transition>
+        </div>
+              
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <transition
+        enter-active-class="animate__animated animate__slideInLeft"
+        leave-active-class="animate__animated animate__slideOutLeft"
+      >
+    <div 
+  class="b-sidebar-backdrop bg-dark" 
+  @click.self="closeGopack"
+  style="cursor: pointer"
+>
+  </div>
+</transition>
+
+</div>
+
+</transition>
+
 
 </template>
 <script>
@@ -706,6 +2031,9 @@ export default {
   setup() {
     const isGameOpen = ref(false);
     const isWabaaOpen = ref(false);
+    const isInternetOpen = ref(false);
+    const isMaxiOpen = ref(false);
+    const isGopackOpen = ref(false);
 
     const isCollapsed = ref(true);
     const collapsedCards = ref([false, false]);
@@ -725,6 +2053,31 @@ export default {
     const closeWabaa = () => {
       isWabaaOpen.value = false;
     };
+
+    const openInternet = () => {
+      isInternetOpen.value = true;
+    };
+
+    const closeInternet = () => {
+      isInternetOpen.value = false;
+    };
+
+    const openMaxi = () => {
+      isMaxiOpen.value = true;
+    };
+
+    const closeMaxi = () => {
+      isMaxiOpen.value = false;
+    };
+
+    const openGopack = () => {
+      isGopackOpen.value = true;
+    };
+
+    const closeGopack = () => {
+      isGopackOpen.value = false;
+    };
+
 // Fonction pour basculer l'état des cartes
 const toggleCollapse = (index) => {
   // Fermer tous les autres collapses
@@ -742,12 +2095,20 @@ const toggleCollapse = (index) => {
       isGameOpen, 
       isWabaaOpen,
       collapsedCards,
+      isInternetOpen,
+      isMaxiOpen,
+      isGopackOpen,
       
       openGame, 
       closeGame,
       openWabaa,
       closeWabaa,
-      
+      closeInternet,
+      openInternet,
+      openMaxi,
+      closeMaxi,
+      openGopack,
+      closeGopack,
       
 
       toggleCollapse 
