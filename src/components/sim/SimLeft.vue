@@ -125,7 +125,7 @@
     enter-active-class="animate__animated animate__fadeIn"
     leave-active-class="animate__animated animate__fadeOut"
   >
-    <div v-if="isModalOpen" class="b-sidebar-outer">
+      <div v-if="isModalOpen" class="b-sidebar-outer my-sidebar-popup">
       <div class="b-sidebar shadow bg-light text-dark">
         <header class="b-sidebar-header">
             <strong id="sim_details_sidebar___title__">Infos 61255118</strong>
