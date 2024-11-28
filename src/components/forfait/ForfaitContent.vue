@@ -22,7 +22,7 @@
         <div>
           <div class="mobile-align">
             <h3  class="text-truncate">Wabaa</h3>
-          <svg class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+          <svg @click="openWabaa" class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
           
           </div>
           <p  class="text-muted"></p>
@@ -43,7 +43,7 @@
         <div>
           <div class="mobile-align">
             <h3  class="text-truncate">Internet</h3>
-          <svg class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+          <svg @click="openGame" class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
           
           </div>
           <p  class="text-muted"></p>
@@ -63,7 +63,7 @@
         <div>
           <div class="mobile-align">
             <h3  class="text-truncate">Yellow game</h3>
-          <svg class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+          <svg  class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
           
           </div>
           <p  class="text-muted"></p>
@@ -122,393 +122,408 @@
     enter-active-class="animate__animated animate__fadeIn"
     leave-active-class="animate__animated animate__fadeOut"
   >
-<div v-if="isGameOpen" id="bundle_sidebar_yellow_game" class="modal-backdrop" tabindex="-1" role="dialog" aria-modal="true"  aria-labelledby="bundle_sidebar_yellow_game___title__">
-<div class="b-sidebar shadow b-sidebar-right bg-light text-dark">
+  <div v-if="isGameOpen" tabindex="-1" class="b-sidebar-outer bundle-sidebar my-sidebar-popup">
+    <div tabindex="0"></div>
+    <div id="bundle_sidebar_yellow_game" 
+        tabindex="-1" 
+        role="dialog" 
+        aria-modal="true" 
+        aria-labelledby="bundle_sidebar_yellow_game___title__" 
+        class="b-sidebar shadow b-sidebar-right bg-light text-dark" 
+        style=""
+    >  
 
-<header class="b-sidebar-header">
-  <button type="button" aria-label="Close" class="close text-dark"  @click="closeGame">
-    <svg
-      viewBox="0 0 16 16"
-      width="1em"
-      height="1em"
-      focusable="false"
-      role="img"
-      aria-label="x"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="currentColor"
-      class="bi-x b-icon bi"
-    >
-      <g>
-        <path
-          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-        ></path>
-      </g>
-    </svg>
-  </button>
-  <strong id="bundle_sidebar_yellow_game___title__">Yellow Game</strong>
-</header>
-
-
-<div class="b-sidebar-body">
-  <div>
-    <div class="bundle-sidebar-header">
-      <div id="bundle_filter_list">
-        <div class="row">
-          <div class="col bundle-filter-item active">
-            <div class="text-truncate">Jours</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div role="tablist" class="accordion">
-      <!-- First Card -->
-
-  <div class="card collapsed">
-    <header
-        role="tab"
-        class="card-header p-1"
-        @click="toggleCollapse(0)"
-      >
-        <div
-          class="bundle-activation-card-header"
-          role="button"
-          tabindex="0"
-          :aria-expanded="collapsedCards[0]"
-          :aria-controls="'accordion0'"
-          style="overflow-anchor: none;"
-        >
-          <div class="font-weight-bold">50 FCFA</div>
-          <p class="text-muted">Yellow_Game_3Days</p>
-          <span class="icon" v-if="collapsedCards[0]">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
-            </svg>
-          </span>
-          <span class="icon" v-else>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-              <path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z" />
-            </svg>
-          </span>
-        </div>
-      </header>
-
-      <div :id="'accordion0'" v-show="collapsedCards[0]" role="tabpanel">
-      <div class="card-body">
-        <div>
-          <form>
-            <div class="bundle-activation-card-options">
-              <label class="mr-1">
-                <input
-                  name="YELLOW_GAME_50"
-                  value="activate"
-                  type="radio"
-                  checked="checked"
-                />
-                <div>Activer</div>
-                <p class="text-muted">
-                  Activer sur votre numéro
-                </p>
-              </label>
-              <label>
-                <input
-                  name="YELLOW_GAME_50"
-                  value="offer"
-                  type="radio"
-                />
-                <div>Offrir</div>
-                <p class="text-muted">
-                  Activer sur un autre numéro
-                </p>
-              </label>
-            </div>
-
-            <div class="bundle-activation-card-payment-mode mt-2">
-              <div class="form-group">
-                <label class="font-weight-bold">
-                  Sélectionnez un mode de paiement
-                </label>
-                <label class="mr-3">
-                  <input
-                    value="main"
-                    name="mode_YELLOW_GAME_50"
-                    type="radio"
-                    checked="checked"
-                    class="hidden-radio"
-                  />
-                  <span class="bundle-mode-icon mr-2">
-                    <i class="mtn-icon mtn-icon-phone"></i>
-                  </span>
-                  <span class="bundle-mode-title">
-                    Compte principal
-                  </span>
-                </label>
-                <label>
-                  <input
-                    value="MO"
-                    name="mode_YELLOW_GAME_50"
-                    type="radio"
-                    class="hidden-radio"
-                  />
-                  <span class="bundle-mode-icon mr-2">
-                    <i class="mtn-icon mtn-icon-mtn-momo"></i>
-                  </span>
-                  <span class="bundle-mode-title">
-                    Mobile Money
-                  </span>
-                </label>
-              </div>
-            </div>
-
-            <button class="btn btn-primary float-right">
-              <span>Activer</span>
+            <header class="b-sidebar-header">
+            <button type="button" aria-label="Close" class="close text-dark"  @click="closeGame">
+                <svg
+                viewBox="0 0 16 16"
+                width="1em"
+                height="1em"
+                focusable="false"
+                role="img"
+                aria-label="x"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="bi-x b-icon bi"
+                >
+                <g>
+                    <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                    ></path>
+                </g>
+                </svg>
             </button>
-            <div class="clearfix"></div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+            <strong id="bundle_sidebar_yellow_game___title__">Yellow Game</strong>
+            </header>
 
 
-      
-      <div class="card collapsed">
-        <header
-        role="tab"
-        class="card-header p-1"
-        @click="toggleCollapse(1)"
-      >
-        <div
-          class="bundle-activation-card-header"
-          role="button"
-          tabindex="1"
-          :aria-expanded="collapsedCards[1]"
-          :aria-controls="'accordion1'"
-          style="overflow-anchor: none;"
-        >
-          <div class="font-weight-bold">100 FCFA</div>
-          <p class="text-muted">Yellow_Game_3Days(100F/200MB/3D)</p>
-          <span class="icon" v-if="collapsedCards[1]">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
-            </svg>
-          </span>
-          <span class="icon" v-else>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-              <path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z" />
-            </svg>
-          </span>
-        </div>
-      </header>
-
-            <div :id="'accordion1'" v-show="collapsedCards[1]" role="tabpane2">
-          <div class="card-body">
-            <div >
-              <form >
-                <div  class="bundle-activation-card-options">
-                  <label  class="mr-1">
-                    <input
-                      
-                      name="YELLOW_GAME_50"
-                      value="activate"
-                      type="radio"
-                      checked="checked"
-                    />
-                    <div >Activer</div>
-                    <p  class="text-muted">
-                      Activer sur votre numéro
-                    </p>
-                  </label>
-                  <label >
-                    <input
-                      
-                      name="YELLOW_GAME_50"
-                      value="offer"
-                      type="radio"
-                    />
-                    <div >Offrir</div>
-                    <p  class="text-muted">
-                      Activer sur un autre numéro
-                    </p>
-                  </label>
+            <div class="b-sidebar-body">
+            <div>
+                <div class="bundle-sidebar-header">
+                <div id="bundle_filter_list">
+                    <div class="row">
+                    <div class="col bundle-filter-item active">
+                        <div class="text-truncate">Jours</div>
+                    </div>
+                    </div>
+                </div>
                 </div>
 
-                <div  class="bundle-activation-card-payment-mode mt-2">
-                  <div  class="form-group">
-                    <label  class="font-weight-bold">
-                      Sélectionnez un mode de paiement
-                    </label>
-                    <label  class="mr-3">
-                      <input
-                        
-                        value="main"
-                        name="mode_YELLOW_GAME_50"
-                        type="radio"
-                        checked="checked"
-                        class="hidden-radio"
-                      />
-                      <span  class="bundle-mode-icon mr-2">
-                        <i  class="mtn-icon mtn-icon-phone"></i>
-                      </span>
-                      <span  class="bundle-mode-title">
-                        Compte principal
-                      </span>
-                    </label>
-                    <label >
-                      <input
-                        
-                        value="MO"
-                        name="mode_YELLOW_GAME_50"
-                        type="radio"
-                        class="hidden-radio"
-                      />
-                      <span  class="bundle-mode-icon mr-2">
-                        <i  class="mtn-icon mtn-icon-mtn-momo"></i>
-                      </span>
-                      <span  class="bundle-mode-title">
-                        Mobile Money
-                      </span>
-                    </label>
-                  </div>
-                </div>
+                <div role="tablist" class="accordion">
+                <!-- First Card -->
 
-                <button  class="btn btn-primary float-right">
-                  <span >Activer</span>
-                </button>
-                <div  class="clearfix"></div>
-              </form>
+            <div class="card collapsed">
+                <header
+                    role="tab"
+                    class="card-header p-1"
+                    @click="toggleCollapse(0)"
+                >
+                    <div
+                    class="bundle-activation-card-header"
+                    role="button"
+                    tabindex="0"
+                    :aria-expanded="collapsedCards[0]"
+                    :aria-controls="'accordion0'"
+                    style="overflow-anchor: none;"
+                    >
+                    <div class="font-weight-bold">50 FCFA</div>
+                    <p class="text-muted">Yellow_Game_3Days</p>
+                    <span class="icon" v-if="collapsedCards[0]">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                        </svg>
+                    </span>
+                    <span class="icon" v-else>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                        <path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z" />
+                        </svg>
+                    </span>
+                    </div>
+                </header>
+
+                <div :id="'accordion0'" v-show="collapsedCards[0]" role="tabpanel">
+                <div class="card-body">
+                    <div>
+                    <form>
+                        <div class="bundle-activation-card-options">
+                        <label class="mr-1">
+                            <input
+                            name="YELLOW_GAME_50"
+                            value="activate"
+                            type="radio"
+                            checked="checked"
+                            />
+                            <div>Activer</div>
+                            <p class="text-muted">
+                            Activer sur votre numéro
+                            </p>
+                        </label>
+                        <label>
+                            <input
+                            name="YELLOW_GAME_50"
+                            value="offer"
+                            type="radio"
+                            />
+                            <div>Offrir</div>
+                            <p class="text-muted">
+                            Activer sur un autre numéro
+                            </p>
+                        </label>
+                        </div>
+
+                        <div class="bundle-activation-card-payment-mode mt-2">
+
+        
+                        <div class="form-group">
+                          <div >
+                            <label class="font-weight-bold">
+                              Sélectionnez un mode de paiement
+                            </label>
+                          </div>
+                            <label class="mr-3">
+                            <input
+                                value="main"
+                                name="mode_YELLOW_GAME_50"
+                                type="radio"
+                                checked="checked"
+                                class="hidden-radio"
+                            />
+                            <span class="bundle-mode-icon mr-2">
+                                <i class="mtn-icon mtn-icon-phone"></i>
+                            </span>
+                            <span class="bundle-mode-title">
+                                Compte principal
+                            </span>
+                            </label>
+                            <label>
+                            <input
+                                value="MO"
+                                name="mode_YELLOW_GAME_50"
+                                type="radio"
+                                class="hidden-radio"
+                            />
+                            <span class="bundle-mode-icon mr-2">
+                                <i class="mtn-icon mtn-icon-mtn-momo"></i>
+                            </span>
+                            <span class="bundle-mode-title">
+                                Mobile Money
+                            </span>
+                            </label>
+                        </div>
+                        </div>
+
+                        <button class="btn btn-primary float-right plus-haut">
+                        <span>Activer</span>
+                        </button>
+                        <div class="clearfix"></div>
+                    </form>
+                    </div>
+                </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
 
 
+                
+                <div class="card collapsed">
+                    <header
+                    role="tab"
+                    class="card-header p-1"
+                    @click="toggleCollapse(1)"
+                >
+                    <div
+                    class="bundle-activation-card-header"
+                    role="button"
+                    tabindex="1"
+                    :aria-expanded="collapsedCards[1]"
+                    :aria-controls="'accordion1'"
+                    style="overflow-anchor: none;"
+                    >
+                    <div class="font-weight-bold">100 FCFA</div>
+                    <p class="text-muted">Yellow_Game_3Days(100F/200MB/3D)</p>
+                    <span class="icon" v-if="collapsedCards[1]">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                        </svg>
+                    </span>
+                    <span class="icon" v-else>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                        <path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z" />
+                        </svg>
+                    </span>
+                    </div>
+                </header>
 
-      <div class="card collapsed">
-          <header
-        role="tab"
-        class="card-header p-1"
-        @click="toggleCollapse(2)"
-      >
+                        <div :id="'accordion1'" v-show="collapsedCards[1]" role="tabpane2">
+                    <div class="card-body">
+                        <div >
+                        <form >
+                            <div  class="bundle-activation-card-options">
+                            <label  class="mr-1">
+                                <input
+                                
+                                name="YELLOW_GAME_50"
+                                value="activate"
+                                type="radio"
+                                checked="checked"
+                                />
+                                <div >Activer</div>
+                                <p  class="text-muted">
+                                Activer sur votre numéro
+                                </p>
+                            </label>
+                            <label >
+                                <input
+                                
+                                name="YELLOW_GAME_50"
+                                value="offer"
+                                type="radio"
+                                />
+                                <div >Offrir</div>
+                                <p  class="text-muted">
+                                Activer sur un autre numéro
+                                </p>
+                            </label>
+                            </div>
 
-          <div
-          class="bundle-activation-card-header"
-          role="button"
-          tabindex="2"
-          :aria-expanded="collapsedCards[2]"
-          :aria-controls="'accordion2'"
-          style="overflow-anchor: none;"
-        >
+                            <div  class="bundle-activation-card-payment-mode mt-2">
+                            <div  class="form-group">
+                              <div >
+                            <label class="font-weight-bold">
+                              Sélectionnez un mode de paiement
+                            </label>
+                          </div>
+                                <label  class="mr-3">
+                                <input
+                                    
+                                    value="main"
+                                    name="mode_YELLOW_GAME_50"
+                                    type="radio"
+                                    checked="checked"
+                                    class="hidden-radio"
+                                />
+                                <span  class="bundle-mode-icon mr-2">
+                                    <i  class="mtn-icon mtn-icon-phone"></i>
+                                </span>
+                                <span  class="bundle-mode-title">
+                                    Compte principal
+                                </span>
+                                </label>
+                                <label >
+                                <input
+                                    
+                                    value="MO"
+                                    name="mode_YELLOW_GAME_50"
+                                    type="radio"
+                                    class="hidden-radio"
+                                />
+                                <span  class="bundle-mode-icon mr-2">
+                                    <i  class="mtn-icon mtn-icon-mtn-momo"></i>
+                                </span>
+                                <span  class="bundle-mode-title">
+                                    Mobile Money
+                                </span>
+                                </label>
+                            </div>
+                            </div>
 
-        <div class="font-weight-bold">150 FCFA</div>
-            <p class="text-muted">Yellow_Game_Weekly(150F/400MB/7D)</p>
-              <span class="icon" v-if="collapsedCards[2]">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"/></svg>
-            </span>
-            <span class="icon" v-else>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-            </span>
-          </div>
-        </header>
-
-          <div :id="'accordion3'" v-show="collapsedCards[2]" role="tabpane3">
-          <div class="card-body">
-            <div >
-              <form >
-                <div  class="bundle-activation-card-options">
-                  <label  class="mr-1">
-                    <input
-                      
-                      name="YELLOW_GAME_50"
-                      value="activate"
-                      type="radio"
-                      checked="checked"
-                    />
-                    <div >Activer</div>
-                    <p  class="text-muted">
-                      Activer sur votre numéro
-                    </p>
-                  </label>
-                  <label >
-                    <input
-                      
-                      name="YELLOW_GAME_50"
-                      value="offer"
-                      type="radio"
-                    />
-                    <div >Offrir</div>
-                    <p  class="text-muted">
-                      Activer sur un autre numéro
-                    </p>
-                  </label>
+                            <button  class="btn btn-primary float-right plus-haut">
+                            <span >Activer</span>
+                            </button>
+                            <div  class="clearfix"></div>
+                        </form>
+                        </div>
+                    </div>
+                    </div>
                 </div>
 
-                <div  class="bundle-activation-card-payment-mode mt-2">
-                  <div  class="form-group">
-                    <label  class="font-weight-bold">
-                      Sélectionnez un mode de paiement
-                    </label>
-                    <label  class="mr-3">
-                      <input
-                        
-                        value="main"
-                        name="mode_YELLOW_GAME_50"
-                        type="radio"
-                        checked="checked"
-                        class="hidden-radio"
-                      />
-                      <span  class="bundle-mode-icon mr-2">
-                        <i  class="mtn-icon mtn-icon-phone"></i>
-                      </span>
-                      <span  class="bundle-mode-title">
-                        Compte principal
-                      </span>
-                    </label>
-                    <label >
-                      <input
-                        
-                        value="MO"
-                        name="mode_YELLOW_GAME_50"
-                        type="radio"
-                        class="hidden-radio"
-                      />
-                      <span  class="bundle-mode-icon mr-2">
-                        <i  class="mtn-icon mtn-icon-mtn-momo"></i>
-                      </span>
-                      <span  class="bundle-mode-title">
-                        Mobile Money
-                      </span>
-                    </label>
-                  </div>
-                </div>
 
-                <button  class="btn btn-primary float-right">
-                  <span >Activer</span>
-                </button>
-                <div  class="clearfix"></div>
-              </form>
+
+                <div class="card collapsed">
+                    <header
+                    role="tab"
+                    class="card-header p-1"
+                    @click="toggleCollapse(2)"
+                >
+
+                    <div
+                    class="bundle-activation-card-header"
+                    role="button"
+                    tabindex="2"
+                    :aria-expanded="collapsedCards[2]"
+                    :aria-controls="'accordion2'"
+                    style="overflow-anchor: none;"
+                    >
+
+                    <div class="font-weight-bold">150 FCFA</div>
+                        <p class="text-muted">Yellow_Game_Weekly(150F/400MB/7D)</p>
+                        <span class="icon" v-if="collapsedCards[2]">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"/></svg>
+                        </span>
+                        <span class="icon" v-else>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                        </span>
+                    </div>
+                    </header>
+
+                    <div :id="'accordion3'" v-show="collapsedCards[2]" role="tabpane3">
+                    <div class="card-body">
+                        <div >
+                        <form >
+                            <div  class="bundle-activation-card-options">
+                            <label  class="mr-1">
+                                <input
+                                
+                                name="YELLOW_GAME_50"
+                                value="activate"
+                                type="radio"
+                                checked="checked"
+                                />
+                                <div >Activer</div>
+                                <p  class="text-muted">
+                                Activer sur votre numéro
+                                </p>
+                            </label>
+                            <label >
+                                <input
+                                
+                                name="YELLOW_GAME_50"
+                                value="offer"
+                                type="radio"
+                                />
+                                <div >Offrir</div>
+                                <p  class="text-muted">
+                                Activer sur un autre numéro
+                                </p>
+                            </label>
+                            </div>
+
+                            <div  class="bundle-activation-card-payment-mode mt-2">
+                            <div  class="form-group">
+                              <div >
+                            <label class="font-weight-bold">
+                              Sélectionnez un mode de paiement
+                            </label>
+                          </div>
+                                <label  class="mr-3">
+                                <input
+                                    
+                                    value="main"
+                                    name="mode_YELLOW_GAME_50"
+                                    type="radio"
+                                    checked="checked"
+                                    class="hidden-radio"
+                                />
+                                <span  class="bundle-mode-icon mr-2">
+                                    <i  class="mtn-icon mtn-icon-phone"></i>
+                                </span>
+                                <span  class="bundle-mode-title">
+                                    Compte principal
+                                </span>
+                                </label>
+                                <label >
+                                <input
+                                    
+                                    value="MO"
+                                    name="mode_YELLOW_GAME_50"
+                                    type="radio"
+                                    class="hidden-radio"
+                                />
+                                <span  class="bundle-mode-icon mr-2">
+                                    <i  class="mtn-icon mtn-icon-mtn-momo"></i>
+                                </span>
+                                <span  class="bundle-mode-title">
+                                    Mobile Money
+                                </span>
+                                </label>
+                            </div>
+                            </div>
+
+                            <button  class="btn btn-primary float-right plus-haut">
+                            <span >Activer</span>
+                            </button>
+                            <div  class="clearfix"></div>
+                        </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
+            </div>
+
+
     </div>
-  </div>
-</div>
 
-
-</div>
-
-
-<transition
+    <transition
         enter-active-class="animate__animated animate__slideInLeft"
         leave-active-class="animate__animated animate__slideOutLeft"
       >
-<div 
-  class="b-sidebar-backdrop bg-dark" 
-  @click.self="closeGame"
-  style="cursor: pointer"
->
-  </div>
+        <div 
+            class="b-sidebar-backdrop bg-dark" 
+            @click.self="closeGame"
+            style="cursor: pointer"
+            >
+            </div>
 
 </transition>
 </div>
@@ -607,7 +622,11 @@
                     </div>
                     <div class="bundle-activation-card-payment-mode mt-2">
                       <div class="form-group">
-                        <label class="font-weight-bold">Sélectionnez un mode de paiement</label>
+                        <div >
+                            <label class="font-weight-bold">
+                              Sélectionnez un mode de paiement
+                            </label>
+                          </div>
                         <label class="mr-3">
                           <input
                             value="main"
@@ -630,7 +649,7 @@
                         </label>
                       </div>
                     </div>
-                    <button class="btn btn-primary float-right">
+                    <button class="btn btn-primary float-right plus-haut">
                       <span>Activer</span>
                     </button>
                     <div class="clearfix"></div>
@@ -982,7 +1001,6 @@ h1, h2, h3, h4, h5, strong {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 320px;
     max-width: 100%;
     max-height: 100%;
     margin: 0;
@@ -1276,6 +1294,8 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 }
 
+
+
 .bundle-activation-card-options label {
     display: inline-block;
     vertical-align: top;
@@ -1454,26 +1474,7 @@ label input:checked~.bundle-mode-icon {
     left: auto;
     right: 0;
 }
-.b-sidebar {
-    width: 40%;
-}
-.b-sidebar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex
-;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 320px;
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0;
-    outline: 0;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-}
+
 .b-sidebar, .b-sidebar-backdrop {
     position: fixed;
     top: 0;
@@ -1621,6 +1622,32 @@ img, svg {
 
 
 
+@media screen and (max-width: 600px) {
+    .my-sidebar-popup .b-sidebar {
+        width: 100%;
+        height: 80%;
+        bottom: 0;
+        top: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .b-sidebar-right .close, .my-sidebar-popup .b-sidebar:not(.b-sidebar-right)>.b-sidebar-header .close {
+        right: 15px !important;
+        top: -45px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .b-sidebar-right .close {
+        left: auto !important;
+    }
+}
+
+
+.plus-haut {
+  bottom: 1.5rem;
+    position: relative;
+}
 
 
 

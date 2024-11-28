@@ -281,6 +281,7 @@ h1, h2, h3, h4, h5, strong {
 .b-form-btn-label-control.form-control {
     display: -webkit-box;
     display: -ms-flexbox;
+    align-items: center;
     display: flex;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -355,6 +356,9 @@ h1, h2, h3, h4, h5, strong {
     font-size: inherit;
     white-space: normal;
     cursor: pointer;
+    align-items: center;
+    display: flex
+;
 }
 
 .text-muted {

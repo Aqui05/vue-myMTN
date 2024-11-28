@@ -31,7 +31,7 @@
                 <div class="card-box d-flex align-items-center justify-content-center px-0 mt-4">
                     <div class="h-100 w-100">
                         <div class="pt-3 pb-4 px-4 d-flex justify-content-end">
-                            <button class="btn btn-primary download d-flex align-items-center py-2">
+                            <button class="btn btn-primary download d-flex align-items-center py-2" @click="downloadPdf('products')">
                                 <span>Télécharger en PDF</span>
                             </button></div>
                             
@@ -75,7 +75,7 @@
                 <div class="card-box d-flex align-items-center justify-content-center px-0 mt-4 internet">
                     <div class="h-100 w-100">
                         <div class="pt-3 pb-4 px-4 d-flex justify-content-end">
-                            <button class="btn btn-primary download d-flex align-items-center py-2 mb-3" style="margin-bottom: 1rem">
+                            <button class="btn btn-primary download d-flex align-items-center py-2 mb-3" style="margin-bottom: 1rem" @click="downloadPdf('internet')">
                                 <span >Télécharger en PDF</span>
                             </button>
                         </div>
@@ -123,17 +123,38 @@
   </template>
   
   <script>
+  import jsPDF from 'jspdf'; 
+  import html2canvas from 'html2canvas';
+  import autoTable from 'jspdf-autotable';
         export default {
             name:'ConsomLeft',
             data() {
             return {
                 activeTab: 'products'
             };
-            }
+            },
+            methods: {
+                downloadPdf(tab) {
+                const doc = new jsPDF();
+                
+                // Sélectionner le tableau en fonction de l'onglet actif
+                const tableId = tab === 'products' ? '#table' : '.bill-details-table.internet';
+
+                autoTable(doc, {
+                    html: tableId,
+                    styles: { fillColor: [255, 255, 255] }, // Optionnel: styles pour le tableau
+                });
+
+                doc.save('tableau.pdf');
+                },
+            },
+            
         };
 
   </script>
-  
+
+
+
   <style scoped>
 
 .tab-content>.tab-pane {
