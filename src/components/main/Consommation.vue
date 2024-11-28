@@ -1,7 +1,7 @@
 <template>
     <div class="row site-page v-step-0">
             <div class="col-md-12" style="">
-            <div class="section-header page-title title1">
+            <div class="section-header page-title title1" style="line-height: 25px;">
                 <h1>Ma consommation</h1>
                 <p class="text-muted font-weight-light">
                     Consommation sur les sept derniers jours
@@ -148,11 +148,6 @@
     100% { background-position: -200% 0; } 
 }
 
-@media screen and (min-width: 600px) {
- .title1 {
-    margin-left: 5px;
- }
-}
 
 
 .row {
@@ -170,6 +165,7 @@
     .site-page .page-title h1, .site-page .page-title h2 {
     font-size: 24px;
     margin: 0;
+    font-family: MTNBrighterSans-Bold, Century Gothic, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, strong {
@@ -195,6 +191,7 @@ p {
 
 .section-header p {
     font-size: 16px;
+    font-family: MTNBrighterSans-Light, Century Gothic, Arial, sans-serif;
 }
 
 

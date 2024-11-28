@@ -524,6 +524,13 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     color: #bfbfbf !important;
 }
 
+.sidebar-card h3 {
+    font-size: 16px;
+    position: relative;
+    font-family: MTNBrighterSans-Bold, Century Gothic, Arial, sans-serif;
+    margin-bottom: 15px;
+}
+
 .close {
     float: right;
     font-size: 1.5rem;
@@ -565,6 +572,16 @@ table {
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: rgba(0, 0, 0, .05);
 }
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    line-height: 1.2;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
 
 #sim_details_sidebar .table td, #sim_details_sidebar .table th {
     padding: 10px 20px;
