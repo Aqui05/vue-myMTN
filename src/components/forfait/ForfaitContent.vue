@@ -27,7 +27,7 @@
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
-            <button class="btn btn-secondary ripple" @click="openModal">
+            <button class="btn btn-secondary ripple" @click="openWabaa">
               <span class="float-left">Afficher</span>
               <i class="mdi mdi-arrow-right float-right"></i>
             </button>
@@ -48,7 +48,7 @@
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
-            <button class="btn btn-secondary ripple" @click="openModal">
+            <button class="btn btn-secondary ripple" @click="openGame">
               <span class="float-left">Afficher</span>
               <i class="mdi mdi-arrow-right float-right"></i>
             </button>
@@ -68,7 +68,7 @@
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
-            <button class="btn btn-secondary ripple" @click="openModal">
+            <button class="btn btn-secondary ripple" @click="openGame">
               <span class="float-left">Afficher</span>
               <i class="mdi mdi-arrow-right float-right"></i>
             </button>
@@ -88,7 +88,7 @@
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
-            <button class="btn btn-secondary ripple" @click="openModal">
+            <button class="btn btn-secondary ripple" @click="openGame">
               <span class="float-left">Afficher</span>
               <i class="mdi mdi-arrow-right float-right"></i>
             </button>
@@ -105,7 +105,7 @@
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
-            <button class="btn btn-secondary ripple" @click="openModal">
+            <button class="btn btn-secondary ripple" @click="openGame">
               <span class="float-left">Afficher</span>
               <i class="mdi mdi-arrow-right float-right"></i>
             </button>
@@ -117,11 +117,16 @@
 </div>
 
 
-<div v-if="isModalOpen" id="bundle_sidebar_yellow_game" class="modal-backdrop" tabindex="-1" role="dialog" aria-modal="true"  aria-labelledby="bundle_sidebar_yellow_game___title__">
+    
+<transition
+    enter-active-class="animate__animated animate__fadeIn"
+    leave-active-class="animate__animated animate__fadeOut"
+  >
+<div v-if="isGameOpen" id="bundle_sidebar_yellow_game" class="modal-backdrop" tabindex="-1" role="dialog" aria-modal="true"  aria-labelledby="bundle_sidebar_yellow_game___title__">
 <div class="b-sidebar shadow b-sidebar-right bg-light text-dark">
 
 <header class="b-sidebar-header">
-  <button type="button" aria-label="Close" class="close text-dark"  @click="closeModal">
+  <button type="button" aria-label="Close" class="close text-dark"  @click="closeGame">
     <svg
       viewBox="0 0 16 16"
       width="1em"
@@ -160,27 +165,35 @@
       <!-- First Card -->
 
   <div class="card collapsed">
-    <header role="tab" class="card-header p-1" @click="toggleCollapse">
-      <div
-        class="bundle-activation-card-header"
-        role="button"
-        tabindex="0"
-        :aria-expanded="isCollapsed"
-        :aria-controls="accordion0"
-        style="overflow-anchor: none;"
+    <header
+        role="tab"
+        class="card-header p-1"
+        @click="toggleCollapse(0)"
       >
-        <div class="font-weight-bold">50 FCFA</div>
-        <p class="text-muted">Yellow_Game_3Days</p>
-        <span class="icon" v-if="isCollapsed">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-        </span>
-        <span class="icon" v-else>
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"/></svg>
-        </span>
-      </div>
-    </header>
+        <div
+          class="bundle-activation-card-header"
+          role="button"
+          tabindex="0"
+          :aria-expanded="collapsedCards[0]"
+          :aria-controls="'accordion0'"
+          style="overflow-anchor: none;"
+        >
+          <div class="font-weight-bold">50 FCFA</div>
+          <p class="text-muted">Yellow_Game_3Days</p>
+          <span class="icon" v-if="collapsedCards[0]">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+            </svg>
+          </span>
+          <span class="icon" v-else>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z" />
+            </svg>
+          </span>
+        </div>
+      </header>
 
-    <div :id="accordion0" v-show="isCollapsed" role="tabpanel">
+      <div :id="'accordion0'" v-show="collapsedCards[0]" role="tabpanel">
       <div class="card-body">
         <div>
           <form>
@@ -260,28 +273,35 @@
 
       
       <div class="card collapsed">
-        <header role="tab" class="card-header p-1" @click="toggleCollapse">
-          <div
-           
-            class="bundle-activation-card-header not-collapsed"
-            role="button"
-            tabindex="1"
-            aria-expanded="true"
-            aria-controls="accordion1"
-            style="overflow-anchor: none;"
-          >
-        <div class="font-weight-bold">100 FCFA</div>
-            <p class="text-muted">Yellow_Game_3Days(100F/200MB/3D)</p>
-            <span class="icon-not-collapsed">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"/></svg>
-            </span>
-            <span class="icon-collapsed">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-            </span>
-          </div>
-        </header>
+        <header
+        role="tab"
+        class="card-header p-1"
+        @click="toggleCollapse(1)"
+      >
+        <div
+          class="bundle-activation-card-header"
+          role="button"
+          tabindex="1"
+          :aria-expanded="collapsedCards[1]"
+          :aria-controls="'accordion1'"
+          style="overflow-anchor: none;"
+        >
+          <div class="font-weight-bold">100 FCFA</div>
+          <p class="text-muted">Yellow_Game_3Days(100F/200MB/3D)</p>
+          <span class="icon" v-if="collapsedCards[1]">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+            </svg>
+          </span>
+          <span class="icon" v-else>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z" />
+            </svg>
+          </span>
+        </div>
+      </header>
 
-          <div :id="accordion1" v-show="isCollapsed" role="tabpane2">
+            <div :id="'accordion1'" v-show="collapsedCards[1]" role="tabpane2">
           <div class="card-body">
             <div >
               <form >
@@ -365,28 +385,33 @@
 
 
       <div class="card collapsed">
-        <header role="tab" class="card-header p-1" @click="toggleCollapse">
+          <header
+        role="tab"
+        class="card-header p-1"
+        @click="toggleCollapse(2)"
+      >
+
           <div
-           
-            class="bundle-activation-card-header not-collapsed"
-            role="button"
-            tabindex="2"
-            aria-expanded="true"
-            aria-controls="accordion2"
-            style="overflow-anchor: none;"
-          >
+          class="bundle-activation-card-header"
+          role="button"
+          tabindex="2"
+          :aria-expanded="collapsedCards[2]"
+          :aria-controls="'accordion2'"
+          style="overflow-anchor: none;"
+        >
+
         <div class="font-weight-bold">150 FCFA</div>
             <p class="text-muted">Yellow_Game_Weekly(150F/400MB/7D)</p>
-            <span class="kgk-mtn-keyboard_arrow_down icon-not-collapsed">
+              <span class="icon" v-if="collapsedCards[2]">
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"/></svg>
             </span>
-            <span class="kgk-mtn-keyboard_arrow_right icon-collapsed">
+            <span class="icon" v-else>
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
             </span>
           </div>
         </header>
 
-        <div :id="accordion2" v-show="isCollapsed" role="tabpane2">
+          <div :id="'accordion3'" v-show="collapsedCards[2]" role="tabpane3">
           <div class="card-body">
             <div >
               <form >
@@ -469,8 +494,171 @@
     </div>
   </div>
 </div>
+
+
 </div>
+
+
+<transition
+        enter-active-class="animate__animated animate__slideInLeft"
+        leave-active-class="animate__animated animate__slideOutLeft"
+      >
+<div 
+  class="b-sidebar-backdrop bg-dark" 
+  @click.self="closeGame"
+  style="cursor: pointer"
+>
+  </div>
+
+</transition>
 </div>
+
+</transition>
+
+
+<transition
+    enter-active-class="animate__animated animate__fadeIn"
+    leave-active-class="animate__animated animate__fadeOut"
+  >
+  <div v-if="isWabaaOpen" tabindex="-1" class="b-sidebar-outer bundle-sidebar my-sidebar-popup">
+    <div tabindex="0"></div>
+    <div
+      id="bundle_sidebar_wabaa"
+      tabindex="-1"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="bundle_sidebar_wabaa___title__"
+      class="b-sidebar shadow b-sidebar-right bg-light text-dark"
+    >
+      <header class="b-sidebar-header">
+        <button type="button" aria-label="Close" class="close text-dark" @click="closeWabaa">
+          <svg
+            viewBox="0 0 16 16"
+            width="1em"
+            height="1em"
+            focusable="false"
+            role="img"
+            aria-label="x"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="bi-x b-icon bi"
+          >
+            <g>
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+              ></path>
+            </g>
+          </svg>
+        </button>
+        <strong id="bundle_sidebar_wabaa___title__">Wabaa</strong>
+      </header>
+      <div class="b-sidebar-body">
+        <div>
+          <div class="bundle-sidebar-header">
+            <div id="bundle_filter_list">
+              <div class="row">
+                <div class="col bundle-filter-item active">
+                  <div class="text-truncate">Jours</div>
+                </div>
+                <div class="col bundle-filter-item">
+                  <div class="text-truncate">Semaines</div>
+                </div>
+                <div class="col bundle-filter-item">
+                  <div class="text-truncate">Mois</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div role="tablist" class="accordion">
+            <div class="card collapsed">
+      
+              <header  @click="toggleCollapse(3)" role="tab" class="card-header p-1">
+                <div
+                  class="bundle-activation-card-header"
+                  role="button"
+                  tabindex="3"
+                  :aria-expanded="collapsedCards[3]"
+                  :aria-controls="'accordion3'"
+                  style="overflow-anchor: none;"
+                >
+                  <div class="font-weight-bold">100 FCFA</div>
+                  <p class="text-muted">Wabaa 100F (4 min/24H)</p>
+                  <span v-if="collapsedCards[3]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
+                  <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
+                </div>
+              </header>
+
+              <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[3]" role="tabpane4">
+                <div class="card-body">
+                  <form>
+                    <div class="bundle-activation-card-options">
+                      <label class="mr-1">
+                        <input name="WABAA_100" value="activate" type="radio" checked="checked" />
+                        <div>Activer</div>
+                        <p class="text-muted">Activer sur votre numéro</p>
+                      </label>
+                      <label>
+                        <input name="WABAA_100" value="offer" type="radio" />
+                        <div>Offrir</div>
+                        <p class="text-muted">Activer sur un autre numéro</p>
+                      </label>
+                    </div>
+                    <div class="bundle-activation-card-payment-mode mt-2">
+                      <div class="form-group">
+                        <label class="font-weight-bold">Sélectionnez un mode de paiement</label>
+                        <label class="mr-3">
+                          <input
+                            value="main"
+                            name="mode_WABAA_100"
+                            type="radio"
+                            checked="checked"
+                            class="hidden-radio"
+                          />
+                          <span class="bundle-mode-icon mr-2">
+                            <i class="mtn-icon mtn-icon-phone"></i>
+                          </span>
+                          <span class="bundle-mode-title">Compte principal</span>
+                        </label>
+                        <label>
+                          <input value="MO" name="mode_WABAA_100" type="radio" class="hidden-radio" />
+                          <span class="bundle-mode-icon mr-2">
+                            <i class="mtn-icon mtn-icon-mtn-momo"></i>
+                          </span>
+                          <span class="bundle-mode-title">Mobile Money</span>
+                        </label>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary float-right">
+                      <span>Activer</span>
+                    </button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- Add similar structure for other cards -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <transition
+        enter-active-class="animate__animated animate__slideInLeft"
+        leave-active-class="animate__animated animate__slideOutLeft"
+      >
+    <div 
+  class="b-sidebar-backdrop bg-dark" 
+  @click.self="closeWabaa"
+  style="cursor: pointer"
+>
+  </div>
+</transition>
+
+</div>
+
+</transition>
 
 </template>
 <script>
@@ -480,27 +668,46 @@ export default {
   name: 'ForfaitContent',
 
   setup() {
-    const isModalOpen = ref(false);
+    const isGameOpen = ref(false);
+    const isWabaaOpen = ref(false);
+
     const isCollapsed = ref(true);
+    const collapsedCards = ref([false, false]);
 
-    const openModal = () => {
-      isModalOpen.value = true;
+    const openGame = () => {
+      isGameOpen.value = true;
     };
 
-    const closeModal = () => {
-      isModalOpen.value = false;
+    const closeGame = () => {
+      isGameOpen.value = false;
     };
 
-    const toggleCollapse = () => {
-      isCollapsed.value = !isCollapsed.value;
+    const openWabaa = () => {
+      isWabaaOpen.value = true;
     };
+
+    const closeWabaa = () => {
+      isWabaaOpen.value = false;
+    };
+
+  // Fonction pour basculer l'état d'une carte spécifique
+  const toggleCollapse = (index) => {
+    collapsedCards.value[index] = !collapsedCards.value[index];
+  };
 
     // Retournez toutes les propriétés et méthodes nécessaires au template
     return { 
-      isModalOpen, 
-      isCollapsed, // Ajoutez cette ligne
-      openModal, 
-      closeModal, 
+      isGameOpen, 
+      isWabaaOpen,
+      collapsedCards,
+      
+      openGame, 
+      closeGame,
+      openWabaa,
+      closeWabaa,
+      
+      
+
       toggleCollapse 
     };
   },
@@ -512,8 +719,15 @@ export default {
   mounted() {
     setTimeout(() => {
       this.loading = false
-    }, 2000)
+    }, 2000);
+
+        // Importer Animate.css
+        const link = document.createElement('link')
+    link.rel = 'stylesheet'
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
+    document.head.appendChild(link)
   }
+
 };
 </script>
 
@@ -1049,10 +1263,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     font-size: 24px;
     color: #00678f;
 }
-.icon-collapsed, .icon-not-collapsed {
-    display: none;
-}
-
 .bundle-sidebar, .card, .card-body {
     background: #f4f4f4 !important;
 }
@@ -1221,6 +1431,193 @@ label input:checked~.bundle-mode-icon {
 }
 
 
+
+
+.b-sidebar-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    overflow: visible;
+    z-index: 1035;
+}
+
+
+
+
+
+
+/* STLES DES MODALS */
+
+.b-sidebar.b-sidebar-right {
+    left: auto;
+    right: 0;
+}
+.b-sidebar {
+    width: 40%;
+}
+.b-sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 320px;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    outline: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.b-sidebar, .b-sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+}
+.text-dark {
+    color: #343a40 !important;
+}
+.shadow {
+    -webkit-box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.b-sidebar, .b-sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+}
+.b-sidebar-backdrop {
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    opacity: .6;
+}
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.b-sidebar>.b-sidebar-header {
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.b-sidebar-header {
+    background: #ffcc01;
+    padding: 15px 20px !important;
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+.b-sidebar.b-sidebar-right>.b-sidebar-header .close {
+    margin-right: auto;
+}
+.b-sidebar>.b-sidebar-header .close {
+    float: none;
+    font-size: 1.5rem;
+}
+.b-sidebar-right .close {
+    right: auto;
+    left: -50px !important;
+}
+.b-sidebar-header .close {
+    position: absolute;
+    right: -50px;
+    background: 40px;
+    width: 30px;
+    background: #fff;
+    opacity: 1;
+    margin: 0;
+    display: block;
+    border-radius: 50%;
+    height: 30px;
+    line-height: 34px;
+    color: #bfbfbf !important;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}
+.text-dark {
+    color: #343a40 !important;
+}
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    overflow: visible;
+}
+
+.b-sidebar-header strong {
+    font-size: 18px;
+}
+h1, h2, h3, h4, h5, strong {
+    font-weight: 700;
+}
+
+.b-icon.bi {
+    display: inline-block;
+    overflow: visible;
+    vertical-align: -.15em;
+}
+svg {
+    overflow: hidden;
+}
+img, svg {
+    vertical-align: middle;
+}
+
+.bundle-sidebar .b-sidebar-body {
+    background: #fff !important;
+}
+.b-sidebar>.b-sidebar-body {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    height: 100%;
+    overflow-y: auto;
+}
 
 
 

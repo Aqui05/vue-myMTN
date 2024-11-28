@@ -3,7 +3,8 @@
   src:
     url('fonts/KAMGOKO-MTN-ICONS.ttf?15ofbg') format('truetype'),
     url('fonts/KAMGOKO-MTN-ICONS.woff?15ofbg') format('woff'),
-    url('fonts/KAMGOKO-MTN-ICONS.svg?15ofbg#KAMGOKO-MTN-ICONS') format('svg');
+    url('fonts/KAMGOKO-MTN-ICONS.svg?15ofbg#KAMGOKO-MTN-ICONS') format('svg'),
+    url('../mtn-icon-font.svg') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

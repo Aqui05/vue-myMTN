@@ -6,7 +6,7 @@
 /*@import './mdi/fonts/materialdesignicons-webfont.ttf';*/
 /*@import './mdi/scss/materialdesignicons.scss';
 @import './mdi/scss/_icons.scss';*/
-/*@import '/src/assets/fonts/mtn-icon-font.svg';*/
+
 @import '/src/assets/fonts/kgk/style.css';
 
 #app {
@@ -22,6 +22,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 
 
 @font-face {

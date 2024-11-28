@@ -61,10 +61,10 @@
 
       <div class="col-md-3 service-card">
         <div>
-          <h3 class="text-truncate">PUK</h3>
-          <p class="text-muted">Récupérer mon code PUK</p>
+          <h3 class="text-truncate">Bloquer ma sim</h3>
+          <p class="text-muted"> En cas de vol ou de perte </p>
           <div class="service-card-bottom">
-            <button class="btn btn-secondary ripple">
+            <button class="btn btn-secondary ripple" @click="openBSim">
               <span class="float-left">Afficher</span>
               <i class="mdi mdi-arrow-right float-right"></i>
              </button>
@@ -74,12 +74,12 @@
   
       <div class="col-md-3 service-card">
         <div>
-          <h3 class="text-truncate">Activer internet</h3>
+          <h3 class="text-truncate">Débloquer ma sim</h3>
           <p class="text-muted">
-            Recevoir les paramètres internet
+            Remettre mon numéro en ligne
           </p>
           <div class="service-card-bottom">
-            <button class="btn btn-secondary ripple">
+            <button class="btn btn-secondary ripple " @click="openDSim">
               <span class="float-left">Afficher</span>
               <i class="mdi mdi-arrow-right float-right"></i>
                  </button>
@@ -89,12 +89,12 @@
   
       <div class="col-md-3 service-card">
         <div>
-          <h3 class="text-truncate">Désactiver internet</h3>
+          <h3 class="text-truncate">Code Me2u</h3>
           <p class="text-muted">
-            Désactiver internet sur ma SIM
+            Changer mon code de transfert 
           </p>
           <div class="service-card-bottom">
-            <button class="btn btn-secondary ripple">
+            <button class="btn btn-secondary ripple" @click="openCCode">
               <span class="float-left">Afficher</span>
               <i class="mdi mdi-arrow-right float-right"></i>
             </button>
@@ -121,19 +121,13 @@
 
 
     
-    <div  v-if="isModalOpen">
-      <div  tabindex="-1" class="b-sidebar-outer my-sidebar-popup">
-        <div tabindex="0"></div>
-        <div 
-          id="sim_details_sidebar" 
-          tabindex="-1" 
-          role="dialog" 
-          aria-modal="true" 
-          class="b-sidebar shadow bg-light text-dark" 
-          style="" 
-          aria-labelledby="sim_details_sidebar___title__"
-        >
-          <header class="b-sidebar-header">
+    <transition
+    enter-active-class="animate__animated animate__fadeIn"
+    leave-active-class="animate__animated animate__fadeOut"
+  >
+    <div v-if="isModalOpen" class="b-sidebar-outer">
+      <div class="b-sidebar shadow bg-light text-dark">
+        <header class="b-sidebar-header">
             <strong id="sim_details_sidebar___title__">Infos 61255118</strong>
             <button type="button" aria-label="Close" class="close text-dark" @click="closeSimModal">
               <svg 
@@ -218,13 +212,21 @@
               </table>
             </div>
           </div>
-          <!----></div>
+          
         <div tabindex="0"></div>
-        <div class="b-sidebar-backdrop bg-dark" style="" @click.self="closeSimModal"></div>
       </div>
+      
+      <transition
+        enter-active-class="animate__animated animate__slideInLeft"
+        leave-active-class="animate__animated animate__slideOutLeft"
+      >
+        <div 
+          class="b-sidebar-backdrop bg-dark" 
+          @click.self="closeSimModal"
+        ></div>
+      </transition>
     </div>
-
-
+  </transition>
 
 
 
@@ -298,11 +300,18 @@
         <span tabindex="0"></span>
       </div>
     </div>
-    <div
+<!--     <div
       id="sim_card_pin_puk_modal___BV_modal_backdrop_"
       class="modal-backdrop"
-      @click="closePukModal"
-    ></div>
+      @click.self="closePukModal"
+    ></div> -->
+
+        <div 
+  class="b-sidebar-backdrop bg-dark" 
+  @click.self="closePukModal"
+  style="cursor: pointer"
+>
+</div>
   </div>
 
 
@@ -475,6 +484,242 @@ v-if="isModalDInternet"
     @click="closeDInternet"
   ></div>
 </div>
+
+
+
+
+
+ <!-- Bloquer SIM Modal -->
+<div v-if="isModalBSim" data-v-883fa50a="" footer="{null}" id="sim_card_gmcvs_block___BV_modal_outer_" style="position: absolute; z-index: 1040;">
+  <div 
+    id="sim_card_gmcvs_block" 
+    role="dialog" 
+    aria-labelledby="sim_card_gmcvs_block___BV_modal_title_" 
+    aria-describedby="sim_card_gmcvs_block___BV_modal_body_" 
+    class="modal fade show" 
+    aria-modal="true" 
+    style="display: block;"
+  >
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <span tabindex="0"></span>
+      <div id="sim_card_gmcvs_block___BV_modal_content_" tabindex="-1" class="modal-content">
+        <header id="sim_card_gmcvs_block___BV_modal_header_" class="modal-header">
+          <h5 id="sim_card_gmcvs_block___BV_modal_title_" class="modal-title">Bloquer ma SIM</h5>
+          <button type="button" aria-label="Close" class="close" @click="closeBSim">×</button>
+        </header>
+        <div id="sim_card_gmcvs_block___BV_modal_body_" class="modal-body">
+          <div data-v-883fa50a="">
+            <div data-v-883fa50a="">
+              <div data-v-883fa50a="" class="modal-header-wrap text-center">
+                <i data-v-883fa50a="" class="kgk-mtn-app_blocking modal-header-icon yellow-muted"></i>
+                <h3 data-v-883fa50a="">Bloquer ma SIM</h3>
+                <p data-v-883fa50a="" class="text-muted">
+                  Vous avez été victime d'un vol et vous souhaitez protéger votre compte?
+                  Bloquez votre carte SIM pour éviter qu'une tierce personne ne l'utilise.<br data-v-883fa50a="">
+                  Cliquez sur le bouton ci-dessous pour le bloquer.
+                </p>
+              </div>
+              <div data-v-883fa50a="" class="mt-3 mb-3 text-center">
+                <button data-v-883fa50a="" class="btn btn-primary">
+                  <span data-v-883fa50a="">Bloquer ma SIM</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div data-v-883fa50a=""></div>
+        </div>
+      </div>
+      <span tabindex="0"></span>
+    </div>
+  </div>
+  <div id="sim_card_gmcvs_block___BV_modal_backdrop_" class="modal-backdrop"></div>
+</div>
+
+
+
+ <!-- DéBloquer SIM Modal -->
+<div v-if="isModalDSim" 
+  data-v-c423cc10="" 
+  footer="{null}" 
+  id="sim_card_gmcvs_unblock___BV_modal_outer_" 
+  style="position: absolute; z-index: 1040;"
+>
+  <div 
+    id="sim_card_gmcvs_unblock" 
+    role="dialog" 
+    aria-labelledby="sim_card_gmcvs_unblock___BV_modal_title_" 
+    aria-describedby="sim_card_gmcvs_unblock___BV_modal_body_" 
+    class="modal fade show" 
+    aria-modal="true" 
+    style="display: block;"
+  >
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <span tabindex="0"></span>
+      <div id="sim_card_gmcvs_unblock___BV_modal_content_" tabindex="-1" class="modal-content">
+        <header id="sim_card_gmcvs_unblock___BV_modal_header_" class="modal-header">
+          <h5 id="sim_card_gmcvs_unblock___BV_modal_title_" class="modal-title">Débloquer ma SIM</h5>
+          <button type="button" aria-label="Close" class="close" @click="closeDSim">×</button>
+        </header>
+        <div id="sim_card_gmcvs_unblock___BV_modal_body_" class="modal-body">
+          <div data-v-c423cc10="">
+            <div data-v-c423cc10="">
+              <div data-v-c423cc10="" class="modal-header-wrap text-center">
+                <i data-v-c423cc10="" class="kgk-mtn-app_blocking modal-header-icon yellow-muted"></i>
+                <h3 data-v-c423cc10="">Débloquer ma SIM</h3>
+                <p data-v-c423cc10="" class="text-muted">
+                  <span data-v-c423cc10="">Vous avez bloqué votre SIM par erreur ?</span><br data-v-c423cc10="">
+                  Cliquez sur le bouton ci-dessous pour la débloquer.
+                </p>
+              </div>
+              <div data-v-c423cc10="" class="mt-3 mb-3 text-center">
+                <button data-v-c423cc10="" class="btn btn-primary">
+                  <span data-v-c423cc10="">Débloquer ma SIM</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div data-v-c423cc10=""></div>
+        </div>
+      </div>
+      <span tabindex="0"></span>
+    </div>
+  </div>
+  <div id="sim_card_gmcvs_unblock___BV_modal_backdrop_" class="modal-backdrop"></div>
+</div>
+
+ <!-- Changer code transfert Modal -->
+<div  v-if="isModalCCode"
+  data-v-15c0ad76="" 
+  footer="{null}" 
+  id="pin_code___BV_modal_outer_" 
+  style="position: absolute; z-index: 1040;"
+>
+  <div 
+    id="pin_code" 
+    role="dialog" 
+    aria-labelledby="pin_code___BV_modal_title_" 
+    aria-describedby="pin_code___BV_modal_body_" 
+    class="modal fade show" 
+    aria-modal="true" 
+    style="display: block;"
+  >
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <span tabindex="0"></span>
+      <div id="pin_code___BV_modal_content_" tabindex="-1" class="modal-content">
+        <header id="pin_code___BV_modal_header_" class="modal-header">
+          <h5 id="pin_code___BV_modal_title_" class="modal-title">Changer mon code de transfert</h5>
+          <button type="button" aria-label="Close" class="close" @click="closeCCode">×</button>
+        </header>
+        <div id="pin_code___BV_modal_body_" class="modal-body">
+          <div data-v-15c0ad76="">
+            <div data-v-15c0ad76="">
+              <div data-v-15c0ad76="">
+                <span data-v-15c0ad76="">
+                  <form data-v-15c0ad76="" class="">
+                    <div 
+                      data-v-15c0ad76="" 
+                      id="input-group-1" 
+                      role="group" 
+                      class="form-group"
+                    >
+                      <label 
+                        id="input-group-1__BV_label_" 
+                        for="input-1" 
+                        class="d-block"
+                      >
+                        Nouveau code
+                      </label>
+                      <div>
+                        <span data-v-15c0ad76="">
+                          <input 
+                            data-v-15c0ad76="" 
+                            id="input-1" 
+                            type="password" 
+                            placeholder="Entrer le nouveau code" 
+                            class="form-control" 
+                            aria-describedby="input-group-1__BV_description_"
+                          >
+                          <div 
+                            data-v-6f184a57="" 
+                            data-v-15c0ad76="" 
+                            class="w-100"
+                          >
+                            <!---->
+                          </div>
+                        </span>
+                        <!----><!---->
+                        <small 
+                          tabindex="-1" 
+                          id="input-group-1__BV_description_" 
+                          class="form-text text-muted"
+                        >
+                          Numéro à 4 chiffres
+                        </small>
+                      </div>
+                    </div>
+                    <div 
+                      data-v-15c0ad76="" 
+                      id="input-group-1" 
+                      role="group" 
+                      class="form-group"
+                    >
+                      <label 
+                        id="input-group-1__BV_label_" 
+                        for="input-1" 
+                        class="d-block"
+                      >
+                        Confirmer le code
+                      </label>
+                      <div>
+                        <span data-v-15c0ad76="">
+                          <input 
+                            data-v-15c0ad76="" 
+                            id="input-1" 
+                            type="password" 
+                            placeholder="Confirmer le nouveau code" 
+                            class="form-control"
+                          >
+                          <div 
+                            data-v-6f184a57="" 
+                            data-v-15c0ad76="" 
+                            class="w-100"
+                          >
+                            <!---->
+                          </div>
+                        </span>
+                        <!----><!----><!---->
+                      </div>
+                    </div>
+                    <div 
+                      data-v-15c0ad76="" 
+                      class="mt-3 mb-3 text-right"
+                    >
+                      <button 
+                        data-v-15c0ad76="" 
+                        type="submit" 
+                        class="btn btn-primary"
+                      >
+                        <span data-v-15c0ad76="">Valider</span>
+                      </button>
+                    </div>
+                  </form>
+                </span>
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div data-v-15c0ad76=""></div>
+        </div>
+        <!---->
+      </div>
+      <span tabindex="0"></span>
+    </div>
+  </div>
+  <div id="pin_code___BV_modal_backdrop_" class="modal-backdrop"></div>
+</div>
+
+
+
   </template>
 
 <script>
@@ -487,6 +732,9 @@ export default {
     const isModalPUKOpen = ref(false);
     const isModalAInternet = ref(false);
     const isModalDInternet = ref(false);
+    const isModalBSim = ref(false);
+    const isModalDSim = ref(false);
+    const isModalCCode = ref(false);
 
     const openSimModal = () => {
       isModalOpen.value = true;
@@ -502,6 +750,7 @@ export default {
     
     const closePukModal = () => {
       isModalPUKOpen.value = false;
+      console.log(isModalPUKOpen.value)
     };
 
     const openAInternet = () => {
@@ -520,8 +769,39 @@ export default {
       isModalDInternet.value = false;
     };
 
+    const openDSim = () => {
+      isModalDSim.value = true;
+    };
 
-    return { isModalOpen, openSimModal, closeSimModal, isModalPUKOpen, openPukModal, closePukModal, isModalAInternet, openAInternet, closeAInternet, isModalDInternet, openDInternet, closeDInternet  };
+    const closeDSim = () => {
+      isModalDSim.value = false;
+    };
+
+    const openBSim = () => {
+      isModalBSim.value = true;
+    };
+    
+    const closeBSim = () => {
+      isModalBSim.value = false;
+    };
+
+    const openCCode = () => {
+      isModalCCode.value = true;
+    };
+
+    const closeCCode = () => {
+      isModalCCode.value = false;
+    };
+
+
+    return { isModalOpen, openSimModal, closeSimModal, isModalPUKOpen, openPukModal, closePukModal, isModalAInternet, openAInternet, closeAInternet, isModalDInternet, openDInternet, closeDInternet, openDSim, closeDSim, openBSim, openCCode, closeBSim, closeCCode, isModalBSim, isModalCCode, isModalDSim  };
+  },
+  mounted() {
+    // Importer Animate.css
+    const link = document.createElement('link')
+    link.rel = 'stylesheet'
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
+    document.head.appendChild(link)
   }
 };
 </script>
@@ -675,8 +955,8 @@ h1, h2, h3, h4, h5, strong {
 .service-card p {
     font-size: 14px;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1515,4 +1795,113 @@ button.close {
 }
 
 
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, strong {
+    font-weight: 700;
+}
+
+.h5, h5 {
+    font-size: 1.25rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+.modal-body {
+    overflow-y: auto !important;
+}
+
+.modal-body {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+ label {
+    font-size: 12px !important;
+    margin-bottom: 3px !important;
+    font-weight: 400 !important;
+    font-weight: 700 !important;
+}
+.d-block {
+    display: block !important;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+
+.w-100 {
+    width: 100% !important;
+}
+
+
+
+.form-text {
+    font-size: 10px !important;
+    color: #6c757d !important;
+    font-weight: 400 !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+.form-text {
+    display: block;
+    margin-top: .25rem;
+}
+.small, small {
+    font-size: .875em;
+    font-weight: 400;
+}
+small {
+    font-size: 80%;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.mb-3, .my-3 {
+    margin-bottom: 1rem !important;
+}
+.mt-3, .my-3 {
+    margin-top: 1rem !important;
+}
+
+.btn, .btn>span {
+    vertical-align: middle;
+}
 </style>

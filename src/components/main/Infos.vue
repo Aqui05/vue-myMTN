@@ -50,19 +50,13 @@
 
 
         
-    <div  v-if="isModalOpen">
-      <div  tabindex="-1" class="b-sidebar-outer my-sidebar-popup">
-        <div tabindex="0"></div>
-        <div 
-          id="sim_details_sidebar" 
-          tabindex="-1" 
-          role="dialog" 
-          aria-modal="true" 
-          class="b-sidebar shadow bg-light text-dark" 
-          style="" 
-          aria-labelledby="sim_details_sidebar___title__"
-        >
-          <header class="b-sidebar-header">
+    <transition
+    enter-active-class="animate__animated animate__fadeIn"
+    leave-active-class="animate__animated animate__fadeOut"
+  >
+    <div v-if="isModalOpen" class="b-sidebar-outer">
+      <div class="b-sidebar shadow bg-light text-dark">
+        <header class="b-sidebar-header">
             <strong id="sim_details_sidebar___title__">Infos 61255118</strong>
             <button type="button" aria-label="Close" class="close text-dark" @click="closeSimModal">
               <svg 
@@ -147,11 +141,21 @@
               </table>
             </div>
           </div>
-          <!----></div>
+          
         <div tabindex="0"></div>
-        <div class="b-sidebar-backdrop bg-dark" style="" @click.self="closeSimModal"></div>
       </div>
+      
+      <transition
+        enter-active-class="animate__animated animate__slideInLeft"
+        leave-active-class="animate__animated animate__slideOutLeft"
+      >
+        <div 
+          class="b-sidebar-backdrop bg-dark" 
+          @click.self="closeSimModal"
+        ></div>
+      </transition>
     </div>
+  </transition>
   </template>
   
   <script>
@@ -184,6 +188,12 @@
     setTimeout(() => {
       this.loading = false
     }, 2000) // Chargement pendant 2 secondes
+
+        // Importer Animate.css
+        const link = document.createElement('link')
+    link.rel = 'stylesheet'
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
+    document.head.appendChild(link)
   }
   };
   </script>
@@ -545,6 +555,29 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: inline-block;
     overflow: visible;
     vertical-align: -.15em;
+}
+
+@media screen and (max-width: 600px) {
+    #sim_details_sidebar {
+        -webkit-animation: animatebottom .3s !important;
+        animation: animatebottom .3s !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .my-sidebar-popup .b-sidebar {
+        width: 100%;
+        height: 80%;
+        bottom: 0;
+        top: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .b-sidebar-right .close, .my-sidebar-popup .b-sidebar:not(.b-sidebar-right)>.b-sidebar-header .close {
+        right: 15px !important;
+        top: -45px !important;
+    }
 }
 
 svg {
