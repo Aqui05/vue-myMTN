@@ -37,7 +37,7 @@
                     <div>
                         <div class="input-skeleton"  v-if="loading"></div>
                         <div v-else class="custom-control custom-switch b-custom-control-md">
-                            <input type="checkbox" class="custom-control-input" value="true" id="__BVID__76">
+                            <input type="checkbox" class="custom-control-input" value="true" id="__BVID__76" checked="checked">
                             <label class="custom-control-label" for="__BVID__76"></label>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                     <div>
                         <div class="input-skeleton"  v-if="loading"></div>
                         <div v-else class="custom-control custom-switch b-custom-control-md">
-                            <input type="checkbox" class="custom-control-input" value="true" id="__BVID__79">
+                            <input type="checkbox" class="custom-control-input" value="true" id="__BVID__79" checked="checked">
                             <label class="custom-control-label" for="__BVID__79"></label>
                         </div>
                     </div>

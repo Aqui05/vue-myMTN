@@ -20,37 +20,37 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'home',
     component: HomeComponent,
-    meta: { title: 'MyMTN WEB' },
+    meta: { title: 'MyMTN Web' },
     children: [
       {
         path: '/accueil',
         name: 'accueil',
         component: MainContent,
-        meta: { title: 'Mon compte | MyMTN WEB' },
+        meta: { title: 'Mon compte | MyMTN Web' },
       },
       {
         path: '/business',
         name: 'business',
         component: BusinessContent,
-        meta: { title: 'MTN Business | MyMTN WEB' },
+        meta: { title: 'MTN Business | MyMTN Web' },
       },
       {
         path: '/sim',
         name: 'sim',
         component: SimContent,
-        meta: { title: 'Gérer ma carte SIM | MyMTN WEB' },
+        meta: { title: 'Gérer ma carte SIM | MyMTN Web' },
       },
       {
         path: '/consommation',
         name: 'consommation',
         component: ConsommationContent,
-        meta: { title: 'Ma Consommation | MyMTN WEB' },
+        meta: { title: 'Ma Consommation | MyMTN Web' },
       },
       {
         path: '/forfaits-services',
         name: 'forfait',
         component: ForfaitContent,
-        meta: { title: 'Forfaits & Services | MyMTN WEB' },
+        meta: { title: 'Forfaits & Services | MyMTN Web' },
       },
       {
         path: '/profil',

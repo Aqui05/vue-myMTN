@@ -20,10 +20,8 @@
 
       <div  class="col-md-3 service-card" v-else>
         <div>
-          <div class="mobile-align">
-            <h3  class="text-truncate">Wabaa</h3>
-          <svg @click="openWabaa" class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-          
+          <div>
+            <h3  class="text-truncate">Wabaa</h3>    
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
@@ -35,16 +33,15 @@
         </div>
       </div>
 
+
       <div class="skeleton-loader" v-if="loading"> 
           <div class="skeleton-text"></div> 
       </div>
       <div v-else  class="col-md-3 service-card">
         
         <div>
-          <div class="mobile-align">
-            <h3  class="text-truncate">Internet</h3>
-          <svg @click="openInternet" class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-          
+          <div>
+            <h3  class="text-truncate">Internet</h3>   
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
@@ -61,10 +58,8 @@
       </div>
       <div v-else class="col-md-3 service-card">
         <div>
-          <div class="mobile-align">
-            <h3  class="text-truncate">Yellow game</h3>
-          <svg  class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-          
+          <div>
+            <h3  class="text-truncate">Yellow game</h3>    
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
@@ -81,10 +76,8 @@
       </div>
       <div v-else class="col-md-3 service-card">
         <div>
-          <div class="mobile-align">
-            <h3  class="text-truncate">Maxi</h3>
-          <svg @click="openMaxi" class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-          
+          <div>
+            <h3  class="text-truncate">Maxi</h3> 
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
@@ -98,10 +91,8 @@
 
       <div v-if="!loading" class="col-md-3 service-card">
         <div >
-          <div class="mobile-align">
-            <h3  class="text-truncate">Go Pack</h3>
-          <svg @click="openGopack" class="float-right svg-mobile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-          
+          <div>
+            <h3  class="text-truncate">Go Pack</h3>     
           </div>
           <p  class="text-muted"></p>
           <div  class="service-card-bottom">
@@ -1724,7 +1715,7 @@ leave-active-class="animate__animated animate__fadeOutUp"
                       style="overflow-anchor: none;"
                     >
                       <div class="font-weight-bold">100 FCFA</div>
-                      <p class="text-muted">Wabaa 100F (4 min/24H)</p>
+                      <p class="text-muted">100F (3Min+3sms+3Mo/24H)</p>
                       <span v-if="collapsedCards[3]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
                       <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
                     </div>
@@ -1752,7 +1743,7 @@ leave-active-class="animate__animated animate__fadeOutUp"
         :aria-controls="'accordion6'" 
         style="overflow-anchor: none;">
         <div class="font-weight-bold">150 FCFA</div>
-        <p class="text-muted">Wabaa 150F (6 min/24H)</p>
+        <p class="text-muted">150F (5Min + 5sms + 5Mo/24H)</p>
         <span v-if="collapsedCards[6]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
         <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
       </div>
@@ -1782,7 +1773,7 @@ leave-active-class="animate__animated animate__fadeOutUp"
               style="overflow-anchor: none;"
             >
               <div class="font-weight-bold">200 FCFA</div>
-              <p class="text-muted">Wabaa 200F (8 min/24H)</p>
+              <p class="text-muted">200F (7Min + 7sms + 7Mo/24H)</p>
               <span v-if="collapsedCards[14]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
               <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
             </div>
@@ -1812,7 +1803,7 @@ leave-active-class="animate__animated animate__fadeOutUp"
               style="overflow-anchor: none;"
             >
               <div class="font-weight-bold">300 FCFA</div>
-              <p class="text-muted">Wabaa 300F (12 min/24H)</p>
+              <p class="text-muted">300F (11min + 11sms + 11Mo/24H)</p>
               <span v-if="collapsedCards[13]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
               <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
             </div>
@@ -1879,7 +1870,7 @@ leave-active-class="animate__animated animate__fadeOutUp"
               style="overflow-anchor: none;"
             >
               <div class="font-weight-bold">1000 FCFA</div>
-              <p class="text-muted">Wabaa 1000F (40 min/7J)</p>
+              <p class="text-muted">1000F (35min+35Mo/07J)</p>
               <span v-if="collapsedCards[8]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
               <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
             </div>
@@ -1909,7 +1900,7 @@ leave-active-class="animate__animated animate__fadeOutUp"
               style="overflow-anchor: none;"
             >
               <div class="font-weight-bold">1500 FCFA</div>
-              <p class="text-muted">Wabaa 1500F (62 min/7J)</p>
+              <p class="text-muted">1500F (60min+60Mo/07J)</p>
               <span v-if="collapsedCards[9]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
               <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
             </div>
@@ -1944,7 +1935,7 @@ leave-active-class="animate__animated animate__fadeOutUp"
               style="overflow-anchor: none;"
             >
               <div class="font-weight-bold">2500 FCFA</div>
-              <p class="text-muted">Wabaa 2500F (102 min/20J)</p>
+              <p class="text-muted">500F (19min+19Mo/3J)</p>
               <span v-if="collapsedCards[10]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
               <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
             </div>
@@ -1974,7 +1965,7 @@ leave-active-class="animate__animated animate__fadeOutUp"
               style="overflow-anchor: none;"
             >
               <div class="font-weight-bold">5000 FCFA</div>
-              <p class="text-muted">Wabaa 5000F (208 min/30J)</p>
+              <p class="text-muted">5000F (175Min+175SMS+175Mo/30J)</p>
               <span v-if="collapsedCards[11]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
               <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
             </div>
@@ -2345,27 +2336,16 @@ h1, h2, h3, h4, h5, strong {
     padding-right: 15px;
 }
 
+@media screen and (max-width: 600px) {
+    .service-card .service-card-bottom .btn span {
+        display: none;
+    }
+}
+
 
 @media (min-width: 600px) {
   .svg-mobile {
     display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .svg-mobile {
-    display: block;
-    fill: #106887;
-  }
-
-  .service-card-bottom {
-    display: none;
-  }
-
-  .mobile-align {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 }
 
@@ -3093,6 +3073,49 @@ img, svg {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+
+@media screen and (max-width: 600px) {
+    .service-card {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .service-card>* {
+        min-height: 77px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .service-card p {
+        margin-top: -2px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .service-card .service-card-bottom .btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50% !important;
+        right: 15px;
+        top: 18px;
+        text-align: right;
+        padding: 0;
+        line-height: 40px;
+        background: transparent;
+        border: none;
+        color: #106887;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .service-card .service-card-bottom .btn i {
+        float: none !important;
+        font-size: 22px;
+    }
 }
 
 

@@ -173,6 +173,8 @@
     border-radius: 50% !important;
     -webkit-transition: .3s;
     transition: .3s;
+    justify-content: center;
+    display: flex;
 }
 .align-items-center {
     -ms-flex-align: center !important;
