@@ -202,83 +202,7 @@
                 </header>
 
                 <div :id="'accordion0'" v-show="collapsedCards[0]" role="tabpanel">
-                <div class="card-body">
-                    <div>
-                    <form>
-                        <div class="bundle-activation-card-options">
-                        <label class="mr-1">
-                            <input
-                            name="YELLOW_GAME_50"
-                            value="activate"
-                            type="radio"
-                            checked="checked"
-                            />
-                            <div>Activer</div>
-                            <p class="text-muted">
-                            Activer sur votre numéro
-                            </p>
-                        </label>
-                        <label>
-                            <input
-                            name="YELLOW_GAME_50"
-                            value="offer"
-                            type="radio"
-                            />
-                            <div>Offrir</div>
-                            <p class="text-muted">
-                            Activer sur un autre numéro
-                            </p>
-                        </label>
-                        </div>
-
-                        <div class="bundle-activation-card-payment-mode mt-2">
-
-        
-                        <div class="form-group">
-                          <div >
-                            <label class="font-weight-bold">
-                              Sélectionnez un mode de paiement
-                            </label>
-                          </div>
-                            <label class="mr-3">
-                            <input
-                                value="main"
-                                name="mode_YELLOW_GAME_50"
-                                type="radio"
-                                checked="checked"
-                                class="hidden-radio"
-                            />
-                            <span class="bundle-mode-icon mr-2">
-                                <i class="mtn-icon mtn-icon-phone"></i>
-                            </span>
-                            <span class="bundle-mode-title">
-                                Compte principal
-                            </span>
-                            </label>
-                            <label>
-                            <input
-                                value="MO"
-                                name="mode_YELLOW_GAME_50"
-                                type="radio"
-                                class="hidden-radio"
-                            />
-                            <span class="bundle-mode-icon mr-2">
-                                <i class="mtn-icon mtn-icon-mtn-momo"></i>
-                            </span>
-                            <span class="bundle-mode-title">
-                                Mobile Money
-                            </span>
-                            </label>
-                        </div>
-                        </div>
-
-                        <button class="btn btn-primary float-right plus-haut">
-                        <span>Activer</span>
-                        </button>
-                        <div class="clearfix"></div>
-                    </form>
-                    </div>
-                </div>
+                  <InfosModal />
                 </div>
             </div>
 
@@ -314,85 +238,7 @@
                 </header>
 
                         <div :id="'accordion1'" v-show="collapsedCards[1]" role="tabpane2">
-                    <div class="card-body">
-                        <div >
-                        <form >
-                            <div  class="bundle-activation-card-options">
-                            <label  class="mr-1">
-                                <input
-                                
-                                name="YELLOW_GAME_50"
-                                value="activate"
-                                type="radio"
-                                checked="checked"
-                                />
-                                <div >Activer</div>
-                                <p  class="text-muted">
-                                Activer sur votre numéro
-                                </p>
-                            </label>
-                            <label >
-                                <input
-                                
-                                name="YELLOW_GAME_50"
-                                value="offer"
-                                type="radio"
-                                />
-                                <div >Offrir</div>
-                                <p  class="text-muted">
-                                Activer sur un autre numéro
-                                </p>
-                            </label>
-                            </div>
-
-                            <div  class="bundle-activation-card-payment-mode mt-2">
-                            <div  class="form-group">
-                              <div >
-                            <label class="font-weight-bold">
-                              Sélectionnez un mode de paiement
-                            </label>
-                          </div>
-                                <label  class="mr-3">
-                                <input
-                                    
-                                    value="main"
-                                    name="mode_YELLOW_GAME_50"
-                                    type="radio"
-                                    checked="checked"
-                                    class="hidden-radio"
-                                />
-                                <span  class="bundle-mode-icon mr-2">
-                                    <i  class="mtn-icon mtn-icon-phone"></i>
-                                </span>
-                                <span  class="bundle-mode-title">
-                                    Compte principal
-                                </span>
-                                </label>
-                                <label >
-                                <input
-                                    
-                                    value="MO"
-                                    name="mode_YELLOW_GAME_50"
-                                    type="radio"
-                                    class="hidden-radio"
-                                />
-                                <span  class="bundle-mode-icon mr-2">
-                                    <i  class="mtn-icon mtn-icon-mtn-momo"></i>
-                                </span>
-                                <span  class="bundle-mode-title">
-                                    Mobile Money
-                                </span>
-                                </label>
-                            </div>
-                            </div>
-
-                            <button  class="btn btn-primary float-right plus-haut">
-                            <span >Activer</span>
-                            </button>
-                            <div  class="clearfix"></div>
-                        </form>
-                        </div>
-                    </div>
+                          <InfosModal />
                     </div>
                 </div>
 
@@ -426,85 +272,7 @@
                     </header>
 
                     <div :id="'accordion3'" v-show="collapsedCards[2]" role="tabpane3">
-                    <div class="card-body">
-                        <div >
-                        <form >
-                            <div  class="bundle-activation-card-options">
-                            <label  class="mr-1">
-                                <input
-                                
-                                name="YELLOW_GAME_50"
-                                value="activate"
-                                type="radio"
-                                checked="checked"
-                                />
-                                <div >Activer</div>
-                                <p  class="text-muted">
-                                Activer sur votre numéro
-                                </p>
-                            </label>
-                            <label >
-                                <input
-                                
-                                name="YELLOW_GAME_50"
-                                value="offer"
-                                type="radio"
-                                />
-                                <div >Offrir</div>
-                                <p  class="text-muted">
-                                Activer sur un autre numéro
-                                </p>
-                            </label>
-                            </div>
-
-                            <div  class="bundle-activation-card-payment-mode mt-2">
-                            <div  class="form-group">
-                              <div >
-                            <label class="font-weight-bold">
-                              Sélectionnez un mode de paiement
-                            </label>
-                          </div>
-                                <label  class="mr-3">
-                                <input
-                                    
-                                    value="main"
-                                    name="mode_YELLOW_GAME_50"
-                                    type="radio"
-                                    checked="checked"
-                                    class="hidden-radio"
-                                />
-                                <span  class="bundle-mode-icon mr-2">
-                                    <i  class="mtn-icon mtn-icon-phone"></i>
-                                </span>
-                                <span  class="bundle-mode-title">
-                                    Compte principal
-                                </span>
-                                </label>
-                                <label >
-                                <input
-                                    
-                                    value="MO"
-                                    name="mode_YELLOW_GAME_50"
-                                    type="radio"
-                                    class="hidden-radio"
-                                />
-                                <span  class="bundle-mode-icon mr-2">
-                                    <i  class="mtn-icon mtn-icon-mtn-momo"></i>
-                                </span>
-                                <span  class="bundle-mode-title">
-                                    Mobile Money
-                                </span>
-                                </label>
-                            </div>
-                            </div>
-
-                            <button  class="btn btn-primary float-right plus-haut">
-                            <span >Activer</span>
-                            </button>
-                            <div  class="clearfix"></div>
-                        </form>
-                        </div>
-                    </div>
+                      <InfosModal />
                     </div>
                 </div>
                 </div>
@@ -614,55 +382,7 @@
       leave-active-class="animate__animated animate__fadeOutUp"
     >
                   <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[3]" role="tabpane4">
-                    <div class="card-body">
-                      <form>
-                        <div class="bundle-activation-card-options">
-                          <label class="mr-1">
-                            <input name="WABAA_100" value="activate" type="radio" checked="checked" />
-                            <div>Activer</div>
-                            <p class="text-muted">Activer sur votre numéro</p>
-                          </label>
-                          <label>
-                            <input name="WABAA_100" value="offer" type="radio" />
-                            <div>Offrir</div>
-                            <p class="text-muted">Activer sur un autre numéro</p>
-                          </label>
-                        </div>
-                        <div class="bundle-activation-card-payment-mode mt-2">
-                          <div class="form-group">
-                            <div >
-                                <label class="font-weight-bold">
-                                  Sélectionnez un mode de paiement
-                                </label>
-                              </div>
-                            <label class="mr-3">
-                              <input
-                                value="main"
-                                name="mode_WABAA_100"
-                                type="radio"
-                                checked="checked"
-                                class="hidden-radio"
-                              />
-                              <span class="bundle-mode-icon mr-2">
-                                <i class="mtn-icon mtn-icon-phone"></i>
-                              </span>
-                              <span class="bundle-mode-title">Compte principal</span>
-                            </label>
-                            <label>
-                              <input value="MO" name="mode_WABAA_100" type="radio" class="hidden-radio" />
-                              <span class="bundle-mode-icon mr-2">
-                                <i class="mtn-icon mtn-icon-mtn-momo"></i>
-                              </span>
-                              <span class="bundle-mode-title">Mobile Money</span>
-                            </label>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary float-right plus-haut">
-                          <span>Activer</span>
-                        </button>
-                        <div class="clearfix"></div>
-                      </form>
-                    </div>
+                    <InfosModal />
                   </div>
 
                   </transition>
@@ -689,54 +409,10 @@
       enter-active-class="animate__animated animate__fadeInDown"
       leave-active-class="animate__animated animate__fadeOutUp"
     >
-      <div 
-        v-if="collapsedCards[6]"
-        :id="'accordion6'" 
-        role="tabpanel" 
-        class="card-body"
-      >
-        <form>
-          <div class="bundle-activation-card-options">
-            <label class="mr-1">
-              <input name="WABAA_150" value="activate" type="radio" checked="checked">
-              <div>Activer</div>
-              <p class="text-muted">Activer sur votre numéro</p>
-            </label>
-            <label>
-              <input name="WABAA_150" value="offer" type="radio">
-              <div>Offrir</div>
-              <p class="text-muted">Activer sur un autre numéro</p>
-            </label>
+
+    <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[6]" role="tabpane4">
+            <InfosModal />
           </div>
-          <div class="bundle-activation-card-payment-mode mt-2">
-            <div class="form-group">
-              <div>
-                <label class="font-weight-bold">Sélectionnez un mode de paiement</label>
-              </div>
-              <label class="mr-3">
-                <input value="main" name="mode_WABAA_150" type="radio" checked="checked" class="hidden-radio">
-                <span class="bundle-mode-icon mr-2">
-                  <i class="mtn-icon mtn-icon-phone"></i>
-                </span>
-                <span class="bundle-mode-title">Compte principal</span>
-              </label>
-              <label>
-                <input value="MO" name="mode_WABAA_150" type="radio" class="hidden-radio">
-                <span class="bundle-mode-icon mr-2">
-                  <i class="mtn-icon mtn-icon-mtn-momo"></i>
-                </span>
-                <span class="bundle-mode-title">Mobile Money</span>
-              </label>
-            </div>
-          </div>
-          <div>
-            <button class="btn btn-primary float-right">
-              <span>Activer</span>
-            </button>
-          </div>
-          <div class="clearfix"></div>
-        </form>
-      </div>
     </transition>
                 </div>
 
@@ -751,68 +427,20 @@
               :aria-controls="'accordion14'"
               style="overflow-anchor: none;"
             >
-              <div class="font-weight-bold">100 FCFA</div>
-              <p class="text-muted">Wabaa 150F (6 min/24H)</p>
+              <div class="font-weight-bold">200 FCFA</div>
+              <p class="text-muted">Wabaa 200F (8 min/24H)</p>
               <span v-if="collapsedCards[14]" class="kgk-mtn-keyboard_arrow_down icon-not-collapsed"></span>
               <span v-else class="kgk-mtn-keyboard_arrow_right icon-collapsed"></span>
             </div>
           </header>
 
           <transition
-name="custom-classes-transition"
-enter-active-class="animate__animated animate__fadeInDown"
-leave-active-class="animate__animated animate__fadeOutUp"
->
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[14]" role="tabpane4">
-            <div class="card-body">
-              <form>
-                <div class="bundle-activation-card-options">
-                  <label class="mr-1">
-                    <input name="WABAA_100" value="activate" type="radio" checked="checked" />
-                    <div>Activer</div>
-                    <p class="text-muted">Activer sur votre numéro</p>
-                  </label>
-                  <label>
-                    <input name="WABAA_100" value="offer" type="radio" />
-                    <div>Offrir</div>
-                    <p class="text-muted">Activer sur un autre numéro</p>
-                  </label>
-                </div>
-                <div class="bundle-activation-card-payment-mode mt-2">
-                  <div class="form-group">
-                    <div >
-                        <label class="font-weight-bold">
-                          Sélectionnez un mode de paiement
-                        </label>
-                      </div>
-                    <label class="mr-3">
-                      <input
-                        value="main"
-                        name="mode_WABAA_100"
-                        type="radio"
-                        checked="checked"
-                        class="hidden-radio"
-                      />
-                      <span class="bundle-mode-icon mr-2">
-                        <i class="mtn-icon mtn-icon-phone"></i>
-                      </span>
-                      <span class="bundle-mode-title">Compte principal</span>
-                    </label>
-                    <label>
-                      <input value="MO" name="mode_WABAA_100" type="radio" class="hidden-radio" />
-                      <span class="bundle-mode-icon mr-2">
-                        <i class="mtn-icon mtn-icon-mtn-momo"></i>
-                      </span>
-                      <span class="bundle-mode-title">Mobile Money</span>
-                    </label>
-                  </div>
-                </div>
-                <button class="btn btn-primary float-right plus-haut">
-                  <span>Activer</span>
-                </button>
-                <div class="clearfix"></div>
-              </form>
-            </div>
+            <InfosModal />
           </div>
 
           </transition>
@@ -842,55 +470,7 @@ enter-active-class="animate__animated animate__fadeInDown"
 leave-active-class="animate__animated animate__fadeOutUp"
 >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[13]" role="tabpane4">
-            <div class="card-body">
-              <form>
-                <div class="bundle-activation-card-options">
-                  <label class="mr-1">
-                    <input name="WABAA_100" value="activate" type="radio" checked="checked" />
-                    <div>Activer</div>
-                    <p class="text-muted">Activer sur votre numéro</p>
-                  </label>
-                  <label>
-                    <input name="WABAA_100" value="offer" type="radio" />
-                    <div>Offrir</div>
-                    <p class="text-muted">Activer sur un autre numéro</p>
-                  </label>
-                </div>
-                <div class="bundle-activation-card-payment-mode mt-2">
-                  <div class="form-group">
-                    <div >
-                        <label class="font-weight-bold">
-                          Sélectionnez un mode de paiement
-                        </label>
-                      </div>
-                    <label class="mr-3">
-                      <input
-                        value="main"
-                        name="mode_WABAA_100"
-                        type="radio"
-                        checked="checked"
-                        class="hidden-radio"
-                      />
-                      <span class="bundle-mode-icon mr-2">
-                        <i class="mtn-icon mtn-icon-phone"></i>
-                      </span>
-                      <span class="bundle-mode-title">Compte principal</span>
-                    </label>
-                    <label>
-                      <input value="MO" name="mode_WABAA_100" type="radio" class="hidden-radio" />
-                      <span class="bundle-mode-icon mr-2">
-                        <i class="mtn-icon mtn-icon-mtn-momo"></i>
-                      </span>
-                      <span class="bundle-mode-title">Mobile Money</span>
-                    </label>
-                  </div>
-                </div>
-                <button class="btn btn-primary float-right plus-haut">
-                  <span>Activer</span>
-                </button>
-                <div class="clearfix"></div>
-              </form>
-            </div>
+            <InfosModal />
           </div>
 
           </transition>
@@ -920,61 +500,13 @@ enter-active-class="animate__animated animate__fadeInDown"
 leave-active-class="animate__animated animate__fadeOutUp"
 >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[12]" role="tabpane4">
-            <div class="card-body">
-              <form>
-                <div class="bundle-activation-card-options">
-                  <label class="mr-1">
-                    <input name="WABAA_100" value="activate" type="radio" checked="checked" />
-                    <div>Activer</div>
-                    <p class="text-muted">Activer sur votre numéro</p>
-                  </label>
-                  <label>
-                    <input name="WABAA_100" value="offer" type="radio" />
-                    <div>Offrir</div>
-                    <p class="text-muted">Activer sur un autre numéro</p>
-                  </label>
-                </div>
-                <div class="bundle-activation-card-payment-mode mt-2">
-                  <div class="form-group">
-                    <div >
-                        <label class="font-weight-bold">
-                          Sélectionnez un mode de paiement
-                        </label>
-                      </div>
-                    <label class="mr-3">
-                      <input
-                        value="main"
-                        name="mode_WABAA_100"
-                        type="radio"
-                        checked="checked"
-                        class="hidden-radio"
-                      />
-                      <span class="bundle-mode-icon mr-2">
-                        <i class="mtn-icon mtn-icon-phone"></i>
-                      </span>
-                      <span class="bundle-mode-title">Compte principal</span>
-                    </label>
-                    <label>
-                      <input value="MO" name="mode_WABAA_100" type="radio" class="hidden-radio" />
-                      <span class="bundle-mode-icon mr-2">
-                        <i class="mtn-icon mtn-icon-mtn-momo"></i>
-                      </span>
-                      <span class="bundle-mode-title">Mobile Money</span>
-                    </label>
-                  </div>
-                </div>
-                <button class="btn btn-primary float-right plus-haut">
-                  <span>Activer</span>
-                </button>
-                <div class="clearfix"></div>
-              </form>
-            </div>
+            <InfosModal />
           </div>
 
           </transition>
         </div>
 
-                <!-- Add similar structure for other cards -->
+                
               </div>
             </div>
 
@@ -1004,55 +536,7 @@ leave-active-class="animate__animated animate__fadeOutUp"
       leave-active-class="animate__animated animate__fadeOutUp"
     >
                   <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[7]" role="tabpane4">
-                    <div class="card-body">
-                      <form>
-                        <div class="bundle-activation-card-options">
-                          <label class="mr-1">
-                            <input name="WABAA_100" value="activate" type="radio" checked="checked" />
-                            <div>Activer</div>
-                            <p class="text-muted">Activer sur votre numéro</p>
-                          </label>
-                          <label>
-                            <input name="WABAA_100" value="offer" type="radio" />
-                            <div>Offrir</div>
-                            <p class="text-muted">Activer sur un autre numéro</p>
-                          </label>
-                        </div>
-                        <div class="bundle-activation-card-payment-mode mt-2">
-                          <div class="form-group">
-                            <div >
-                                <label class="font-weight-bold">
-                                  Sélectionnez un mode de paiement
-                                </label>
-                              </div>
-                            <label class="mr-3">
-                              <input
-                                value="main"
-                                name="mode_WABAA_100"
-                                type="radio"
-                                checked="checked"
-                                class="hidden-radio"
-                              />
-                              <span class="bundle-mode-icon mr-2">
-                                <i class="mtn-icon mtn-icon-phone"></i>
-                              </span>
-                              <span class="bundle-mode-title">Compte principal</span>
-                            </label>
-                            <label>
-                              <input value="MO" name="mode_WABAA_100" type="radio" class="hidden-radio" />
-                              <span class="bundle-mode-icon mr-2">
-                                <i class="mtn-icon mtn-icon-mtn-momo"></i>
-                              </span>
-                              <span class="bundle-mode-title">Mobile Money</span>
-                            </label>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary float-right plus-haut">
-                          <span>Activer</span>
-                        </button>
-                        <div class="clearfix"></div>
-                      </form>
-                    </div>
+                    <InfosModal />
                   </div>
 
                   </transition>
@@ -1077,60 +561,12 @@ leave-active-class="animate__animated animate__fadeOutUp"
           </header>
 
           <transition
-name="custom-classes-transition"
-enter-active-class="animate__animated animate__fadeInDown"
-leave-active-class="animate__animated animate__fadeOutUp"
->
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[8]" role="tabpane4">
-            <div class="card-body">
-              <form>
-                <div class="bundle-activation-card-options">
-                  <label class="mr-1">
-                    <input name="WABAA_100" value="activate" type="radio" checked="checked" />
-                    <div>Activer</div>
-                    <p class="text-muted">Activer sur votre numéro</p>
-                  </label>
-                  <label>
-                    <input name="WABAA_100" value="offer" type="radio" />
-                    <div>Offrir</div>
-                    <p class="text-muted">Activer sur un autre numéro</p>
-                  </label>
-                </div>
-                <div class="bundle-activation-card-payment-mode mt-2">
-                  <div class="form-group">
-                    <div >
-                        <label class="font-weight-bold">
-                          Sélectionnez un mode de paiement
-                        </label>
-                      </div>
-                    <label class="mr-3">
-                      <input
-                        value="main"
-                        name="mode_WABAA_100"
-                        type="radio"
-                        checked="checked"
-                        class="hidden-radio"
-                      />
-                      <span class="bundle-mode-icon mr-2">
-                        <i class="mtn-icon mtn-icon-phone"></i>
-                      </span>
-                      <span class="bundle-mode-title">Compte principal</span>
-                    </label>
-                    <label>
-                      <input value="MO" name="mode_WABAA_100" type="radio" class="hidden-radio" />
-                      <span class="bundle-mode-icon mr-2">
-                        <i class="mtn-icon mtn-icon-mtn-momo"></i>
-                      </span>
-                      <span class="bundle-mode-title">Mobile Money</span>
-                    </label>
-                  </div>
-                </div>
-                <button class="btn btn-primary float-right plus-haut">
-                  <span>Activer</span>
-                </button>
-                <div class="clearfix"></div>
-              </form>
-            </div>
+            <InfosModal />
           </div>
 
           </transition>
@@ -1155,65 +591,17 @@ leave-active-class="animate__animated animate__fadeOutUp"
           </header>
 
           <transition
-name="custom-classes-transition"
-enter-active-class="animate__animated animate__fadeInDown"
-leave-active-class="animate__animated animate__fadeOutUp"
->
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[9]" role="tabpane4">
-            <div class="card-body">
-              <form>
-                <div class="bundle-activation-card-options">
-                  <label class="mr-1">
-                    <input name="WABAA_100" value="activate" type="radio" checked="checked" />
-                    <div>Activer</div>
-                    <p class="text-muted">Activer sur votre numéro</p>
-                  </label>
-                  <label>
-                    <input name="WABAA_100" value="offer" type="radio" />
-                    <div>Offrir</div>
-                    <p class="text-muted">Activer sur un autre numéro</p>
-                  </label>
-                </div>
-                <div class="bundle-activation-card-payment-mode mt-2">
-                  <div class="form-group">
-                    <div >
-                        <label class="font-weight-bold">
-                          Sélectionnez un mode de paiement
-                        </label>
-                      </div>
-                    <label class="mr-3">
-                      <input
-                        value="main"
-                        name="mode_WABAA_100"
-                        type="radio"
-                        checked="checked"
-                        class="hidden-radio"
-                      />
-                      <span class="bundle-mode-icon mr-2">
-                        <i class="mtn-icon mtn-icon-phone"></i>
-                      </span>
-                      <span class="bundle-mode-title">Compte principal</span>
-                    </label>
-                    <label>
-                      <input value="MO" name="mode_WABAA_100" type="radio" class="hidden-radio" />
-                      <span class="bundle-mode-icon mr-2">
-                        <i class="mtn-icon mtn-icon-mtn-momo"></i>
-                      </span>
-                      <span class="bundle-mode-title">Mobile Money</span>
-                    </label>
-                  </div>
-                </div>
-                <button class="btn btn-primary float-right plus-haut">
-                  <span>Activer</span>
-                </button>
-                <div class="clearfix"></div>
-              </form>
-            </div>
+            <InfosModal />
           </div>
 
           </transition>
         </div>
-              <!-- Add similar structure for other cards -->
+              
               </div>
             </div>
 
@@ -1238,64 +626,16 @@ leave-active-class="animate__animated animate__fadeOutUp"
           </header>
 
           <transition
-name="custom-classes-transition"
-enter-active-class="animate__animated animate__fadeInDown"
-leave-active-class="animate__animated animate__fadeOutUp"
->
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[10]" role="tabpane4">
-            <div class="card-body">
-              <form>
-                <div class="bundle-activation-card-options">
-                  <label class="mr-1">
-                    <input name="WABAA_100" value="activate" type="radio" checked="checked" />
-                    <div>Activer</div>
-                    <p class="text-muted">Activer sur votre numéro</p>
-                  </label>
-                  <label>
-                    <input name="WABAA_100" value="offer" type="radio" />
-                    <div>Offrir</div>
-                    <p class="text-muted">Activer sur un autre numéro</p>
-                  </label>
-                </div>
-                <div class="bundle-activation-card-payment-mode mt-2">
-                  <div class="form-group">
-                    <div >
-                        <label class="font-weight-bold">
-                          Sélectionnez un mode de paiement
-                        </label>
-                      </div>
-                    <label class="mr-3">
-                      <input
-                        value="main"
-                        name="mode_WABAA_100"
-                        type="radio"
-                        checked="checked"
-                        class="hidden-radio"
-                      />
-                      <span class="bundle-mode-icon mr-2">
-                        <i class="mtn-icon mtn-icon-phone"></i>
-                      </span>
-                      <span class="bundle-mode-title">Compte principal</span>
-                    </label>
-                    <label>
-                      <input value="MO" name="mode_WABAA_100" type="radio" class="hidden-radio" />
-                      <span class="bundle-mode-icon mr-2">
-                        <i class="mtn-icon mtn-icon-mtn-momo"></i>
-                      </span>
-                      <span class="bundle-mode-title">Mobile Money</span>
-                    </label>
-                  </div>
-                </div>
-                <button class="btn btn-primary float-right plus-haut">
-                  <span>Activer</span>
-                </button>
-                <div class="clearfix"></div>
-              </form>
-            </div>
+            <InfosModal />
           </div>
 
           </transition>
-        </div>
+                </div>
 
         <div class="card collapsed">
           
@@ -1316,65 +656,17 @@ leave-active-class="animate__animated animate__fadeOutUp"
           </header>
 
           <transition
-name="custom-classes-transition"
-enter-active-class="animate__animated animate__fadeInDown"
-leave-active-class="animate__animated animate__fadeOutUp"
->
+            name="custom-classes-transition"
+            enter-active-class="animate__animated animate__fadeInDown"
+            leave-active-class="animate__animated animate__fadeOutUp"
+            >
           <div :id="'accordion11'" class="collapse show" v-show="collapsedCards[11]" role="tabpane11">
-            <div class="card-body">
-              <form>
-                <div class="bundle-activation-card-options">
-                  <label class="mr-1">
-                    <input name="WABAA_100" value="activate" type="radio" checked="checked" />
-                    <div>Activer</div>
-                    <p class="text-muted">Activer sur votre numéro</p>
-                  </label>
-                  <label>
-                    <input name="WABAA_100" value="offer" type="radio" />
-                    <div>Offrir</div>
-                    <p class="text-muted">Activer sur un autre numéro</p>
-                  </label>
-                </div>
-                <div class="bundle-activation-card-payment-mode mt-2">
-                  <div class="form-group">
-                    <div >
-                        <label class="font-weight-bold">
-                          Sélectionnez un mode de paiement
-                        </label>
-                      </div>
-                    <label class="mr-3">
-                      <input
-                        value="main"
-                        name="mode_WABAA_100"
-                        type="radio"
-                        checked="checked"
-                        class="hidden-radio"
-                      />
-                      <span class="bundle-mode-icon mr-2">
-                        <i class="mtn-icon mtn-icon-phone"></i>
-                      </span>
-                      <span class="bundle-mode-title">Compte principal</span>
-                    </label>
-                    <label>
-                      <input value="MO" name="mode_WABAA_100" type="radio" class="hidden-radio" />
-                      <span class="bundle-mode-icon mr-2">
-                        <i class="mtn-icon mtn-icon-mtn-momo"></i>
-                      </span>
-                      <span class="bundle-mode-title">Mobile Money</span>
-                    </label>
-                  </div>
-                </div>
-                <button class="btn btn-primary float-right plus-haut">
-                  <span>Activer</span>
-                </button>
-                <div class="clearfix"></div>
-              </form>
-            </div>
+            <InfosModal />
           </div>
 
           </transition>
         </div>
-              <!-- Add similar structure for other cards -->
+              
               </div>
             </div>
 
@@ -1403,9 +695,13 @@ leave-active-class="animate__animated animate__fadeOutUp"
 </template>
 <script>
 import { ref } from 'vue';
+import InfosModal from '../modals/Infos.vue';
 
 export default {
   name: 'ForfaitContent',
+  components: {
+    InfosModal,
+  },
 
   setup() {
     const isGameOpen = ref(false);
