@@ -56,7 +56,7 @@
         <div id="main_left_menu_bottom">
           <div>
             <a href="#" style="    display: flex; align-items: center;">
-              <i class="mdi mdi-logout"></i>
+              <i class="mdi mdi-logout" style="color: #b81e50;"></i>
               <span class="link">
                 Déconnexion
               </span>
