@@ -490,7 +490,7 @@ v-if="isModalDInternet"
 
 
  <!-- Bloquer SIM Modal -->
-<div v-if="isModalBSim" data-v-883fa50a="" footer="{null}" id="sim_card_gmcvs_block___BV_modal_outer_" style="position: absolute; z-index: 1040;">
+<div v-if="isModalBSim"  footer="{null}" id="sim_card_gmcvs_block___BV_modal_outer_" style="position: absolute; z-index: 1040;">
   <div 
     id="sim_card_gmcvs_block" 
     role="dialog" 
@@ -508,25 +508,25 @@ v-if="isModalDInternet"
           <button type="button" aria-label="Close" class="close" @click="closeBSim">×</button>
         </header>
         <div id="sim_card_gmcvs_block___BV_modal_body_" class="modal-body">
-          <div data-v-883fa50a="">
-            <div data-v-883fa50a="">
-              <div data-v-883fa50a="" class="modal-header-wrap text-center">
-                <i data-v-883fa50a="" class="kgk-mtn-app_blocking modal-header-icon yellow-muted"></i>
-                <h3 data-v-883fa50a="">Bloquer ma SIM</h3>
-                <p data-v-883fa50a="" class="text-muted">
+          <div >
+            <div >
+              <div  class="modal-header-wrap text-center">
+                <i  class="kgk-mtn-app_blocking modal-header-icon yellow-muted"></i>
+                <h3 >Bloquer ma SIM</h3>
+                <p  class="text-muted">
                   Vous avez été victime d'un vol et vous souhaitez protéger votre compte?
-                  Bloquez votre carte SIM pour éviter qu'une tierce personne ne l'utilise.<br data-v-883fa50a="">
+                  Bloquez votre carte SIM pour éviter qu'une tierce personne ne l'utilise.<br >
                   Cliquez sur le bouton ci-dessous pour le bloquer.
                 </p>
               </div>
-              <div data-v-883fa50a="" class="mt-3 mb-3 text-center">
-                <button data-v-883fa50a="" class="btn btn-primary">
-                  <span data-v-883fa50a="">Bloquer ma SIM</span>
+              <div  class="mt-3 mb-3 text-center">
+                <button  class="btn btn-primary">
+                  <span >Bloquer ma SIM</span>
                 </button>
               </div>
             </div>
           </div>
-          <div data-v-883fa50a=""></div>
+          <div ></div>
         </div>
       </div>
       <span tabindex="0"></span>
@@ -539,7 +539,7 @@ v-if="isModalDInternet"
 
  <!-- DéBloquer SIM Modal -->
 <div v-if="isModalDSim" 
-  data-v-c423cc10="" 
+   
   footer="{null}" 
   id="sim_card_gmcvs_unblock___BV_modal_outer_" 
   style="position: absolute; z-index: 1040;"
@@ -561,24 +561,24 @@ v-if="isModalDInternet"
           <button type="button" aria-label="Close" class="close" @click="closeDSim">×</button>
         </header>
         <div id="sim_card_gmcvs_unblock___BV_modal_body_" class="modal-body">
-          <div data-v-c423cc10="">
-            <div data-v-c423cc10="">
-              <div data-v-c423cc10="" class="modal-header-wrap text-center">
-                <i data-v-c423cc10="" class="kgk-mtn-app_blocking modal-header-icon yellow-muted"></i>
-                <h3 data-v-c423cc10="">Débloquer ma SIM</h3>
-                <p data-v-c423cc10="" class="text-muted">
-                  <span data-v-c423cc10="">Vous avez bloqué votre SIM par erreur ?</span><br data-v-c423cc10="">
+          <div >
+            <div >
+              <div  class="modal-header-wrap text-center">
+                <i  class="kgk-mtn-app_blocking modal-header-icon yellow-muted"></i>
+                <h3 >Débloquer ma SIM</h3>
+                <p  class="text-muted">
+                  <span >Vous avez bloqué votre SIM par erreur ?</span><br >
                   Cliquez sur le bouton ci-dessous pour la débloquer.
                 </p>
               </div>
-              <div data-v-c423cc10="" class="mt-3 mb-3 text-center">
-                <button data-v-c423cc10="" class="btn btn-primary">
-                  <span data-v-c423cc10="">Débloquer ma SIM</span>
+              <div  class="mt-3 mb-3 text-center">
+                <button  class="btn btn-primary">
+                  <span >Débloquer ma SIM</span>
                 </button>
               </div>
             </div>
           </div>
-          <div data-v-c423cc10=""></div>
+          <div ></div>
         </div>
       </div>
       <span tabindex="0"></span>
@@ -589,7 +589,7 @@ v-if="isModalDInternet"
 
  <!-- Changer code transfert Modal -->
 <div  v-if="isModalCCode"
-  data-v-15c0ad76="" 
+  
   footer="{null}" 
   id="pin_code___BV_modal_outer_" 
   style="position: absolute; z-index: 1040;"
@@ -611,13 +611,13 @@ v-if="isModalDInternet"
           <button type="button" aria-label="Close" class="close" @click="closeCCode">×</button>
         </header>
         <div id="pin_code___BV_modal_body_" class="modal-body">
-          <div data-v-15c0ad76="">
-            <div data-v-15c0ad76="">
-              <div data-v-15c0ad76="">
-                <span data-v-15c0ad76="">
-                  <form data-v-15c0ad76="" class="">
+          <div >
+            <div >
+              <div >
+                <span >
+                  <form class="">
                     <div 
-                      data-v-15c0ad76="" 
+                      
                       id="input-group-1" 
                       role="group" 
                       class="form-group"
@@ -630,18 +630,17 @@ v-if="isModalDInternet"
                         Nouveau code
                       </label>
                       <div>
-                        <span data-v-15c0ad76="">
+                        <span >
                           <input 
-                            data-v-15c0ad76="" 
+                            
                             id="input-1" 
                             type="password" 
                             placeholder="Entrer le nouveau code" 
                             class="form-control" 
                             aria-describedby="input-group-1__BV_description_"
                           >
-                          <div 
-                            data-v-6f184a57="" 
-                            data-v-15c0ad76="" 
+                          <div
+                            
                             class="w-100"
                           >
                             <!---->
@@ -658,7 +657,7 @@ v-if="isModalDInternet"
                       </div>
                     </div>
                     <div 
-                      data-v-15c0ad76="" 
+                      
                       id="input-group-1" 
                       role="group" 
                       class="form-group"
@@ -671,17 +670,16 @@ v-if="isModalDInternet"
                         Confirmer le code
                       </label>
                       <div>
-                        <span data-v-15c0ad76="">
+                        <span >
                           <input 
-                            data-v-15c0ad76="" 
+                            
                             id="input-1" 
                             type="password" 
                             placeholder="Confirmer le nouveau code" 
                             class="form-control"
                           >
-                          <div 
-                            data-v-6f184a57="" 
-                            data-v-15c0ad76="" 
+                          <div
+                            
                             class="w-100"
                           >
                             <!---->
@@ -691,15 +689,15 @@ v-if="isModalDInternet"
                       </div>
                     </div>
                     <div 
-                      data-v-15c0ad76="" 
+                      
                       class="mt-3 mb-3 text-right"
                     >
                       <button 
-                        data-v-15c0ad76="" 
+                        
                         type="submit" 
                         class="btn btn-primary"
                       >
-                        <span data-v-15c0ad76="">Valider</span>
+                        <span >Valider</span>
                       </button>
                     </div>
                   </form>
@@ -708,7 +706,7 @@ v-if="isModalDInternet"
             </div>
             <!---->
           </div>
-          <div data-v-15c0ad76=""></div>
+          <div ></div>
         </div>
         <!---->
       </div>

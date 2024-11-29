@@ -3029,19 +3029,12 @@ img, svg {
     color: #6c757d;
 }
 
-#bundle_filter_list>div[data-v-58f8d25d] {
+#bundle_filter_list>div {
     padding: 0 !important;
 }
 
 #bundle_filter_list>div {
     padding: 0 10px;
-}
-.row[data-v-58f8d25d] {
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    width: 100% !important;
-    overflow-x: auto;
-    margin: 0 !important;
 }
 
 .bundle-filter-item {
