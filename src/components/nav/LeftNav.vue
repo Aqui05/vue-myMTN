@@ -126,6 +126,11 @@ img {
     overflow: hidden;
   }
 
+  #main_left_menu_bottom a:hover {
+    opacity: .5;
+    /* color: #a81e5f; */
+}
+
   .left-bar ul {
     list-style: none;
     padding: 0;

@@ -1718,6 +1718,12 @@ button.close {
     }
 }
 
+button:hover {
+    opacity: .3;
+    background: #106887;
+    color: white;
+}
+
 .modal-dialog-centered {
     display: -ms-flexbox;
     display: -webkit-box;
