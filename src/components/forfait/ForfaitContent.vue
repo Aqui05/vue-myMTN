@@ -368,10 +368,10 @@
                   </header>
 
                   <transition
-      name="custom-classes-transition"
-      enter-active-class="animate__animated animate__fadeInDown"
-      leave-active-class="animate__animated animate__fadeOutUp"
-    >
+                    name="custom-classes-transition"
+                    enter-active-class="animate__animated animate__slideInDown"
+                    leave-active-class="animate__animated animate__slideOutUp"
+                  >
                   <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[3]" role="tabpane4">
                     <InfosModal />
                   </div>
@@ -397,8 +397,8 @@
     
     <transition
       name="custom-classes-transition"
-      enter-active-class="animate__animated animate__fadeInDown"
-      leave-active-class="animate__animated animate__fadeOutUp"
+      enter-active-class="animate__animated animate__slideInDown"
+      leave-active-class="animate__animated animate__slideOutUp"
     >
 
     <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[6]" role="tabpane4">
@@ -427,8 +427,8 @@
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[15]" role="tabpane4">
             <InfosModal />
@@ -457,8 +457,8 @@
 
           <transition
 name="custom-classes-transition"
-enter-active-class="animate__animated animate__fadeInDown"
-leave-active-class="animate__animated animate__fadeOutUp"
+enter-active-class="animate__animated animate__slideInDown"
+leave-active-class="animate__animated animate__slideOutUp"
 >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[13]" role="tabpane4">
             <InfosModal />
@@ -487,8 +487,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
 name="custom-classes-transition"
-enter-active-class="animate__animated animate__fadeInDown"
-leave-active-class="animate__animated animate__fadeOutUp"
+enter-active-class="animate__animated animate__slideInDown"
+leave-active-class="animate__animated animate__slideOutUp"
 >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[12]" role="tabpane4">
             <InfosModal />
@@ -523,8 +523,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
                   <transition
       name="custom-classes-transition"
-      enter-active-class="animate__animated animate__fadeInDown"
-      leave-active-class="animate__animated animate__fadeOutUp"
+      enter-active-class="animate__animated animate__slideInDown"
+      leave-active-class="animate__animated animate__slideOutUp"
     >
                   <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[7]" role="tabpane4">
                     <InfosModal />
@@ -553,8 +553,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[8]" role="tabpane4">
             <InfosModal />
@@ -583,8 +583,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[9]" role="tabpane4">
             <InfosModal />
@@ -618,8 +618,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[10]" role="tabpane4">
             <InfosModal />
@@ -648,8 +648,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion11'" class="collapse show" v-show="collapsedCards[11]" role="tabpane11">
             <InfosModal />
@@ -770,8 +770,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
                   <transition
       name="custom-classes-transition"
-      enter-active-class="animate__animated animate__fadeInDown"
-      leave-active-class="animate__animated animate__fadeOutUp"
+      enter-active-class="animate__animated animate__slideInDown"
+      leave-active-class="animate__animated animate__slideOutUp"
     >
                   <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[3]" role="tabpane4">
                     <InfosModal />
@@ -798,8 +798,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
     
     <transition
       name="custom-classes-transition"
-      enter-active-class="animate__animated animate__fadeInDown"
-      leave-active-class="animate__animated animate__fadeOutUp"
+      enter-active-class="animate__animated animate__slideInDown"
+      leave-active-class="animate__animated animate__slideOutUp"
     >
 
     <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[6]" role="tabpane4">
@@ -828,8 +828,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[14]" role="tabpane4">
             <InfosModal />
@@ -858,8 +858,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
 name="custom-classes-transition"
-enter-active-class="animate__animated animate__fadeInDown"
-leave-active-class="animate__animated animate__fadeOutUp"
+enter-active-class="animate__animated animate__slideInDown"
+leave-active-class="animate__animated animate__slideOutUp"
 >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[16]" role="tabpane4">
             <InfosModal />
@@ -888,8 +888,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
 name="custom-classes-transition"
-enter-active-class="animate__animated animate__fadeInDown"
-leave-active-class="animate__animated animate__fadeOutUp"
+enter-active-class="animate__animated animate__slideInDown"
+leave-active-class="animate__animated animate__slideOutUp"
 >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[13]" role="tabpane4">
             <InfosModal />
@@ -918,8 +918,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
 name="custom-classes-transition"
-enter-active-class="animate__animated animate__fadeInDown"
-leave-active-class="animate__animated animate__fadeOutUp"
+enter-active-class="animate__animated animate__slideInDown"
+leave-active-class="animate__animated animate__slideOutUp"
 >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[12]" role="tabpane4">
             <InfosModal />
@@ -954,8 +954,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
                   <transition
       name="custom-classes-transition"
-      enter-active-class="animate__animated animate__fadeInDown"
-      leave-active-class="animate__animated animate__fadeOutUp"
+      enter-active-class="animate__animated animate__slideInDown"
+      leave-active-class="animate__animated animate__slideOutUp"
     >
                   <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[7]" role="tabpane4">
                     <InfosModal />
@@ -984,8 +984,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[8]" role="tabpane4">
             <InfosModal />
@@ -1014,8 +1014,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[9]" role="tabpane4">
             <InfosModal />
@@ -1049,8 +1049,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[10]" role="tabpane4">
             <InfosModal />
@@ -1079,8 +1079,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion11'" class="collapse show" v-show="collapsedCards[11]" role="tabpane11">
             <InfosModal />
@@ -1114,8 +1114,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[10]" role="tabpane4">
             <InfosModal />
@@ -1144,8 +1144,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion11'" class="collapse show" v-show="collapsedCards[11]" role="tabpane11">
             <InfosModal />
@@ -1263,8 +1263,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
                   <transition
       name="custom-classes-transition"
-      enter-active-class="animate__animated animate__fadeInDown"
-      leave-active-class="animate__animated animate__fadeOutUp"
+      enter-active-class="animate__animated animate__slideInDown"
+      leave-active-class="animate__animated animate__slideOutUp"
     >
                   <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[3]" role="tabpane4">
                     <InfosModal />
@@ -1291,8 +1291,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
     
     <transition
       name="custom-classes-transition"
-      enter-active-class="animate__animated animate__fadeInDown"
-      leave-active-class="animate__animated animate__fadeOutUp"
+      enter-active-class="animate__animated animate__slideInDown"
+      leave-active-class="animate__animated animate__slideOutUp"
     >
 
     <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[6]" role="tabpane4">
@@ -1321,8 +1321,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[14]" role="tabpane4">
             <InfosModal />
@@ -1351,8 +1351,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
 name="custom-classes-transition"
-enter-active-class="animate__animated animate__fadeInDown"
-leave-active-class="animate__animated animate__fadeOutUp"
+enter-active-class="animate__animated animate__slideInDown"
+leave-active-class="animate__animated animate__slideOutUp"
 >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[13]" role="tabpane4">
             <InfosModal />
@@ -1381,8 +1381,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
 name="custom-classes-transition"
-enter-active-class="animate__animated animate__fadeInDown"
-leave-active-class="animate__animated animate__fadeOutUp"
+enter-active-class="animate__animated animate__slideInDown"
+leave-active-class="animate__animated animate__slideOutUp"
 >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[12]" role="tabpane4">
             <InfosModal />
@@ -1417,8 +1417,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
                   <transition
       name="custom-classes-transition"
-      enter-active-class="animate__animated animate__fadeInDown"
-      leave-active-class="animate__animated animate__fadeOutUp"
+      enter-active-class="animate__animated animate__slideInDown"
+      leave-active-class="animate__animated animate__slideOutUp"
     >
                   <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[7]" role="tabpane4">
                     <InfosModal />
@@ -1447,8 +1447,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[8]" role="tabpane4">
             <InfosModal />
@@ -1477,8 +1477,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[9]" role="tabpane4">
             <InfosModal />
@@ -1512,8 +1512,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[10]" role="tabpane4">
             <InfosModal />
@@ -1542,8 +1542,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion11'" class="collapse show" v-show="collapsedCards[11]" role="tabpane11">
             <InfosModal />
@@ -1577,8 +1577,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[10]" role="tabpane4">
             <InfosModal />
@@ -1607,8 +1607,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion11'" class="collapse show" v-show="collapsedCards[11]" role="tabpane11">
             <InfosModal />
@@ -1723,8 +1723,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
                   <transition
       name="custom-classes-transition"
-      enter-active-class="animate__animated animate__fadeInDown"
-      leave-active-class="animate__animated animate__fadeOutUp"
+      enter-active-class="animate__animated animate__slideInDown"
+      leave-active-class="animate__animated animate__slideOutUp"
     >
                   <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[3]" role="tabpane4">
                     <InfosModal />
@@ -1751,8 +1751,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
     
     <transition
       name="custom-classes-transition"
-      enter-active-class="animate__animated animate__fadeInDown"
-      leave-active-class="animate__animated animate__fadeOutUp"
+      enter-active-class="animate__animated animate__slideInDown"
+      leave-active-class="animate__animated animate__slideOutUp"
     >
 
     <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[6]" role="tabpane4">
@@ -1781,8 +1781,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[14]" role="tabpane4">
             <InfosModal />
@@ -1811,8 +1811,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
 name="custom-classes-transition"
-enter-active-class="animate__animated animate__fadeInDown"
-leave-active-class="animate__animated animate__fadeOutUp"
+enter-active-class="animate__animated animate__slideInDown"
+leave-active-class="animate__animated animate__slideOutUp"
 >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[13]" role="tabpane4">
             <InfosModal />
@@ -1841,8 +1841,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
 name="custom-classes-transition"
-enter-active-class="animate__animated animate__fadeInDown"
-leave-active-class="animate__animated animate__fadeOutUp"
+enter-active-class="animate__animated animate__slideInDown"
+leave-active-class="animate__animated animate__slideOutUp"
 >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[12]" role="tabpane4">
             <InfosModal />
@@ -1878,8 +1878,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[8]" role="tabpane4">
             <InfosModal />
@@ -1908,8 +1908,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[9]" role="tabpane4">
             <InfosModal />
@@ -1943,8 +1943,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion3'" class="collapse show" v-show="collapsedCards[10]" role="tabpane4">
             <InfosModal />
@@ -1973,8 +1973,8 @@ leave-active-class="animate__animated animate__fadeOutUp"
 
           <transition
             name="custom-classes-transition"
-            enter-active-class="animate__animated animate__fadeInDown"
-            leave-active-class="animate__animated animate__fadeOutUp"
+            enter-active-class="animate__animated animate__slideInDown"
+            leave-active-class="animate__animated animate__slideOutUp"
             >
           <div :id="'accordion11'" class="collapse show" v-show="collapsedCards[11]" role="tabpane11">
             <InfosModal />
