@@ -99,21 +99,21 @@
                             <tbody>
                                 <tr>
                                     <td class="service d-flex align-items-center text-truncate">
-                                        <img src="https://my.mtn.bj/aws/icons_s/HTTPS.png" alt="" class="icon">
+                                        <img src="/src/assets/HTTPS.png" alt="" class="icon">
                                         <span>HTTPS</span>
                                     </td>
                                     <td>581.56 MB</td>
                                 </tr>
                                 <tr>
                                     <td class="service d-flex align-items-center text-truncate">
-                                        <img src="https://my.mtn.bj/aws/icons_s/whatsapp.png" alt="" class="icon">
+                                        <img src="/src/assets/whatsapp.png" alt="" class="icon">
                                         <span>WhatsApp</span>
                                     </td>
                                     <td>465.55 MB</td>
                                 </tr>
                                 <tr>
                                     <td class="service d-flex align-items-center text-truncate">
-                                        <img src="https://my.mtn.bj/aws/icons_s/linewebtoon.png" alt="" class="icon">
+                                        <img src="/src/assets/linewebtoon.png" alt="" class="icon">
                                         <span>LineWebtoon</span>
                                     </td>
                                     <td>184.29 MB</td>
@@ -132,71 +132,76 @@
   
   <script>
   import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
-import autoTable from 'jspdf-autotable';
-
-export default {
+  import html2canvas from 'html2canvas';
+  import autoTable from 'jspdf-autotable';
+  
+  export default {
     name: 'ConsomLeft',
     data() {
-        return {
-            activeTab: 'products'
-        };
+      return {
+        activeTab: 'products',
+      };
     },
     methods: {
-        async downloadPdf(tab) {
-            // Wait for Vue to update the DOM
-            await this.$nextTick();
-
-            let tabContent;
-            
-            // Use a more specific selector based on the active tab
-            if (tab === 'products') {
-                tabContent = this.$refs.productsTab;
-            } else if (tab === 'internet') {
-                tabContent = this.$refs.internetTab;
-            }
-
-            if (!tabContent) {
-                console.error('Tab content not found');
-                return;
-            }
-
-            const doc = new jsPDF('p', 'mm', 'a4');
-            
-            try {
-                // Convert tab content to canvas
-                const canvas = await html2canvas(tabContent, {
-                    scale: 2,
-                    useCORS: true,
-                    logging: false
-                });
-
-                // Get canvas image
-                const imgData = canvas.toDataURL('image/png');
-                
-                // Get A4 page dimensions
-                const pageWidth = doc.internal.pageSize.getWidth();
-                const pageHeight = doc.internal.pageSize.getHeight();
-
-                // Calculate image dimensions to fit the page
-                const imgWidth = pageWidth - 20; // Margin of 10mm on each side
-                const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-                // Add image to PDF
-                doc.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
-
-                // If there's a table, try to add it as well
-                const tableId = tab === 'products' ? '#table' : '.bill-details-table.internet';
-                const table = tabContent.querySelector(tableId);
-                // Save the PDF
-                doc.save(`${tab}_details.pdf`);
-            } catch (error) {
-                console.error('Error creating PDF:', error);
-            }
-        },
+      async downloadPdf(tab) {
+        // Wait for Vue to update the DOM
+        await this.$nextTick();
+  
+        let tabContent;
+  
+        // Use a more specific selector based on the active tab
+        if (tab === 'products') {
+          tabContent = this.$refs.productsTab;
+        } else if (tab === 'internet') {
+          tabContent = this.$refs.internetTab;
+        }
+  
+        if (!tabContent) {
+          console.error('Tab content not found');
+          return;
+        }
+  
+        try {
+          // Convert tab content to canvas
+          const canvas = await html2canvas(tabContent, {
+            scale: 2,
+            useCORS: true,
+            logging: false,
+            onclone: (documentClone) => {
+              // Load all images in the cloned document
+              const images = documentClone.querySelectorAll('img');
+              images.forEach((img) => {
+                if (!img.complete) {
+                  img.onload = () => { };
+                  img.onerror = () => { console.error(`Image load error for ${img.src}`); };
+                }
+              });
+            },
+          });
+  
+          // Get canvas image
+          const imgData = canvas.toDataURL('image/png');
+  
+          // Initialize PDF
+          const doc = new jsPDF('p', 'mm', 'a4');
+          const pageWidth = doc.internal.pageSize.getWidth();
+          const pageHeight = doc.internal.pageSize.getHeight();
+          const imgWidth = pageWidth - 20; // Margin of 10mm on each side
+          const imgHeight = (canvas.height * imgWidth) / canvas.width;
+  
+          // Add image to PDF
+          doc.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
+  
+          // Save the PDF
+          doc.save(`${tab}_details.pdf`);
+        } catch (error) {
+          console.error('Error creating PDF:', error);
+        }
+      },
     },
-};
+  };
   </script>
+  
 
   <style scoped>
 
