@@ -47,6 +47,7 @@ import ConsomRight from '../consommation/ConsomRight.vue';
         -webkit-box-flex: 0;
         flex: 0 0 100%;
         max-width: 100%;
+        padding: 0 15px;
     }
 }
 
@@ -88,6 +89,8 @@ a, body, div, h1, h2, h3, h4, h5, p, span, strong {
         -ms-flex: 0 0 25%;
         -webkit-box-flex: 0;
         flex: 0 0 25%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 

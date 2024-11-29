@@ -16,14 +16,12 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  // Ajouter les fichiers SVG comme ressources statiques
   assetsInclude: ['**/*.svg'],
-  css: {
+  /*css: {
     postcss: {
       plugins: [
         require('postcss-import')({
           filter: (url: string) => {
-            // Exclure les fichiers SVG pour éviter les erreurs de PostCSS
             if (url.endsWith('.svg')) {
               return false;
             }
@@ -33,4 +31,5 @@ export default defineConfig({
       ],
     },
   },
+  */
 });

@@ -1,5 +1,5 @@
 <template>
-    <div class="col-md-9 order-md-first order-last">
+    <div class=" order-md-first order-last">
       <!-- Tab Navigation -->
       <ul role="tablist" class="nav nav-tabs v-step-0">
         <li role="presentation" class="nav-item">
@@ -188,23 +188,6 @@ export default {
                 // If there's a table, try to add it as well
                 const tableId = tab === 'products' ? '#table' : '.bill-details-table.internet';
                 const table = tabContent.querySelector(tableId);
-
-                if (table) {
-                    autoTable(doc, {
-                        html: tableId,
-                        startY: imgHeight + 20, // Position below the screenshot
-                        styles: { 
-                            fillColor: [255, 255, 255],
-                            fontSize: 10
-                        },
-                        columnStyles: {
-                            0: { cellWidth: 'auto' },
-                            1: { cellWidth: 'auto' },
-                            2: { cellWidth: 'auto' }
-                        }
-                    });
-                }
-
                 // Save the PDF
                 doc.save(`${tab}_details.pdf`);
             } catch (error) {
@@ -214,8 +197,6 @@ export default {
     },
 };
   </script>
-
-
 
   <style scoped>
 
